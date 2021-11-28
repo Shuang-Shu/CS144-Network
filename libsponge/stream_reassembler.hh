@@ -5,6 +5,9 @@
 
 #include <cstdint>
 #include <string>
+#include <vector>
+#include <algorithm>
+#include <map>
 
 //! \brief A class that assembles a series of excerpts from a byte stream (possibly out of order,
 //! possibly overlapping) into an in-order byte stream.
@@ -13,7 +16,29 @@ class StreamReassembler {
     // Your code here -- add private members as necessary.
 
     ByteStream _output;  //!< The reassembled in-order byte stream
-    size_t _capacity;    //!< The maximum number of bytes
+    size_t capacity;    //!< The maximum number of bytes
+    map<int, string> unassembledBuf; // 未重组的缓冲区
+    vector<size_t> idx_heap; // 索引的小顶堆
+    string assembledBuf; // 已经重组的缓冲区
+    size_t unassembledSize; // 未重组的大小
+    size_t expectedIdx; // 期望的索引
+    bool eof;
+
+    // 方法区
+    // 将新的string插入到unassembledBuf中
+    void insertStr(const string &data, size_t index);
+    // 将unassembledBuf中的str尽可能多地重组为有序
+    void assembleStr();
+    // 将assembledBuf中字节写入到_output中
+    void writeStr(); 
+
+    // 堆运算
+    // 插入元素到heap中
+    void insertToHeap(size_t);
+    // 获取堆顶元素
+    size_t peek();
+    // 弹出堆顶元素
+    size_t pop();
 
   public:
     //! \brief Construct a `StreamReassembler` that will store up to `capacity` bytes.
