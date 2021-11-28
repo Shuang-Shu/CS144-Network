@@ -12,15 +12,14 @@ void DUMMY_CODE(Targs &&... /* unused */) {}
 
 using namespace std;
 
-StreamReassembler::StreamReassembler(const size_t capacity) : _output(capacity), capacity(capacity)
-, unassembledBuf(), idx_heap(), assembledBuf(), unassembledSize(), expectedIdx(0), eof(false){}
+StreamReassembler::StreamReassembler(const size_t capacity0) : capacity(capacity0), _output(capacity0), unassembledBuf(), idx_heap(), assembledBuf(), unassembledSize(0), expectedIdx(0), eof(false){}
 
 //! \details This function accepts a substring (aka a segment) of bytes,
 //! possibly out-of-order, from the logical stream, and assembles any newly
 //! contiguous substrings and writes them into the output stream in order.
-void StreamReassembler::push_substring(const string &data, const size_t index, const bool eof) {
+void StreamReassembler::push_substring(const string &data, const size_t index, const bool aEof) {
     // DUMMY_CODE(data, index, eof);
-    this->eof=this->eof|eof;
+    this->eof=this->eof|aEof;
     this->insertStr(data, index);
     this->assembleStr();
     this->writeStr();
@@ -29,7 +28,7 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
 void StreamReassembler::insertStr(const string &data, size_t index){
     // 首先检查buf中是否已经有该index
     if(this->unassembledBuf.find(index)!=this->unassembledBuf.end()){
-        size_t oldLength=this->unassembledBuf[index].length()
+        size_t oldLength=this->unassembledBuf[index].length();
         if(data.length()<=oldLength)
             return;
         else{
@@ -71,9 +70,9 @@ void StreamReassembler::writeStr(){
         this->_output.end_input();
 }
 
-void StreamReassembler::insertToHeap(size_t){
+void StreamReassembler::insertToHeap(size_t val){
     vector<size_t> &heapRef=this->idx_heap;
-    heapRef.insert(size_t);
+    heapRef.push_back(val);
     push_heap(heapRef.begin(), heapRef.end());
 }
 
@@ -83,7 +82,7 @@ size_t StreamReassembler::peek(){
 
 size_t StreamReassembler::pop(){
     size_t peekVal=this->peek();
-    pop_heap(this->idx_heap);
+    pop_heap(this->idx_heap.begin(), this->idx_heap.end());
     this->idx_heap.pop_back();
     return peekVal;
 }
