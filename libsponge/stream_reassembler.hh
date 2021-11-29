@@ -8,6 +8,7 @@
 #include <vector>
 #include <algorithm>
 #include <map>
+#include <iostream>
 
 using namespace std;
 
@@ -22,7 +23,7 @@ class StreamReassembler {
     vector<size_t> idx_heap; // 索引的小顶堆
     string assembledBuf; // 已经重组的缓冲区
     size_t unassembledSize; // 未重组的大小
-    size_t expectedIdx; // 期望的索引
+    size_t expectedIdx; // 期望的索引，指相对于已重组的部分
     bool eof;
 
     // 方法区
@@ -32,6 +33,15 @@ class StreamReassembler {
     void assembleStr();
     // 将assembledBuf中字节写入到_output中
     void writeStr(); 
+    // 返回空间是否已满
+    bool isFull();
+    // 将新的data推入
+    void pushData(const string &data, const size_t &index);
+    // 检测重叠str
+    void detectOverlap(size_t index, size_t length, size_t &leftOverlap, size_t &rightOverlap);
+    // 合并substr
+    void merge(const string &data, map<int, string>::iterator iter, size_t overlapNum;
+
 
     // 堆运算
     // 插入元素到heap中

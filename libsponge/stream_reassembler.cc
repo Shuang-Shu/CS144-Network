@@ -19,14 +19,59 @@ StreamReassembler::StreamReassembler(const size_t capacity0) : capacity(capacity
 //! contiguous substrings and writes them into the output stream in order.
 void StreamReassembler::push_substring(const string &data, const size_t index, const bool aEof) {
     // DUMMY_CODE(data, index, eof);
+    //cout<<"=========================================="<<endl;
     this->eof=this->eof|aEof;
+    // 进行输入之前，先检查data的index是否满足index<=this.expectedIdx
+    if(index<=this->expectedIdx)
+        this->pushData(data, index);
     this->insertStr(data, index);
     this->assembleStr();
     this->writeStr();
+    //cout<<"=========================================="<<endl;
+}
+
+void StreamReassembler::pushData(const string &data, const size_t &index){
+    if(index+data.length()<=this->expectedIdx)
+        // 若该data并无有用信息
+        return;
+    if(this->assembledBuf.length()!=0)
+        // 此时有序的内容还存在，只是未发送，直接丢弃新的内容
+        return;
+    size_t validLength=index+data.length()-this->expectedIdx;
+    string validStr=data.substr(data.length()-validLength, validLength);
+    size_t writeLength=this->_output.write(validStr);
+    this->expectedIdx+=writeLength;
+}
+
+map<int, string>::iterator StreamReassembler::detectOverlap(size_t index, size_t length, size_t &leftOverlap, size_t &rightOverlap){
+    this->unassembledBuf.insert(make_pair(index, ""));
+    auto iterLeft=this->unassembledBuf.find(index);
+    iterLeft-=1;
+    auto iterRight=this->unassembledBuf.find(index);
+    iterRight+=1;
+    size_t rightBound=index+length;
+    while((*iterLeft).first+(*iterLeft).second.length()>=index){
+        leftOverlap+=1;
+        iterLeft-=1;
+    }
+    while((*iterRight).first<rightBound){
+        rightOverlap+=1;;
+        iterRight+=1;
+    }
+    return iterLeft+1;
 }
 
 void StreamReassembler::insertStr(const string &data, size_t index){
     // 首先检查buf中是否已经有该index
+    // 存在的问题：无法检查重叠的substr
+    size_t leftOverlap=0;
+    size_t rightOverlap=0;
+
+    auto iter=this->detectOverlap(index, data.length(), leftOverlap, rightOverlap);
+    
+
+    // cout<<"data; "<<data.substr(0, 10)<<";index: "<<index<<endl;
+    /*
     if(this->unassembledBuf.find(index)!=this->unassembledBuf.end()){
         size_t oldLength=this->unassembledBuf[index].length();
         if(data.length()<=oldLength)
@@ -45,15 +90,18 @@ void StreamReassembler::insertStr(const string &data, size_t index){
         this->unassembledSize+=validLength;
         this->unassembledBuf.insert(make_pair(index, data.substr(0, validLength)));
     }
+    */
 }
 
 void StreamReassembler::assembleStr(){
-    while(!(this->idx_heap.empty())&&this->expectedIdx>=this->idx_heap[0]){
+    //cout<<"期望的index: "<<this->expectedIdx<<"目前的最小索引: "<<this->peek()<<endl;
+    while(!(this->idx_heap.empty())&&this->expectedIdx>=this->peek()){
         size_t peekVal=this->pop();
         string &strRef=this->unassembledBuf[peekVal];
+        //cout<<"peekVal: "<<peekVal<<";assembledStr: "<<this->assembledBuf<<";strRef: "<<strRef<<endl;
+        this->unassembledBuf.erase(peekVal);
         this->unassembledSize-=strRef.length();
         if(peekVal+strRef.length()<=this->expectedIdx){
-            this->unassembledBuf.erase(peekVal);
             continue;
         }else{
             size_t validLength=strRef.length()-(this->expectedIdx-peekVal);
@@ -64,6 +112,7 @@ void StreamReassembler::assembleStr(){
 }
 
 void StreamReassembler::writeStr(){
+    //cout<<"aStr: "<<this->assembledBuf<<endl;
     size_t writeLength=this->_output.write(this->assembledBuf);
     this->assembledBuf=this->assembledBuf.substr(writeLength, this->assembledBuf.length()-writeLength);
     if(this->eof&&this->assembledBuf.length()==0&&this->unassembledSize==0)
@@ -73,7 +122,7 @@ void StreamReassembler::writeStr(){
 void StreamReassembler::insertToHeap(size_t val){
     vector<size_t> &heapRef=this->idx_heap;
     heapRef.push_back(val);
-    push_heap(heapRef.begin(), heapRef.end());
+    make_heap(heapRef.begin(), heapRef.end(), greater<int>());
 }
 
 size_t StreamReassembler::peek(){
@@ -82,9 +131,15 @@ size_t StreamReassembler::peek(){
 
 size_t StreamReassembler::pop(){
     size_t peekVal=this->peek();
-    pop_heap(this->idx_heap.begin(), this->idx_heap.end());
+    pop_heap(this->idx_heap.begin(), this->idx_heap.end(), greater<int>());
     this->idx_heap.pop_back();
     return peekVal;
+}
+
+bool StreamReassembler::isFull(){
+    if(this->unassembledSize+this->assembledBuf.length()<this->capacity)
+        return true;
+    return false;
 }
 
 size_t StreamReassembler::unassembled_bytes() const { return this->unassembledSize; }

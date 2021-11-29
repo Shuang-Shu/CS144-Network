@@ -22,9 +22,9 @@ sys/socket.h
 utility
 -
 
-/home/shuangshu/network/sponge/doctests/address_dt.cc
+/home/network/CS144-Network/doctests/address_dt.cc
 address.hh
-/home/shuangshu/network/sponge/doctests/address.hh
+/home/network/CS144-Network/doctests/address.hh
 cstdlib
 -
 iostream
@@ -32,15 +32,15 @@ iostream
 stdexcept
 -
 address_example_1.cc
-/home/shuangshu/network/sponge/doctests/address_example_1.cc
+/home/network/CS144-Network/doctests/address_example_1.cc
 address_example_2.cc
-/home/shuangshu/network/sponge/doctests/address_example_2.cc
+/home/network/CS144-Network/doctests/address_example_2.cc
 address_example_3.cc
-/home/shuangshu/network/sponge/doctests/address_example_3.cc
+/home/network/CS144-Network/doctests/address_example_3.cc
 
-/home/shuangshu/network/sponge/doctests/address_example_1.cc
+/home/network/CS144-Network/doctests/address_example_1.cc
 
-/home/shuangshu/network/sponge/doctests/address_example_2.cc
+/home/network/CS144-Network/doctests/address_example_2.cc
 
-/home/shuangshu/network/sponge/doctests/address_example_3.cc
+/home/network/CS144-Network/doctests/address_example_3.cc
 

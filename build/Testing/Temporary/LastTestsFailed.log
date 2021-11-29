@@ -1,8 +1,3 @@
-18:t_strm_reassem_single
-20:t_strm_reassem_dup
-21:t_strm_reassem_holes
 22:t_strm_reassem_many
 23:t_strm_reassem_overlapping
 24:t_strm_reassem_win
-25:t_strm_reassem_cap
-55:t_socket_dt

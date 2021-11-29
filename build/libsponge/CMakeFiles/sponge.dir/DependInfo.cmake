@@ -4,16 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/shuangshu/network/sponge/libsponge/byte_stream.cc" "/home/shuangshu/network/sponge/build/libsponge/CMakeFiles/sponge.dir/byte_stream.cc.o"
-  "/home/shuangshu/network/sponge/libsponge/stream_reassembler.cc" "/home/shuangshu/network/sponge/build/libsponge/CMakeFiles/sponge.dir/stream_reassembler.cc.o"
-  "/home/shuangshu/network/sponge/libsponge/util/address.cc" "/home/shuangshu/network/sponge/build/libsponge/CMakeFiles/sponge.dir/util/address.cc.o"
-  "/home/shuangshu/network/sponge/libsponge/util/buffer.cc" "/home/shuangshu/network/sponge/build/libsponge/CMakeFiles/sponge.dir/util/buffer.cc.o"
-  "/home/shuangshu/network/sponge/libsponge/util/eventloop.cc" "/home/shuangshu/network/sponge/build/libsponge/CMakeFiles/sponge.dir/util/eventloop.cc.o"
-  "/home/shuangshu/network/sponge/libsponge/util/file_descriptor.cc" "/home/shuangshu/network/sponge/build/libsponge/CMakeFiles/sponge.dir/util/file_descriptor.cc.o"
-  "/home/shuangshu/network/sponge/libsponge/util/parser.cc" "/home/shuangshu/network/sponge/build/libsponge/CMakeFiles/sponge.dir/util/parser.cc.o"
-  "/home/shuangshu/network/sponge/libsponge/util/socket.cc" "/home/shuangshu/network/sponge/build/libsponge/CMakeFiles/sponge.dir/util/socket.cc.o"
-  "/home/shuangshu/network/sponge/libsponge/util/tun.cc" "/home/shuangshu/network/sponge/build/libsponge/CMakeFiles/sponge.dir/util/tun.cc.o"
-  "/home/shuangshu/network/sponge/libsponge/util/util.cc" "/home/shuangshu/network/sponge/build/libsponge/CMakeFiles/sponge.dir/util/util.cc.o"
+  "/home/network/CS144-Network/libsponge/byte_stream.cc" "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/byte_stream.cc.o"
+  "/home/network/CS144-Network/libsponge/stream_reassembler.cc" "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/stream_reassembler.cc.o"
+  "/home/network/CS144-Network/libsponge/util/address.cc" "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/util/address.cc.o"
+  "/home/network/CS144-Network/libsponge/util/buffer.cc" "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/util/buffer.cc.o"
+  "/home/network/CS144-Network/libsponge/util/eventloop.cc" "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/util/eventloop.cc.o"
+  "/home/network/CS144-Network/libsponge/util/file_descriptor.cc" "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/util/file_descriptor.cc.o"
+  "/home/network/CS144-Network/libsponge/util/parser.cc" "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/util/parser.cc.o"
+  "/home/network/CS144-Network/libsponge/util/socket.cc" "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/util/socket.cc.o"
+  "/home/network/CS144-Network/libsponge/util/tun.cc" "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/util/tun.cc.o"
+  "/home/network/CS144-Network/libsponge/util/util.cc" "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/util/util.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
