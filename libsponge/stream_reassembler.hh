@@ -19,7 +19,7 @@ class StreamReassembler {
     // Your code here -- add private members as necessary.
     size_t capacity;    //!< The maximum number of bytes
     ByteStream _output;  //!< The reassembled in-order byte stream
-    map<int, string> unassembledBuf; // 未重组的缓冲区
+    map<size_t, string> unassembledBuf; // 未重组的缓冲区
     vector<size_t> idx_heap; // 索引的小顶堆
     string assembledBuf; // 已经重组的缓冲区
     size_t unassembledSize; // 未重组的大小
@@ -38,10 +38,9 @@ class StreamReassembler {
     // 将新的data推入
     void pushData(const string &data, const size_t &index);
     // 检测重叠str
-    void detectOverlap(size_t index, size_t length, size_t &leftOverlap, size_t &rightOverlap);
+    map<size_t, string>::iterator detectOverlap(size_t index, size_t length, size_t &leftOverlap, size_t &rightOverlap, size_t &mergeLength);
     // 合并substr
-    void merge(const string &data, map<int, string>::iterator iter, size_t overlapNum;
-
+    void merge(const string &data, map<int, string>::iterator iter, size_t overlapNum);
 
     // 堆运算
     // 插入元素到heap中

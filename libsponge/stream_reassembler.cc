@@ -43,22 +43,29 @@ void StreamReassembler::pushData(const string &data, const size_t &index){
     this->expectedIdx+=writeLength;
 }
 
-map<int, string>::iterator StreamReassembler::detectOverlap(size_t index, size_t length, size_t &leftOverlap, size_t &rightOverlap){
+map<size_t, string>::iterator StreamReassembler::detectOverlap(size_t index, size_t length, size_t &leftOverlap, size_t &rightOverlap, size_t &mergeLength){
     this->unassembledBuf.insert(make_pair(index, ""));
-    auto iterLeft=this->unassembledBuf.find(index);
-    iterLeft-=1;
-    auto iterRight=this->unassembledBuf.find(index);
-    iterRight+=1;
+    map<size_t, string>::iterator iterLeft=this->unassembledBuf.find(index);
+
+    map<size_t, string>::iterator end=this->unassembledBuf.end();
+    map<size_t, string>::iterator begin=this->unassembledBuf.begin();
+    begin--;
+    iterLeft--;
+    map<size_t, string>::iterator iterRight=this->unassembledBuf.find(index);
+    iterRight++;
     size_t rightBound=index+length;
-    while((*iterLeft).first+(*iterLeft).second.length()>=index){
-        leftOverlap+=1;
-        iterLeft-=1;
+    while(iterLeft!=begin&&(*iterLeft).first+(*iterLeft).second.length()>=index){
+        leftOverlap++;
+        iterLeft--;
     }
-    while((*iterRight).first<rightBound){
-        rightOverlap+=1;;
-        iterRight+=1;
+    while(iterRight!=end&&(*iterRight).first<rightBound){
+        rightOverlap++;
+        iterRight++;
     }
-    return iterLeft+1;
+    iterLeft++;
+    iterRight--;
+    mergeLength=(*(iterRight)).first+(*(iterRight)).second.length()-(*(iterLeft)).first;
+    return iterLeft;
 }
 
 void StreamReassembler::insertStr(const string &data, size_t index){
@@ -66,12 +73,33 @@ void StreamReassembler::insertStr(const string &data, size_t index){
     // 存在的问题：无法检查重叠的substr
     size_t leftOverlap=0;
     size_t rightOverlap=0;
+    size_t mergeLength=0;
 
-    auto iter=this->detectOverlap(index, data.length(), leftOverlap, rightOverlap);
-    
+    auto iter=this->detectOverlap(index, data.length(), leftOverlap, rightOverlap, mergeLength);
+    auto tempIter=iter;
 
-    // cout<<"data; "<<data.substr(0, 10)<<";index: "<<index<<endl;
+    size_t startIndex=(*tempIter).first;
+    size_t totalNum=leftOverlap+rightOverlap+1;
+    size_t oldLength=0;
+    vector<size_t> overlapIndex;
+
+    string mergeStr(mergeLength, '-');
+    for(size_t i=0;i<totalNum;++i){
+        oldLength+=(*tempIter).second.length();
+        string tempStr=(*tempIter).second;
+        for(size_t j=0;j<tempStr.length();++j){
+            mergeStr[(*tempIter).first+j-startIndex]=tempStr[j];
+        }
+        overlapIndex.push_back((*tempIter).first);
+        tempIter++;
+    }
+    this->unassembledBuf[startIndex]=mergeStr;
+    for(size_t i=1;i<totalNum;++i)
+        this->unassembledBuf.erase(overlapIndex[i]);
+    this->unassembledSize-=(oldLength-mergeStr.length());
+
     /*
+    // cout<<"data; "<<data.substr(0, 10)<<";index: "<<index<<endl;
     if(this->unassembledBuf.find(index)!=this->unassembledBuf.end()){
         size_t oldLength=this->unassembledBuf[index].length();
         if(data.length()<=oldLength)
