@@ -38,9 +38,9 @@ class StreamReassembler {
     // 将新的data推入
     void pushData(const string &data, const size_t &index);
     // 检测重叠str
-    map<size_t, string>::iterator detectOverlap(size_t index, size_t length, size_t &leftOverlap, size_t &rightOverlap, size_t &mergeLength);
+    map<size_t, string>::iterator detectOverlap(size_t index, const string &data, size_t &leftOverlap, size_t &rightOverlap, size_t &mergeLength, size_t &oldLength);
     // 合并substr
-    void merge(const string &data, map<int, string>::iterator iter, size_t overlapNum);
+    string merge(map<size_t, string>::iterator iter, size_t overlapNum, size_t mergedLength);
 
     // 堆运算
     // 插入元素到heap中
@@ -82,5 +82,7 @@ class StreamReassembler {
     //! \returns `true` if no substrings are waiting to be assembled
     bool empty() const;
 };
+
+void showMap(map<size_t, string> map0);
 
 #endif  // SPONGE_LIBSPONGE_STREAM_REASSEMBLER_HH

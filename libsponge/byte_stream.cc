@@ -1,5 +1,4 @@
 #include "byte_stream.hh"
-
 #include <deque>
 // Dummy implementation of a flow-controlled in-memory byte stream.
 
