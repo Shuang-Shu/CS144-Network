@@ -40,7 +40,7 @@ class StreamReassembler {
     // 检测重叠str
     map<size_t, string>::iterator detectOverlap(size_t index, const string &data, size_t &leftOverlap, size_t &rightOverlap, size_t &mergeLength, size_t &oldLength);
     // 合并substr
-    string merge(map<size_t, string>::iterator iter, size_t overlapNum, size_t mergedLength);
+    string merge(size_t index, const string &data, map<size_t, string>::iterator iter, size_t overlapNum, size_t mergedLength);
 
     // 堆运算
     // 插入元素到heap中

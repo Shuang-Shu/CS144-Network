@@ -25,6 +25,7 @@ bool StreamReassembler::isFull(){
 //! \details This function accepts a substring (aka a segment) of bytes,
 //! possibly out-of-order, from the logical stream, and assembles any newly
 //! contiguous substrings and writes them into the output stream in order.
+// 已检查
 void StreamReassembler::push_substring(const string &data, const size_t index, const bool aEof) {
     // DUMMY_CODE(data, index, eof);
     //cout<<"=========================================="<<endl;
@@ -34,11 +35,12 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
         this->pushData(data, index);
     this->insertStr(data, index);
     this->assembleStr();
-    cout<<"未组装大小: "<<this->unassembledSize<<endl;
+    //cout<<"未组装大小: "<<this->unassembledSize<<endl;
     this->writeStr();
     //cout<<"=========================================="<<endl;
 }
 
+// 已检查
 void StreamReassembler::pushData(const string &data, const size_t &index){
     if(index+data.length()<=this->expectedIdx)
         // 若该data并无有用信息
@@ -68,15 +70,19 @@ size_t &rightOverlap, size_t &mergedLength, size_t &oldLength){
         if((*findIter).second.length()>data.length())
             // 没有新的信息，不处理
             return findIter;
-        else
+        else{
             // 因为此时data的长度大于buf中同index的内容，则旧内容一定被覆盖
+            oldLength+=(*findIter).second.length();
             this->unassembledBuf.erase(index);
+        }
     }
     this->unassembledBuf.insert(make_pair(index, data));
-    size_t rightBound=index+data.length();
+    size_t dataRightBound=index+data.length();
+    size_t rightBound=dataRightBound;
 
     auto iter=this->unassembledBuf.find(index);
     map<size_t, string>::reverse_iterator riter(this->unassembledBuf.find(index));
+    riter--;
 
     auto end=this->unassembledBuf.end();
     auto rend=this->unassembledBuf.rend();
@@ -84,53 +90,25 @@ size_t &rightOverlap, size_t &mergedLength, size_t &oldLength){
     iter++;
     riter++;
 
-    while(iter!=end&&(*iter).first<=rightBound){
+    while(iter!=end&&(*iter).first<=dataRightBound){
+        rightBound=max(rightBound, (*iter).first+(*iter).second.length());
         oldLength+=(*iter).second.length();
         rightOverlap++;
         iter++;
     }
     iter--;
+    rightBound=dataRightBound>rightBound?dataRightBound:rightBound;
     while(riter!=rend&&((*riter).first+(*riter).second.length()>=index)){
+        rightBound=max(rightBound, (*riter).first+(*riter).second.length());
         oldLength+=(*riter).second.length();
         leftOverlap++;
         riter++;
     }
     riter--;
     mergedLength=rightBound-(*riter).first;
+    // 此处存在问题
+    //this->unassembledBuf.erase(index);
     return --(riter.base());
-
-    /*
-    this->unassembledBuf.insert(make_pair(index, data));
-    auto iterLeft=map<size_t, string>::reverse_iterator(this->unassembledBuf.find(index));
-    iterLeft++;
-
-    auto end=this->unassembledBuf.end();
-    auto rend=this->unassembledBuf.rend();
-    
-    auto iterRight=this->unassembledBuf.find(index);
-    iterRight++;
-
-    size_t rightBound=index+data.length();
-    while(iterLeft!=rend&&(*iterLeft).first+(*iterLeft).second.length()>=index){
-        leftOverlap++;
-        iterLeft++;
-    }
-    while(iterRight!=end&&(*iterRight).first<rightBound){
-        rightOverlap++;
-        iterRight++;
-    }
-
-    //cout<<(*iterLeft).first<<endl;
-    iterLeft--;
-    iterRight--;
-    //cout<<(*iterLeft).first<<endl;
-    //cout<<index<<", "<<this->unassembledBuf.size()<<", "<<((*(iterRight)).first)<<", "<<(*(iterRight)).second.length()<<", "<<(*(iterLeft)).first<<endl;
-    mergeLength=(*(iterRight)).first+(*(iterRight)).second.length()-(*(iterLeft)).first;
-    //cout<<mergeLength<<endl;
-    //cout<<leftOverlap<<", "<<rightOverlap<<endl;
-    cout<<(*iterLeft).first<<", "<<(*(--iterLeft.base())).first<<endl;
-    return --(iterLeft.base());
-    */
 }
 
 // merge函数，根据传入的iter和overlapNum，自动将unassembledBuf中的重叠substring组合
@@ -138,7 +116,8 @@ size_t &rightOverlap, size_t &mergedLength, size_t &oldLength){
 // overlapNum：重叠的substring数量
 // mergedLength：合并后的string长度
 
-string StreamReassembler::merge(map<size_t, string>::iterator iter, size_t overlapNum, size_t mergedLength){
+string StreamReassembler::merge(size_t index, const string &data, map<size_t, string>::iterator iter, size_t overlapNum, size_t mergedLength){
+    //size_t gapSum=0;
     vector<size_t> overlapIndex;
     auto tempIter=iter;
     tempIter++;
@@ -146,14 +125,25 @@ string StreamReassembler::merge(map<size_t, string>::iterator iter, size_t overl
         overlapIndex.push_back((*tempIter).first);
     }
     string mergedStr(mergedLength, '-');
-    size_t start=(*iter).first;
+    size_t start;
+    if(iter!=this->unassembledBuf.end())
+        start=(*iter).first;
+    else
+        start=index;
+
     size_t offset=0;
+    // 将data中的数据写入
     for(size_t i=0;i<overlapNum;++i){
         offset=(*iter).first-start;
         string tempStr=(*iter).second;
         for(size_t j=0;j<tempStr.length();++j){
             mergedStr[offset+j]=tempStr[j];
         }
+        ++iter;
+    }
+    offset=index-start;
+    for(size_t i=0;i<data.length();++i){
+        mergedStr[offset+i]=data[i];
     }
     for(size_t i=0;i<overlapIndex.size();++i){
         this->unassembledBuf.erase(overlapIndex[i]);
@@ -167,67 +157,21 @@ void StreamReassembler::insertStr(const string &data, size_t index){
     size_t mergedLength=0;
     size_t oldLength=0;
 
+    // 若unassemBuf中的空间原本为0
     auto leftIter=this->detectOverlap(index, data, leftOverlap, rightOverlap, mergedLength, oldLength);
-    string mergedStr=this->merge(leftIter, rightOverlap+leftOverlap+1, mergedLength);
+    string mergedStr=this->merge(index, data, leftIter, rightOverlap+leftOverlap+1, mergedLength);
     this->unassembledSize+=(mergedLength-oldLength);
+    this->insertToHeap(index);
     (*leftIter).second=mergedStr;
-
-    /*
-    auto tempIter=this->detectOverlap(index, data, leftOverlap, rightOverlap, mergeLength, oldLength);
-    // auto iter=this->assembledBuf.find(index);
-    //auto tempIter=iter;
-    //cout<<(*tempIter).first<<endl;
-
-    size_t startIndex=(*tempIter).first;
-    //showMap(this->unassembledBuf);
-    size_t totalNum=leftOverlap+rightOverlap+1;
-    cout<<totalNum<<", "<<mergeLength<<", "<<(*tempIter).first<<endl;
-    vector<size_t> overlapIndex;
-
-    string mergeStr(mergeLength, '-');
-    for(size_t i=0;i<totalNum;++i){
-        string tempStr=(*tempIter).second;
-        for(size_t j=0;j<tempStr.length();++j){
-            mergeStr[(*tempIter).first+j-startIndex]=tempStr[j];
-        }
-        overlapIndex.push_back((*tempIter).first);
-        tempIter++;
-    }
-    //this->unassembledBuf[startIndex]=mergeStr;
-    for(size_t i=1;i<totalNum;++i)
-        this->unassembledBuf.erase(overlapIndex[i]);
-    this->unassembledSize+=(mergeStr.length()-oldLength);
-    this->unassembledSize+=data.length();
-    this->unassembledBuf.erase(startIndex);
-    this->unassembledBuf.insert(make_pair(startIndex, mergeStr));
-    this->insertToHeap(startIndex);
-    cout<<this->unassembledBuf.size()<<endl;
-    // cout<<"data; "<<data.substr(0, 10)<<";index: "<<index<<endl;
-    if(this->unassembledBuf.find(index)!=this->unassembledBuf.end()){
-        size_t oldLength=this->unassembledBuf[index].length();
-        if(data.length()<=oldLength)
-            return;
-        else{
-            // 要检查capacity是否足够
-            size_t leftSpace=this->capacity-this->unassembledSize-this->assembledBuf.length();
-            size_t validLength=min(leftSpace, data.length()-oldLength);
-            this->unassembledSize+=validLength;
-            this->unassembledBuf[index]=data.substr(0, validLength+oldLength);
-        }
-    }else{
-        this->insertToHeap(index);
-        size_t leftSpace=this->capacity-this->unassembledSize-this->assembledBuf.length();
-        size_t validLength=min(leftSpace, data.length());
-        this->unassembledSize+=validLength;
-        this->unassembledBuf.insert(make_pair(index, data.substr(0, validLength)));
-    }
-    */
 }
 
 void StreamReassembler::assembleStr(){
     //cout<<"期望的index: "<<this->expectedIdx<<"目前的最小索引: "<<this->peek()<<endl;
     while(!(this->idx_heap.empty())&&this->expectedIdx>=this->peek()){
         size_t peekVal=this->pop();
+        if(this->unassembledBuf.find(peekVal)==this->unassembledBuf.end())
+            // 若在未组装区中没有这个peekVa
+            return;
         string &strRef=this->unassembledBuf[peekVal];
         //cout<<"peekVal: "<<peekVal<<";assembledStr: "<<this->assembledBuf<<";strRef: "<<strRef<<endl;
         this->unassembledBuf.erase(peekVal);
@@ -270,13 +214,3 @@ size_t StreamReassembler::pop(){
 size_t StreamReassembler::unassembled_bytes() const { return this->unassembledSize; }
 
 bool StreamReassembler::empty() const { return {}; }
-
-// 一些debug函数
-void showMap(map<size_t, string> map0){
-    auto iter=map0.begin();
-    while(iter!=map0.end()){
-        cout<<(*iter).second<<", ";
-        iter++;
-    }
-    cout<<endl;
-}
