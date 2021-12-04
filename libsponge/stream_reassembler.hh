@@ -38,9 +38,19 @@ class StreamReassembler {
     // 将新的data推入
     void pushData(const string &data, const size_t &index);
     // 检测重叠str
-    map<size_t, string>::iterator detectOverlap(size_t index, const string &data, size_t &leftOverlap, size_t &rightOverlap, size_t &mergeLength, size_t &oldLength);
+    map<size_t, string>::iterator detectOverlap(size_t index, 
+    const string &data, size_t &leftOverlap, 
+    size_t &rightOverlap, size_t &mergeLength, 
+    size_t &oldLength);
     // 合并substr
-    string merge(size_t index, const string &data, map<size_t, string>::iterator iter, size_t overlapNum, size_t mergedLength);
+    void merge(size_t index, const string &data, 
+    map<size_t, string>::iterator iter, 
+    size_t leftOverlap, 
+    size_t rightOverlap, size_t mergedLength);
+    // 删除重复的substr
+    void deleteOverlap(map<size_t, string>::iterator iter, size_t count);
+    // 更新未组合缓冲区大小
+    void refreshSize();
 
     // 堆运算
     // 插入元素到heap中
