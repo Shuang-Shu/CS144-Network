@@ -7,6 +7,7 @@
 #include <string>
 #include <map>
 #include <utility>
+#include <vector>
 
 using namespace std;
 
@@ -21,7 +22,7 @@ class StreamReassembler {
     map<size_t, string> unassemBuf;
     string assemBuf;  // 已组装的buf
     size_t expectIdx; // 期望装入assemBuf的index
-    size_t unassmSize; // 未组装的substring的总长度
+    size_t unassemSize; // 未组装的substring的总长度
     size_t eofIndex; //是否已经结束
 
     void pushUnassem(string data, size_t index); // 将data压入unassemBuf

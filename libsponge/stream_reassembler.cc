@@ -13,7 +13,7 @@ void DUMMY_CODE(Targs &&... /* unused */) {}
 using namespace std;
 
 StreamReassembler::StreamReassembler(const size_t capacity) : _output(capacity), _capacity(capacity),
-unassemBuf(), assemBuf(), expectIdx(0), unassmSize(0), eofIndex(-1) {}
+unassemBuf(), assemBuf(), expectIdx(0), unassemSize(0), eofIndex(-1) {}
 
 //! \details This function accepts a substring (aka a segment) of bytes,
 //! possibly out-of-order, from the logical stream, and assembles any newly
@@ -34,7 +34,8 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
 void StreamReassembler::pushUnassem(string data, size_t index){
     // 预处理
     string validStr;
-    size_t validIdx;
+    size_t validIdx,rightBound;
+    rightBound=index+data.length();
     if(index+data.length()<=expectIdx)
         return;
     else if(index<expectIdx){
@@ -55,17 +56,20 @@ void StreamReassembler::pushUnassem(string data, size_t index){
             (*unassemBuf.find(validIdx)).second=validStr;
     }
     auto iterR=unassemBuf.find(validIdx);
+    auto iterRL=iterR;
     auto iterL=iterR;
-    iterR++;iterL--;
-    if(iterL!=unassemBuf.end()&&(*iterL).first+(*iterL).second.length()>validIdx)
-        iterL--;
+    iterL--;
     if(iterL==unassemBuf.end())
-        iterL++;
-    while(iterR!=unassemBuf.end()&&(*iterR).first>=validIdx+validStr.length())
+        iterL=iterR;
+    else if((*iterL).first+(*iterL).second.length()<=(*iterR).first)
+        iterL=iterR;
+    rightBound=max((*iterL).first+(*iterL).second.length(), rightBound);
+    while(iterR!=unassemBuf.end()&&(*iterR).first<validIdx+validStr.length()){
+        rightBound=max(rightBound, (*iterR).first+(*iterR).second.length());
+        iterRL=iterR;
         iterR++;
-    auto tempIter=iterR;
-    tempIter--;
-    string mergedStr((*tempIter).first+(*tempIter).second.length()-(*iterL).first, '-');
+    }
+    string mergedStr(rightBound-(*iterL).first, '-');
     size_t leftBound=(*iterL).first;
     for(auto iter=iterL;iter!=iterR;++iter){
         size_t offset=(*iter).first;
@@ -73,9 +77,15 @@ void StreamReassembler::pushUnassem(string data, size_t index){
         for(size_t j=0;j<tempStr.length();++j)
             mergedStr[j+offset-leftBound]=tempStr[j];
     }
-    iterL++;
-    for(auto iter=iterL;iter!=iterR;++iter)
-        unassemBuf.erase((*iter).first);
+    (*iterL).second=mergedStr;
+    if(iterL!=iterR){
+        iterL++;
+        vector<size_t> deleteIdx;
+        for(auto iter=iterL;iter!=iterR;++iter)
+            deleteIdx.push_back((*iter).first);
+        for(size_t i=0;i<deleteIdx.size();++i)
+            unassemBuf.erase(deleteIdx[i]);
+    }
 }
 
 void StreamReassembler::assem(){
@@ -90,7 +100,7 @@ void StreamReassembler::assem(){
     size_t newSize=0;
     for(iter=unassemBuf.begin();iter!=unassemBuf.end();++iter)
         newSize+=(*iter).second.length();
-    unassmSize=newSize;
+    unassemSize=newSize;
 }
 
 void StreamReassembler::writeStr(){
@@ -99,6 +109,8 @@ void StreamReassembler::writeStr(){
 }
 
 void StreamReassembler::fixCap(){
+    if(unassemBuf.size()==0)
+        return;
     size_t temp=0;
     for(auto iter=unassemBuf.begin();iter!=unassemBuf.end();++iter)
         temp+=(*iter).second.length();
@@ -118,6 +130,10 @@ void StreamReassembler::fixCap(){
     }
 }
 
-size_t StreamReassembler::unassembled_bytes() const { return {}; }
+size_t StreamReassembler::unassembled_bytes() const { return unassemSize; }
 
-bool StreamReassembler::empty() const { return {}; }
+bool StreamReassembler::empty() const {
+    if(unassemSize+assemBuf.length()==0)
+        return true;
+    return false;
+}

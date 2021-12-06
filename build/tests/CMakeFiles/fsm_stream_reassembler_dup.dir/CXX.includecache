@@ -19,13 +19,11 @@ cstdint
 -
 string
 -
-vector
--
-algorithm
--
 map
 -
-iostream
+utility
+-
+vector
 -
 
 ../libsponge/util/util.hh

@@ -1,17 +1,17 @@
-Start testing: Dec 05 01:56 CST
+Start testing: Dec 06 21:16 CST
 ----------------------------------------------------------
 18/169 Testing: t_strm_reassem_single
 18/169 Test: t_strm_reassem_single
 Command: "/home/network/CS144-Network/build/tests/fsm_stream_reassembler_single"
 Directory: /home/network/CS144-Network/build
-"t_strm_reassem_single" start time: Dec 05 01:56 CST
+"t_strm_reassem_single" start time: Dec 06 21:16 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_single" end time: Dec 05 01:56 CST
+"t_strm_reassem_single" end time: Dec 06 21:16 CST
 "t_strm_reassem_single" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -19,14 +19,14 @@ Test Passed.
 19/169 Test: t_strm_reassem_seq
 Command: "/home/network/CS144-Network/build/tests/fsm_stream_reassembler_seq"
 Directory: /home/network/CS144-Network/build
-"t_strm_reassem_seq" start time: Dec 05 01:56 CST
+"t_strm_reassem_seq" start time: Dec 06 21:16 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_seq" end time: Dec 05 01:56 CST
+"t_strm_reassem_seq" end time: Dec 06 21:16 CST
 "t_strm_reassem_seq" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -34,14 +34,14 @@ Test Passed.
 20/169 Test: t_strm_reassem_dup
 Command: "/home/network/CS144-Network/build/tests/fsm_stream_reassembler_dup"
 Directory: /home/network/CS144-Network/build
-"t_strm_reassem_dup" start time: Dec 05 01:56 CST
+"t_strm_reassem_dup" start time: Dec 06 21:16 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_dup" end time: Dec 05 01:56 CST
+"t_strm_reassem_dup" end time: Dec 06 21:16 CST
 "t_strm_reassem_dup" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -49,14 +49,14 @@ Test Passed.
 21/169 Test: t_strm_reassem_holes
 Command: "/home/network/CS144-Network/build/tests/fsm_stream_reassembler_holes"
 Directory: /home/network/CS144-Network/build
-"t_strm_reassem_holes" start time: Dec 05 01:56 CST
+"t_strm_reassem_holes" start time: Dec 06 21:16 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_holes" end time: Dec 05 01:56 CST
+"t_strm_reassem_holes" end time: Dec 06 21:16 CST
 "t_strm_reassem_holes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -64,15 +64,14 @@ Test Passed.
 22/169 Test: t_strm_reassem_many
 Command: "/home/network/CS144-Network/build/tests/fsm_stream_reassembler_many"
 Directory: /home/network/CS144-Network/build
-"t_strm_reassem_many" start time: Dec 05 01:56 CST
+"t_strm_reassem_many" start time: Dec 06 21:16 CST
 Output:
 ----------------------------------------------------------
-Exception: test 1 - number of bytes RX is incorrect
 <end of output>
-Test time =   0.01 sec
+Test time =   0.11 sec
 ----------------------------------------------------------
-Test Failed.
-"t_strm_reassem_many" end time: Dec 05 01:56 CST
+Test Passed.
+"t_strm_reassem_many" end time: Dec 06 21:16 CST
 "t_strm_reassem_many" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -80,14 +79,14 @@ Test Failed.
 23/169 Test: t_strm_reassem_overlapping
 Command: "/home/network/CS144-Network/build/tests/fsm_stream_reassembler_overlapping"
 Directory: /home/network/CS144-Network/build
-"t_strm_reassem_overlapping" start time: Dec 05 01:56 CST
+"t_strm_reassem_overlapping" start time: Dec 06 21:16 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_overlapping" end time: Dec 05 01:56 CST
+"t_strm_reassem_overlapping" end time: Dec 06 21:16 CST
 "t_strm_reassem_overlapping" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -95,15 +94,14 @@ Test Passed.
 24/169 Test: t_strm_reassem_win
 Command: "/home/network/CS144-Network/build/tests/fsm_stream_reassembler_win"
 Directory: /home/network/CS144-Network/build
-"t_strm_reassem_win" start time: Dec 05 01:56 CST
+"t_strm_reassem_win" start time: Dec 06 21:16 CST
 Output:
 ----------------------------------------------------------
-Exception: test 2 - number of RX bytes is incorrect
 <end of output>
-Test time =   0.01 sec
+Test time =   0.15 sec
 ----------------------------------------------------------
-Test Failed.
-"t_strm_reassem_win" end time: Dec 05 01:56 CST
+Test Passed.
+"t_strm_reassem_win" end time: Dec 06 21:16 CST
 "t_strm_reassem_win" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -111,27 +109,14 @@ Test Failed.
 25/169 Test: t_strm_reassem_cap
 Command: "/home/network/CS144-Network/build/tests/fsm_stream_reassembler_cap"
 Directory: /home/network/CS144-Network/build
-"t_strm_reassem_cap" start time: Dec 05 01:56 CST
+"t_strm_reassem_cap" start time: Dec 06 21:16 CST
 Output:
 ----------------------------------------------------------
-Test Failure on expectation:
-	Expectation: net bytes assembled = 2
-
-Failure message:
-	The reassembler was expected to have `2` total bytes assembled, but there were `1`
-
-List of steps that executed successfully:
-	Initialized (capacity = 2)
-	Action:      substring submitted with data "bX", index `1`, eof `0`
-	Expectation: net bytes assembled = 0
-	Action:      substring submitted with data "a", index `0`, eof `0`
-
-Exception: The reassembler was expected to have `2` total bytes assembled, but there were `1`
 <end of output>
-Test time =   0.00 sec
+Test time =   0.10 sec
 ----------------------------------------------------------
-Test Failed.
-"t_strm_reassem_cap" end time: Dec 05 01:56 CST
+Test Passed.
+"t_strm_reassem_cap" end time: Dec 06 21:16 CST
 "t_strm_reassem_cap" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -139,14 +124,14 @@ Test Failed.
 26/169 Test: t_byte_stream_construction
 Command: "/home/network/CS144-Network/build/tests/byte_stream_construction"
 Directory: /home/network/CS144-Network/build
-"t_byte_stream_construction" start time: Dec 05 01:56 CST
+"t_byte_stream_construction" start time: Dec 06 21:16 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_construction" end time: Dec 05 01:56 CST
+"t_byte_stream_construction" end time: Dec 06 21:16 CST
 "t_byte_stream_construction" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -154,14 +139,14 @@ Test Passed.
 27/169 Test: t_byte_stream_one_write
 Command: "/home/network/CS144-Network/build/tests/byte_stream_one_write"
 Directory: /home/network/CS144-Network/build
-"t_byte_stream_one_write" start time: Dec 05 01:56 CST
+"t_byte_stream_one_write" start time: Dec 06 21:16 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_one_write" end time: Dec 05 01:56 CST
+"t_byte_stream_one_write" end time: Dec 06 21:16 CST
 "t_byte_stream_one_write" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -169,14 +154,14 @@ Test Passed.
 28/169 Test: t_byte_stream_two_writes
 Command: "/home/network/CS144-Network/build/tests/byte_stream_two_writes"
 Directory: /home/network/CS144-Network/build
-"t_byte_stream_two_writes" start time: Dec 05 01:56 CST
+"t_byte_stream_two_writes" start time: Dec 06 21:16 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_two_writes" end time: Dec 05 01:56 CST
+"t_byte_stream_two_writes" end time: Dec 06 21:16 CST
 "t_byte_stream_two_writes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -184,14 +169,14 @@ Test Passed.
 29/169 Test: t_byte_stream_capacity
 Command: "/home/network/CS144-Network/build/tests/byte_stream_capacity"
 Directory: /home/network/CS144-Network/build
-"t_byte_stream_capacity" start time: Dec 05 01:56 CST
+"t_byte_stream_capacity" start time: Dec 06 21:16 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.57 sec
+Test time =   0.60 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_capacity" end time: Dec 05 01:56 CST
+"t_byte_stream_capacity" end time: Dec 06 21:16 CST
 "t_byte_stream_capacity" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -199,14 +184,14 @@ Test Passed.
 30/169 Test: t_byte_stream_many_writes
 Command: "/home/network/CS144-Network/build/tests/byte_stream_many_writes"
 Directory: /home/network/CS144-Network/build
-"t_byte_stream_many_writes" start time: Dec 05 01:56 CST
+"t_byte_stream_many_writes" start time: Dec 06 21:16 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_many_writes" end time: Dec 05 01:56 CST
+"t_byte_stream_many_writes" end time: Dec 06 21:16 CST
 "t_byte_stream_many_writes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -214,14 +199,14 @@ Test Passed.
 53/169 Test: t_address_dt
 Command: "/home/network/CS144-Network/build/doctests/address_dt"
 Directory: /home/network/CS144-Network/build
-"t_address_dt" start time: Dec 05 01:56 CST
+"t_address_dt" start time: Dec 06 21:16 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_address_dt" end time: Dec 05 01:56 CST
+"t_address_dt" end time: Dec 06 21:16 CST
 "t_address_dt" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -229,14 +214,14 @@ Test Passed.
 54/169 Test: t_parser_dt
 Command: "/home/network/CS144-Network/build/doctests/parser_dt"
 Directory: /home/network/CS144-Network/build
-"t_parser_dt" start time: Dec 05 01:56 CST
+"t_parser_dt" start time: Dec 06 21:16 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_parser_dt" end time: Dec 05 01:56 CST
+"t_parser_dt" end time: Dec 06 21:16 CST
 "t_parser_dt" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -244,15 +229,15 @@ Test Passed.
 55/169 Test: t_socket_dt
 Command: "/home/network/CS144-Network/build/doctests/socket_dt"
 Directory: /home/network/CS144-Network/build
-"t_socket_dt" start time: Dec 05 01:56 CST
+"t_socket_dt" start time: Dec 06 21:16 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_socket_dt" end time: Dec 05 01:56 CST
+"t_socket_dt" end time: Dec 06 21:16 CST
 "t_socket_dt" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Dec 05 01:56 CST
+End testing: Dec 06 21:16 CST
