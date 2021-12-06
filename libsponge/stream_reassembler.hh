@@ -5,10 +5,8 @@
 
 #include <cstdint>
 #include <string>
-#include <vector>
-#include <algorithm>
 #include <map>
-#include <iostream>
+#include <utility>
 
 using namespace std;
 
@@ -17,49 +15,19 @@ using namespace std;
 class StreamReassembler {
   private:
     // Your code here -- add private members as necessary.
-    size_t capacity;    //!< The maximum number of bytes
+
     ByteStream _output;  //!< The reassembled in-order byte stream
-    map<size_t, string> unassembledBuf; // 未重组的缓冲区
-    vector<size_t> idx_heap; // 索引的小顶堆
-    string assembledBuf; // 已经重组的缓冲区
-    size_t unassembledSize; // 未重组的大小
-    size_t expectedIdx; // 期望的索引，指相对于已重组的部分
-    bool eof;
+    size_t _capacity;    //!< The maximum number of bytes
+    map<size_t, string> unassemBuf;
+    string assemBuf;  // 已组装的buf
+    size_t expectIdx; // 期望装入assemBuf的index
+    size_t unassmSize; // 未组装的substring的总长度
+    size_t eofIndex; //是否已经结束
 
-    // 方法区
-    // 将新的string插入到unassembledBuf中
-    void insertStr(const string &data, size_t index);
-    // 将unassembledBuf中的str尽可能多地重组为有序
-    void assembleStr();
-    // 将assembledBuf中字节写入到_output中
-    void writeStr(); 
-    // 返回空间是否已满
-    bool isFull();
-    // 将新的data推入
-    void pushData(const string &data, const size_t &index);
-    // 检测重叠str
-    map<size_t, string>::iterator detectOverlap(size_t index, 
-    const string &data, size_t &leftOverlap, 
-    size_t &rightOverlap, size_t &mergeLength, 
-    size_t &oldLength);
-    // 合并substr
-    void merge(size_t index, const string &data, 
-    map<size_t, string>::iterator iter, 
-    size_t leftOverlap, 
-    size_t rightOverlap, size_t mergedLength);
-    // 删除重复的substr
-    void deleteOverlap(map<size_t, string>::iterator iter, size_t count);
-    // 更新未组合缓冲区大小
-    void refreshSize();
-
-    // 堆运算
-    // 插入元素到heap中
-    void insertToHeap(size_t);
-    // 获取堆顶元素
-    size_t peek();
-    // 弹出堆顶元素
-    size_t pop();
-
+    void pushUnassem(string data, size_t index); // 将data压入unassemBuf
+    void assem(); // 将unassemBuf中的substr组装到assemBuf中
+    void writeStr(); //将assemBuf中的内容输出到_output中
+    void fixCap(); //修正unassemBuf的容量，保证不超限
   public:
     //! \brief Construct a `StreamReassembler` that will store up to `capacity` bytes.
     //! \note This capacity limits both the bytes that have been reassembled,
@@ -92,7 +60,5 @@ class StreamReassembler {
     //! \returns `true` if no substrings are waiting to be assembled
     bool empty() const;
 };
-
-void showMap(map<size_t, string> map0);
 
 #endif  // SPONGE_LIBSPONGE_STREAM_REASSEMBLER_HH
