@@ -14,8 +14,9 @@ using namespace std;
 //! \param n The input absolute 64-bit sequence number
 //! \param isn The initial sequence number
 WrappingInt32 wrap(uint64_t n, WrappingInt32 isn) {
-    DUMMY_CODE(n, isn);
-    return WrappingInt32{0};
+    uint64_t temp=n+isn.raw_value();
+    uint32_t result=temp;
+    return WrappingInt32(result);
 }
 
 //! Transform a WrappingInt32 into an "absolute" 64-bit sequence number (zero-indexed)
@@ -29,6 +30,39 @@ WrappingInt32 wrap(uint64_t n, WrappingInt32 isn) {
 //! and the other stream runs from the remote TCPSender to the local TCPReceiver and
 //! has a different ISN.
 uint64_t unwrap(WrappingInt32 n, WrappingInt32 isn, uint64_t checkpoint) {
-    DUMMY_CODE(n, isn, checkpoint);
-    return {};
+    //DUMMY_CODE(n, isn, checkpoint);
+    auto nRaw=n.raw_value();
+    auto isnRaw=isn.raw_value();
+    auto dist=nRaw-isnRaw;
+    uint64_t temp=1;
+    temp=temp<<32;
+    uint64_t offset=checkpoint%temp;
+    uint64_t base=(checkpoint/temp)*temp;
+    uint64_t result,temp1,temp2;
+    if(offset<dist){
+        temp1=base-temp+dist;
+        temp2=base+dist;
+        if(absDist(temp1, checkpoint)>=absDist(temp2, checkpoint))
+            result=temp2;
+        else
+            result=temp1;
+    }
+    else if(offset==dist)
+        result=base+dist;
+    else{
+        temp1=base+temp+dist;
+        temp2=base+dist;
+        if(absDist(temp1, checkpoint)>=absDist(temp2, checkpoint))
+            result=temp2;
+        else
+            result=temp1;
+    }
+    return result;
+}
+
+uint64_t absDist(uint64_t a, uint64_t b){
+    if(a>=b)
+        return a-b;
+    else
+        return b-a;
 }

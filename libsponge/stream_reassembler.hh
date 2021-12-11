@@ -49,6 +49,8 @@ class StreamReassembler {
     //!@{
     const ByteStream &stream_out() const { return _output; }
     ByteStream &stream_out() { return _output; }
+    size_t streamSize() const{return assemBuf.length()+_output.buffer_size();};
+    size_t getExpectedIdx() const{return expectIdx;};
     //!@}
 
     //! The number of bytes in the substrings stored but not yet reassembled

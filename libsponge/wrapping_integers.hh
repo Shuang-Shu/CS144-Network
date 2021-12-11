@@ -17,6 +17,9 @@ class WrappingInt32 {
     uint32_t raw_value() const { return _raw_value; }  //!< Access raw stored value
 };
 
+int getK(uint64_t num);
+uint64_t absDist(uint64_t, uint64_t);
+
 //! Transform a 64-bit absolute sequence number (zero-indexed) into a 32-bit relative sequence number
 //! \param n the absolute sequence number
 //! \param isn the initial sequence number
