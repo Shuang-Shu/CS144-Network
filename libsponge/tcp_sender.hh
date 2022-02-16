@@ -5,9 +5,11 @@
 #include "tcp_config.hh"
 #include "tcp_segment.hh"
 #include "wrapping_integers.hh"
+#include "timer.hh"
 
 #include <functional>
 #include <queue>
+#include <map>
 
 //! \brief The "sender" part of a TCP implementation.
 
@@ -17,21 +19,32 @@
 //! segments if the retransmission timer expires.
 class TCPSender {
   private:
-    //! our initial sequence number, the number for our SYN.
+    //! 我们的初始序列号，即SYN的序列号。
     WrappingInt32 _isn;
 
-    //! outbound queue of segments that the TCPSender wants sent
+    //! TCPSender想要发送的报文的输出队列
     std::queue<TCPSegment> _segments_out{};
 
-    //! retransmission timer for the connection
+    //! 连接的重传计时器
     unsigned int _initial_retransmission_timeout;
 
-    //! outgoing stream of bytes that have not yet been sent
+    //! 尚未发送的输出字节流
     ByteStream _stream;
 
-    //! the (absolute) sequence number for the next byte to be sent
+    //! 要发送的下一个字节的(绝对)序列号，可以利用_stream的bytes_read()函数返回值进行计算
     uint64_t _next_seqno{0};
 
+    // 对等方的接收窗口大小
+    uint64_t windowSize{1};
+
+    // 存储突出报文的Map，键为对应报文的absSqeNo
+    std::map<size_t, TCPSegment> outstandingSegs;
+
+    // 存储当前已被确认的absSeqNo
+    size_t ackedAbsSeqNo{0};
+
+    // 一个计时器
+    Timer timer;
   public:
     //! Initialize a TCPSender
     TCPSender(const size_t capacity = TCPConfig::DEFAULT_CAPACITY,
@@ -87,6 +100,17 @@ class TCPSender {
     //! \brief relative seqno for the next byte to be sent
     WrappingInt32 next_seqno() const { return wrap(_next_seqno, _isn); }
     //!@}
+    // ----------------------------------------
+    // 自定函数
+    // 根据报文头和payload生成TCPSegment
+    TCPSegment getSegment(string, TCPHeader);
+    /* 
+      生成Header，Header中只有下述值需要调整:
+        1. seqNo
+        2. SYN
+        3. FIN
+    */
+    TCPHeader getHeader(size_t, bool);
 };
 
 #endif  // SPONGE_LIBSPONGE_TCP_SENDER_HH

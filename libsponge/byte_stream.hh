@@ -82,7 +82,7 @@ class ByteStream {
     //! Total number of bytes written
     size_t bytes_written() const;
 
-    //! Total number of bytes popped
+    //! 弹出的总字节数
     size_t bytes_read() const;
     //!@}
 };

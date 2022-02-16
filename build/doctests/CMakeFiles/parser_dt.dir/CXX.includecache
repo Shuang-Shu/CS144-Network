@@ -38,9 +38,9 @@ string
 utility
 -
 
-/home/network/CS144-Network/doctests/parser_dt.cc
+/home/LJR/network/CS144-Network/doctests/parser_dt.cc
 parser.hh
-/home/network/CS144-Network/doctests/parser.hh
+/home/LJR/network/CS144-Network/doctests/parser.hh
 cstdint
 -
 cstdlib
@@ -50,7 +50,7 @@ stdexcept
 vector
 -
 parser_example.cc
-/home/network/CS144-Network/doctests/parser_example.cc
+/home/LJR/network/CS144-Network/doctests/parser_example.cc
 
-/home/network/CS144-Network/doctests/parser_example.cc
+/home/LJR/network/CS144-Network/doctests/parser_example.cc
 

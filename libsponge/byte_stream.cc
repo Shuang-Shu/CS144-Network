@@ -30,7 +30,7 @@ size_t ByteStream::write(const string &data) {
 }
 
 //! \param[in] len bytes will be copied from the output side of the buffer
-// 观察流接下来的 len 字节的内容
+// 观察流接下来的 len 字节的内容，若真实长度小于len，则获取real_len长度字节
 string ByteStream::peek_output(const size_t len) const {
     // DUMMY_CODE(len);
     string result=string(len, '-');

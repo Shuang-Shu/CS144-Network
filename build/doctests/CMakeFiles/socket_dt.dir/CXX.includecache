@@ -90,13 +90,13 @@ system_error
 vector
 -
 
-/home/network/CS144-Network/doctests/socket_dt.cc
+/home/LJR/network/CS144-Network/doctests/socket_dt.cc
 socket.hh
-/home/network/CS144-Network/doctests/socket.hh
+/home/LJR/network/CS144-Network/doctests/socket.hh
 address.hh
-/home/network/CS144-Network/doctests/address.hh
+/home/LJR/network/CS144-Network/doctests/address.hh
 util.hh
-/home/network/CS144-Network/doctests/util.hh
+/home/LJR/network/CS144-Network/doctests/util.hh
 array
 -
 cstdlib
@@ -110,15 +110,15 @@ sys/socket.h
 vector
 -
 socket_example_1.cc
-/home/network/CS144-Network/doctests/socket_example_1.cc
+/home/LJR/network/CS144-Network/doctests/socket_example_1.cc
 socket_example_2.cc
-/home/network/CS144-Network/doctests/socket_example_2.cc
+/home/LJR/network/CS144-Network/doctests/socket_example_2.cc
 socket_example_3.cc
-/home/network/CS144-Network/doctests/socket_example_3.cc
+/home/LJR/network/CS144-Network/doctests/socket_example_3.cc
 
-/home/network/CS144-Network/doctests/socket_example_1.cc
+/home/LJR/network/CS144-Network/doctests/socket_example_1.cc
 
-/home/network/CS144-Network/doctests/socket_example_2.cc
+/home/LJR/network/CS144-Network/doctests/socket_example_2.cc
 
-/home/network/CS144-Network/doctests/socket_example_3.cc
+/home/LJR/network/CS144-Network/doctests/socket_example_3.cc
 
