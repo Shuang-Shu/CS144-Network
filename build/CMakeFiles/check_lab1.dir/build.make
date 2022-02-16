@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/network/CS144-Network
+CMAKE_SOURCE_DIR = /home/LJR/network/CS144-Network
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/network/CS144-Network/build
+CMAKE_BINARY_DIR = /home/LJR/network/CS144-Network/build
 
 # Utility rule file for check_lab1.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/network/CS144-Network/build
 include CMakeFiles/check_lab1.dir/progress.make
 
 CMakeFiles/check_lab1:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/network/CS144-Network/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Testing the stream reassembler..."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Testing the stream reassembler..."
 	/usr/bin/ctest --output-on-failure --timeout 10 -R 't_strm_reassem_|t_byte_stream|_dt'
 
 check_lab1: CMakeFiles/check_lab1
@@ -72,6 +72,6 @@ CMakeFiles/check_lab1.dir/clean:
 .PHONY : CMakeFiles/check_lab1.dir/clean
 
 CMakeFiles/check_lab1.dir/depend:
-	cd /home/network/CS144-Network/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/network/CS144-Network /home/network/CS144-Network /home/network/CS144-Network/build /home/network/CS144-Network/build /home/network/CS144-Network/build/CMakeFiles/check_lab1.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/LJR/network/CS144-Network/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/LJR/network/CS144-Network /home/LJR/network/CS144-Network /home/LJR/network/CS144-Network/build /home/LJR/network/CS144-Network/build /home/LJR/network/CS144-Network/build/CMakeFiles/check_lab1.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/check_lab1.dir/depend
 

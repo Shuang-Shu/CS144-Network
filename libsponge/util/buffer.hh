@@ -12,9 +12,11 @@
 #include <vector>
 
 //! \brief A reference-counted read-only string that can discard bytes from the front
+// 一个引用计数的只读字符串，可以从前部丢弃字节
 class Buffer {
   private:
     std::shared_ptr<std::string> _storage{};
+    // 起始点的偏移
     size_t _starting_offset{};
 
   public:
@@ -24,8 +26,10 @@ class Buffer {
     Buffer(std::string &&str) noexcept : _storage(std::make_shared<std::string>(std::move(str))) {}
 
     //! \name Expose contents as a std::string_view
+    // string_view 是C++17所提供的用于处理只读字符串的轻量对象。
     //!@{
     std::string_view str() const {
+      // if (not _storage)等价于 if(!_storage)
         if (not _storage) {
             return {};
         }

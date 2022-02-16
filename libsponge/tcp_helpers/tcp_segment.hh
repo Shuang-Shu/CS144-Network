@@ -9,14 +9,18 @@
 //! \brief [TCP](\ref rfc::rfc793) segment
 class TCPSegment {
   private:
+    // TCP报文头部
     TCPHeader _header{};
+    // 有效荷载
     Buffer _payload{};
 
   public:
     //! \brief Parse the segment from a string
+    // 从一个字符串中解析报文
     ParseResult parse(const Buffer buffer, const uint32_t datagram_layer_checksum = 0);
 
     //! \brief Serialize the segment to a string
+    // 将报文序列号为一个字符串
     BufferList serialize(const uint32_t datagram_layer_checksum = 0) const;
 
     //! \name Accessors

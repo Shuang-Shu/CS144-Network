@@ -1,28 +1,42 @@
 t_webget 27 0.0839242
-t_byte_stream_construction 150 2.19407e-05
-t_byte_stream_one_write 139 1.99061e-05
-t_byte_stream_two_writes 139 1.86776e-05
-t_byte_stream_capacity 139 0.00444937
-t_byte_stream_many_writes 147 7.90179e-05
-t_address_dt 153 2.55222e-05
-t_parser_dt 153 1.55619e-05
-t_socket_dt 133 4.14316e-05
-t_strm_reassem_single 47 5.22582e-05
-t_strm_reassem_seq 87 3.44416e-05
-t_strm_reassem_dup 84 7.63063e-05
-t_strm_reassem_holes 42 6.53517e-05
-t_strm_reassem_many 30 0.0040832
-t_strm_reassem_overlapping 30 0.00010754
-t_strm_reassem_win 24 0.00650764
-t_strm_reassem_cap 24 0.0044803
-t_wrapping_ints_cmp 35 0.000105103
-t_wrapping_ints_unwrap 21 0.000158736
-t_wrapping_ints_wrap 32 7.88864e-05
-t_wrapping_ints_roundtrip 21 0.0111142
-t_recv_connect 5 0.000650325
-t_recv_transmit 11 0.00516074
-t_recv_window 8 0.00044053
-t_recv_reorder 11 0.000322812
-t_recv_close 3 0.0012269
-t_recv_special 1 0.0033006
+t_byte_stream_construction 156 2.98101e-05
+t_byte_stream_one_write 145 3.50832e-05
+t_byte_stream_two_writes 145 3.00561e-05
+t_byte_stream_capacity 145 0.00445494
+t_byte_stream_many_writes 153 0.000150173
+t_address_dt 159 9.68362e-05
+t_parser_dt 159 2.80247e-05
+t_socket_dt 139 4.92928e-05
+t_strm_reassem_single 53 0.000112148
+t_strm_reassem_seq 93 6.34317e-05
+t_strm_reassem_dup 90 0.000140924
+t_strm_reassem_holes 48 0.000102883
+t_strm_reassem_many 36 0.00337344
+t_strm_reassem_overlapping 36 0.000142606
+t_strm_reassem_win 30 0.00511568
+t_strm_reassem_cap 30 0.00456672
+t_wrapping_ints_cmp 41 0.00013757
+t_wrapping_ints_unwrap 27 0.000269102
+t_wrapping_ints_wrap 38 0.000144154
+t_wrapping_ints_roundtrip 27 0.00816966
+t_recv_connect 11 0.000509044
+t_recv_transmit 17 0.00485651
+t_recv_window 14 0.00041965
+t_recv_reorder 17 0.000333081
+t_recv_close 9 0.000661668
+t_recv_special 7 0.000887903
+t_send_connect 0 0
+t_send_transmit 0 0
+t_send_retx 0 0
+t_send_window 0 0
+t_send_ack 0 0
+t_send_close 0 0
+t_send_extra 0 0
 ---
+t_send_connect
+t_send_transmit
+t_send_retx
+t_send_window
+t_send_ack
+t_send_close
+t_send_extra

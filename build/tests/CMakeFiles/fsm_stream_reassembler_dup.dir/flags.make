@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wsh
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/network/CS144-Network/libsponge/util -I/home/network/CS144-Network/libsponge/tcp_helpers -I/home/network/CS144-Network/libsponge 
+CXX_INCLUDES = -I/home/LJR/network/CS144-Network/libsponge/util -I/home/LJR/network/CS144-Network/libsponge/tcp_helpers -I/home/LJR/network/CS144-Network/libsponge 
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/network/CS144-Network/doctests
+# Install script for directory: /home/LJR/network/CS144-Network/doctests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
