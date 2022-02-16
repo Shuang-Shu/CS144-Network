@@ -5,10 +5,8 @@
 #include "tcp_config.hh"
 #include "tcp_segment.hh"
 #include "wrapping_integers.hh"
-#include "../tcp_helpers/tcp_segment.hh"
 
 #include <functional>
-#include <map>
 #include <queue>
 
 //! \brief The "sender" part of a TCP implementation.
@@ -20,33 +18,20 @@
 class TCPSender {
   private:
     //! our initial sequence number, the number for our SYN.
-    // 我们的初始序列号，SYN报文的数字
     WrappingInt32 _isn;
 
     //! outbound queue of segments that the TCPSender wants sent
-    // TCP发送器希望发送报文的输出队列
     std::queue<TCPSegment> _segments_out{};
 
     //! retransmission timer for the connection
-    // 初始重传时间，这个值不变
     unsigned int _initial_retransmission_timeout;
 
     //! outgoing stream of bytes that have not yet been sent
-    // 尚未被发送的上层字节流
     ByteStream _stream;
 
     //! the (absolute) sequence number for the next byte to be sent
-    // 下一个要发送的字节的绝对seqNo
     uint64_t _next_seqno{0};
-    // 新定义成员变量
-    // 未确认报文
-    map<size_t, TCPSegment> outstandingSegBuf{};
-    // 计时器
-    Timer timer;
-    // 对等方剩余窗口大小(bytes)
-    uint16_t peerWindowSize;
-    bool reachedLastSeg;
-    uint8_t RTO;
+
   public:
     //! Initialize a TCPSender
     TCPSender(const size_t capacity = TCPConfig::DEFAULT_CAPACITY,
@@ -103,4 +88,5 @@ class TCPSender {
     WrappingInt32 next_seqno() const { return wrap(_next_seqno, _isn); }
     //!@}
 };
+
 #endif  // SPONGE_LIBSPONGE_TCP_SENDER_HH
