@@ -34,19 +34,19 @@ system_error
 vector
 -
 
-/home/network/CS144-Network/tests/byte_stream_test_harness.cc
+/mnt/d/Study/labs/CS144-Network/tests/byte_stream_test_harness.cc
 byte_stream_test_harness.hh
-/home/network/CS144-Network/tests/byte_stream_test_harness.hh
+/mnt/d/Study/labs/CS144-Network/tests/byte_stream_test_harness.hh
 memory
 -
 sstream
 -
 
-/home/network/CS144-Network/tests/byte_stream_test_harness.hh
+/mnt/d/Study/labs/CS144-Network/tests/byte_stream_test_harness.hh
 byte_stream.hh
-/home/network/CS144-Network/tests/byte_stream.hh
+/mnt/d/Study/labs/CS144-Network/tests/byte_stream.hh
 util.hh
-/home/network/CS144-Network/tests/util.hh
+/mnt/d/Study/labs/CS144-Network/tests/util.hh
 exception
 -
 initializer_list

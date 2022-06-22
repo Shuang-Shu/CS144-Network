@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/LJR/network/CS144-Network/tests/fsm_stream_reassembler_single.cc" "/home/LJR/network/CS144-Network/build/tests/CMakeFiles/fsm_stream_reassembler_single.dir/fsm_stream_reassembler_single.cc.o"
+  "/mnt/d/Study/labs/CS144-Network/tests/fsm_stream_reassembler_single.cc" "/mnt/d/Study/labs/CS144-Network/build/tests/CMakeFiles/fsm_stream_reassembler_single.dir/fsm_stream_reassembler_single.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,8 +17,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/LJR/network/CS144-Network/build/tests/CMakeFiles/spongechecks.dir/DependInfo.cmake"
-  "/home/LJR/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/DependInfo.cmake"
+  "/mnt/d/Study/labs/CS144-Network/build/tests/CMakeFiles/spongechecks.dir/DependInfo.cmake"
+  "/mnt/d/Study/labs/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

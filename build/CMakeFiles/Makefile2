@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/LJR/network/CS144-Network
+CMAKE_SOURCE_DIR = /mnt/d/Study/labs/CS144-Network
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/LJR/network/CS144-Network/build
+CMAKE_BINARY_DIR = /mnt/d/Study/labs/CS144-Network/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -231,14 +231,14 @@ tests/clean: tests/CMakeFiles/send_ack.dir/clean
 CMakeFiles/check.dir/all:
 	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/depend
 	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=13 "Built target check"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=13 "Built target check"
 .PHONY : CMakeFiles/check.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/check.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/check.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : CMakeFiles/check.dir/rule
 
 # Convenience name for target.
@@ -258,14 +258,14 @@ CMakeFiles/check.dir/clean:
 CMakeFiles/check_lab6.dir/all:
 	$(MAKE) -f CMakeFiles/check_lab6.dir/build.make CMakeFiles/check_lab6.dir/depend
 	$(MAKE) -f CMakeFiles/check_lab6.dir/build.make CMakeFiles/check_lab6.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=20 "Built target check_lab6"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=20 "Built target check_lab6"
 .PHONY : CMakeFiles/check_lab6.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/check_lab6.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/check_lab6.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : CMakeFiles/check_lab6.dir/rule
 
 # Convenience name for target.
@@ -285,14 +285,14 @@ CMakeFiles/check_lab6.dir/clean:
 CMakeFiles/check_lab3.dir/all:
 	$(MAKE) -f CMakeFiles/check_lab3.dir/build.make CMakeFiles/check_lab3.dir/depend
 	$(MAKE) -f CMakeFiles/check_lab3.dir/build.make CMakeFiles/check_lab3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=17 "Built target check_lab3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=17 "Built target check_lab3"
 .PHONY : CMakeFiles/check_lab3.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/check_lab3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/check_lab3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : CMakeFiles/check_lab3.dir/rule
 
 # Convenience name for target.
@@ -312,14 +312,14 @@ CMakeFiles/check_lab3.dir/clean:
 CMakeFiles/check_lab2.dir/all:
 	$(MAKE) -f CMakeFiles/check_lab2.dir/build.make CMakeFiles/check_lab2.dir/depend
 	$(MAKE) -f CMakeFiles/check_lab2.dir/build.make CMakeFiles/check_lab2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=16 "Built target check_lab2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=16 "Built target check_lab2"
 .PHONY : CMakeFiles/check_lab2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/check_lab2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/check_lab2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : CMakeFiles/check_lab2.dir/rule
 
 # Convenience name for target.
@@ -339,14 +339,14 @@ CMakeFiles/check_lab2.dir/clean:
 CMakeFiles/check_lab5.dir/all:
 	$(MAKE) -f CMakeFiles/check_lab5.dir/build.make CMakeFiles/check_lab5.dir/depend
 	$(MAKE) -f CMakeFiles/check_lab5.dir/build.make CMakeFiles/check_lab5.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=19 "Built target check_lab5"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=19 "Built target check_lab5"
 .PHONY : CMakeFiles/check_lab5.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/check_lab5.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/check_lab5.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : CMakeFiles/check_lab5.dir/rule
 
 # Convenience name for target.
@@ -366,14 +366,14 @@ CMakeFiles/check_lab5.dir/clean:
 CMakeFiles/check_lab4.dir/all:
 	$(MAKE) -f CMakeFiles/check_lab4.dir/build.make CMakeFiles/check_lab4.dir/depend
 	$(MAKE) -f CMakeFiles/check_lab4.dir/build.make CMakeFiles/check_lab4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=18 "Built target check_lab4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=18 "Built target check_lab4"
 .PHONY : CMakeFiles/check_lab4.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/check_lab4.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/check_lab4.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : CMakeFiles/check_lab4.dir/rule
 
 # Convenience name for target.
@@ -393,14 +393,14 @@ CMakeFiles/check_lab4.dir/clean:
 CMakeFiles/check_lab1.dir/all:
 	$(MAKE) -f CMakeFiles/check_lab1.dir/build.make CMakeFiles/check_lab1.dir/depend
 	$(MAKE) -f CMakeFiles/check_lab1.dir/build.make CMakeFiles/check_lab1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=15 "Built target check_lab1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=15 "Built target check_lab1"
 .PHONY : CMakeFiles/check_lab1.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/check_lab1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/check_lab1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : CMakeFiles/check_lab1.dir/rule
 
 # Convenience name for target.
@@ -420,14 +420,14 @@ CMakeFiles/check_lab1.dir/clean:
 CMakeFiles/check_lab0.dir/all:
 	$(MAKE) -f CMakeFiles/check_lab0.dir/build.make CMakeFiles/check_lab0.dir/depend
 	$(MAKE) -f CMakeFiles/check_lab0.dir/build.make CMakeFiles/check_lab0.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=14 "Built target check_lab0"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=14 "Built target check_lab0"
 .PHONY : CMakeFiles/check_lab0.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/check_lab0.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/check_lab0.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : CMakeFiles/check_lab0.dir/rule
 
 # Convenience name for target.
@@ -447,14 +447,14 @@ CMakeFiles/check_lab0.dir/clean:
 CMakeFiles/check_webget.dir/all:
 	$(MAKE) -f CMakeFiles/check_webget.dir/build.make CMakeFiles/check_webget.dir/depend
 	$(MAKE) -f CMakeFiles/check_webget.dir/build.make CMakeFiles/check_webget.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=21 "Built target check_webget"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=21 "Built target check_webget"
 .PHONY : CMakeFiles/check_webget.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/check_webget.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/check_webget.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : CMakeFiles/check_webget.dir/rule
 
 # Convenience name for target.
@@ -474,14 +474,14 @@ CMakeFiles/check_webget.dir/clean:
 CMakeFiles/format.dir/all:
 	$(MAKE) -f CMakeFiles/format.dir/build.make CMakeFiles/format.dir/depend
 	$(MAKE) -f CMakeFiles/format.dir/build.make CMakeFiles/format.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num= "Built target format"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num= "Built target format"
 .PHONY : CMakeFiles/format.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/format.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/format.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : CMakeFiles/format.dir/rule
 
 # Convenience name for target.
@@ -501,14 +501,14 @@ CMakeFiles/format.dir/clean:
 libsponge/CMakeFiles/sponge.dir/all:
 	$(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/depend
 	$(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85 "Built target sponge"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85 "Built target sponge"
 .PHONY : libsponge/CMakeFiles/sponge.dir/all
 
 # Build rule for subdir invocation for target.
 libsponge/CMakeFiles/sponge.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 18
 	$(MAKE) -f CMakeFiles/Makefile2 libsponge/CMakeFiles/sponge.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : libsponge/CMakeFiles/sponge.dir/rule
 
 # Convenience name for target.
@@ -528,14 +528,14 @@ libsponge/CMakeFiles/sponge.dir/clean:
 apps/CMakeFiles/webget.dir/all: libsponge/CMakeFiles/sponge.dir/all
 	$(MAKE) -f apps/CMakeFiles/webget.dir/build.make apps/CMakeFiles/webget.dir/depend
 	$(MAKE) -f apps/CMakeFiles/webget.dir/build.make apps/CMakeFiles/webget.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=90,91 "Built target webget"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=90,91 "Built target webget"
 .PHONY : apps/CMakeFiles/webget.dir/all
 
 # Build rule for subdir invocation for target.
 apps/CMakeFiles/webget.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 20
 	$(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/webget.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : apps/CMakeFiles/webget.dir/rule
 
 # Convenience name for target.
@@ -556,14 +556,14 @@ tests/CMakeFiles/send_extra.dir/all: libsponge/CMakeFiles/sponge.dir/all
 tests/CMakeFiles/send_extra.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/send_extra.dir/build.make tests/CMakeFiles/send_extra.dir/depend
 	$(MAKE) -f tests/CMakeFiles/send_extra.dir/build.make tests/CMakeFiles/send_extra.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=58,59 "Built target send_extra"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=58,59 "Built target send_extra"
 .PHONY : tests/CMakeFiles/send_extra.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/send_extra.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/send_extra.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/send_extra.dir/rule
 
 # Convenience name for target.
@@ -584,14 +584,14 @@ tests/CMakeFiles/send_close.dir/all: libsponge/CMakeFiles/sponge.dir/all
 tests/CMakeFiles/send_close.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/send_close.dir/build.make tests/CMakeFiles/send_close.dir/depend
 	$(MAKE) -f tests/CMakeFiles/send_close.dir/build.make tests/CMakeFiles/send_close.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=54,55 "Built target send_close"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=54,55 "Built target send_close"
 .PHONY : tests/CMakeFiles/send_close.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/send_close.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/send_close.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/send_close.dir/rule
 
 # Convenience name for target.
@@ -612,14 +612,14 @@ tests/CMakeFiles/byte_stream_two_writes.dir/all: libsponge/CMakeFiles/sponge.dir
 tests/CMakeFiles/byte_stream_two_writes.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/byte_stream_two_writes.dir/build.make tests/CMakeFiles/byte_stream_two_writes.dir/depend
 	$(MAKE) -f tests/CMakeFiles/byte_stream_two_writes.dir/build.make tests/CMakeFiles/byte_stream_two_writes.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=11,12 "Built target byte_stream_two_writes"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=11,12 "Built target byte_stream_two_writes"
 .PHONY : tests/CMakeFiles/byte_stream_two_writes.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/byte_stream_two_writes.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/byte_stream_two_writes.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/byte_stream_two_writes.dir/rule
 
 # Convenience name for target.
@@ -640,14 +640,14 @@ tests/CMakeFiles/fsm_stream_reassembler_overlapping.dir/all: libsponge/CMakeFile
 tests/CMakeFiles/fsm_stream_reassembler_overlapping.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_overlapping.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_overlapping.dir/depend
 	$(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_overlapping.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_overlapping.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=30,31 "Built target fsm_stream_reassembler_overlapping"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=30,31 "Built target fsm_stream_reassembler_overlapping"
 .PHONY : tests/CMakeFiles/fsm_stream_reassembler_overlapping.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/fsm_stream_reassembler_overlapping.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fsm_stream_reassembler_overlapping.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/fsm_stream_reassembler_overlapping.dir/rule
 
 # Convenience name for target.
@@ -668,14 +668,14 @@ tests/CMakeFiles/fsm_stream_reassembler_many.dir/all: libsponge/CMakeFiles/spong
 tests/CMakeFiles/fsm_stream_reassembler_many.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_many.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_many.dir/depend
 	$(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_many.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_many.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=28,29 "Built target fsm_stream_reassembler_many"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=28,29 "Built target fsm_stream_reassembler_many"
 .PHONY : tests/CMakeFiles/fsm_stream_reassembler_many.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/fsm_stream_reassembler_many.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fsm_stream_reassembler_many.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/fsm_stream_reassembler_many.dir/rule
 
 # Convenience name for target.
@@ -696,14 +696,14 @@ tests/CMakeFiles/byte_stream_construction.dir/all: libsponge/CMakeFiles/sponge.d
 tests/CMakeFiles/byte_stream_construction.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/byte_stream_construction.dir/build.make tests/CMakeFiles/byte_stream_construction.dir/depend
 	$(MAKE) -f tests/CMakeFiles/byte_stream_construction.dir/build.make tests/CMakeFiles/byte_stream_construction.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=5,6 "Built target byte_stream_construction"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=5,6 "Built target byte_stream_construction"
 .PHONY : tests/CMakeFiles/byte_stream_construction.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/byte_stream_construction.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/byte_stream_construction.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/byte_stream_construction.dir/rule
 
 # Convenience name for target.
@@ -724,14 +724,14 @@ tests/CMakeFiles/send_window.dir/all: libsponge/CMakeFiles/sponge.dir/all
 tests/CMakeFiles/send_window.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/send_window.dir/build.make tests/CMakeFiles/send_window.dir/depend
 	$(MAKE) -f tests/CMakeFiles/send_window.dir/build.make tests/CMakeFiles/send_window.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=64,65 "Built target send_window"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=64,65 "Built target send_window"
 .PHONY : tests/CMakeFiles/send_window.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/send_window.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/send_window.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/send_window.dir/rule
 
 # Convenience name for target.
@@ -752,14 +752,14 @@ tests/CMakeFiles/send_retx.dir/all: libsponge/CMakeFiles/sponge.dir/all
 tests/CMakeFiles/send_retx.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/send_retx.dir/build.make tests/CMakeFiles/send_retx.dir/depend
 	$(MAKE) -f tests/CMakeFiles/send_retx.dir/build.make tests/CMakeFiles/send_retx.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=60,61 "Built target send_retx"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=60,61 "Built target send_retx"
 .PHONY : tests/CMakeFiles/send_retx.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/send_retx.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/send_retx.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/send_retx.dir/rule
 
 # Convenience name for target.
@@ -780,14 +780,14 @@ tests/CMakeFiles/fsm_stream_reassembler_dup.dir/all: libsponge/CMakeFiles/sponge
 tests/CMakeFiles/fsm_stream_reassembler_dup.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_dup.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_dup.dir/depend
 	$(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_dup.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_dup.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=24,25 "Built target fsm_stream_reassembler_dup"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=24,25 "Built target fsm_stream_reassembler_dup"
 .PHONY : tests/CMakeFiles/fsm_stream_reassembler_dup.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/fsm_stream_reassembler_dup.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fsm_stream_reassembler_dup.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/fsm_stream_reassembler_dup.dir/rule
 
 # Convenience name for target.
@@ -808,14 +808,14 @@ tests/CMakeFiles/fsm_stream_reassembler_single.dir/all: libsponge/CMakeFiles/spo
 tests/CMakeFiles/fsm_stream_reassembler_single.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_single.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_single.dir/depend
 	$(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_single.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_single.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=34,35 "Built target fsm_stream_reassembler_single"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=34,35 "Built target fsm_stream_reassembler_single"
 .PHONY : tests/CMakeFiles/fsm_stream_reassembler_single.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/fsm_stream_reassembler_single.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fsm_stream_reassembler_single.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/fsm_stream_reassembler_single.dir/rule
 
 # Convenience name for target.
@@ -836,14 +836,14 @@ tests/CMakeFiles/wrapping_integers_roundtrip.dir/all: libsponge/CMakeFiles/spong
 tests/CMakeFiles/wrapping_integers_roundtrip.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/wrapping_integers_roundtrip.dir/build.make tests/CMakeFiles/wrapping_integers_roundtrip.dir/depend
 	$(MAKE) -f tests/CMakeFiles/wrapping_integers_roundtrip.dir/build.make tests/CMakeFiles/wrapping_integers_roundtrip.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=94,95 "Built target wrapping_integers_roundtrip"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=94,95 "Built target wrapping_integers_roundtrip"
 .PHONY : tests/CMakeFiles/wrapping_integers_roundtrip.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/wrapping_integers_roundtrip.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/wrapping_integers_roundtrip.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/wrapping_integers_roundtrip.dir/rule
 
 # Convenience name for target.
@@ -864,14 +864,14 @@ tests/CMakeFiles/byte_stream_many_writes.dir/all: libsponge/CMakeFiles/sponge.di
 tests/CMakeFiles/byte_stream_many_writes.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/byte_stream_many_writes.dir/build.make tests/CMakeFiles/byte_stream_many_writes.dir/depend
 	$(MAKE) -f tests/CMakeFiles/byte_stream_many_writes.dir/build.make tests/CMakeFiles/byte_stream_many_writes.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=7,8 "Built target byte_stream_many_writes"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=7,8 "Built target byte_stream_many_writes"
 .PHONY : tests/CMakeFiles/byte_stream_many_writes.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/byte_stream_many_writes.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/byte_stream_many_writes.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/byte_stream_many_writes.dir/rule
 
 # Convenience name for target.
@@ -892,14 +892,14 @@ tests/CMakeFiles/byte_stream_one_write.dir/all: libsponge/CMakeFiles/sponge.dir/
 tests/CMakeFiles/byte_stream_one_write.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/byte_stream_one_write.dir/build.make tests/CMakeFiles/byte_stream_one_write.dir/depend
 	$(MAKE) -f tests/CMakeFiles/byte_stream_one_write.dir/build.make tests/CMakeFiles/byte_stream_one_write.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=9,10 "Built target byte_stream_one_write"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=9,10 "Built target byte_stream_one_write"
 .PHONY : tests/CMakeFiles/byte_stream_one_write.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/byte_stream_one_write.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/byte_stream_one_write.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/byte_stream_one_write.dir/rule
 
 # Convenience name for target.
@@ -920,14 +920,14 @@ tests/CMakeFiles/recv_window.dir/all: libsponge/CMakeFiles/sponge.dir/all
 tests/CMakeFiles/recv_window.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/recv_window.dir/build.make tests/CMakeFiles/recv_window.dir/depend
 	$(MAKE) -f tests/CMakeFiles/recv_window.dir/build.make tests/CMakeFiles/recv_window.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=50,51 "Built target recv_window"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=50,51 "Built target recv_window"
 .PHONY : tests/CMakeFiles/recv_window.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/recv_window.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/recv_window.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/recv_window.dir/rule
 
 # Convenience name for target.
@@ -948,14 +948,14 @@ tests/CMakeFiles/fsm_stream_reassembler_cap.dir/all: libsponge/CMakeFiles/sponge
 tests/CMakeFiles/fsm_stream_reassembler_cap.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_cap.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_cap.dir/depend
 	$(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_cap.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_cap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=22,23 "Built target fsm_stream_reassembler_cap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=22,23 "Built target fsm_stream_reassembler_cap"
 .PHONY : tests/CMakeFiles/fsm_stream_reassembler_cap.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/fsm_stream_reassembler_cap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fsm_stream_reassembler_cap.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/fsm_stream_reassembler_cap.dir/rule
 
 # Convenience name for target.
@@ -976,14 +976,14 @@ tests/CMakeFiles/tcp_parser.dir/all: libsponge/CMakeFiles/sponge.dir/all
 tests/CMakeFiles/tcp_parser.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/tcp_parser.dir/build.make tests/CMakeFiles/tcp_parser.dir/depend
 	$(MAKE) -f tests/CMakeFiles/tcp_parser.dir/build.make tests/CMakeFiles/tcp_parser.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=88,89 "Built target tcp_parser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=88,89 "Built target tcp_parser"
 .PHONY : tests/CMakeFiles/tcp_parser.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/tcp_parser.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/tcp_parser.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/tcp_parser.dir/rule
 
 # Convenience name for target.
@@ -1004,14 +1004,14 @@ tests/CMakeFiles/byte_stream_capacity.dir/all: libsponge/CMakeFiles/sponge.dir/a
 tests/CMakeFiles/byte_stream_capacity.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/byte_stream_capacity.dir/build.make tests/CMakeFiles/byte_stream_capacity.dir/depend
 	$(MAKE) -f tests/CMakeFiles/byte_stream_capacity.dir/build.make tests/CMakeFiles/byte_stream_capacity.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=3,4 "Built target byte_stream_capacity"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=3,4 "Built target byte_stream_capacity"
 .PHONY : tests/CMakeFiles/byte_stream_capacity.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/byte_stream_capacity.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/byte_stream_capacity.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/byte_stream_capacity.dir/rule
 
 # Convenience name for target.
@@ -1032,14 +1032,14 @@ tests/CMakeFiles/wrapping_integers_cmp.dir/all: libsponge/CMakeFiles/sponge.dir/
 tests/CMakeFiles/wrapping_integers_cmp.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/wrapping_integers_cmp.dir/build.make tests/CMakeFiles/wrapping_integers_cmp.dir/depend
 	$(MAKE) -f tests/CMakeFiles/wrapping_integers_cmp.dir/build.make tests/CMakeFiles/wrapping_integers_cmp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=92,93 "Built target wrapping_integers_cmp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=92,93 "Built target wrapping_integers_cmp"
 .PHONY : tests/CMakeFiles/wrapping_integers_cmp.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/wrapping_integers_cmp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/wrapping_integers_cmp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/wrapping_integers_cmp.dir/rule
 
 # Convenience name for target.
@@ -1060,14 +1060,14 @@ tests/CMakeFiles/wrapping_integers_unwrap.dir/all: libsponge/CMakeFiles/sponge.d
 tests/CMakeFiles/wrapping_integers_unwrap.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/wrapping_integers_unwrap.dir/build.make tests/CMakeFiles/wrapping_integers_unwrap.dir/depend
 	$(MAKE) -f tests/CMakeFiles/wrapping_integers_unwrap.dir/build.make tests/CMakeFiles/wrapping_integers_unwrap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=96,97 "Built target wrapping_integers_unwrap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=96,97 "Built target wrapping_integers_unwrap"
 .PHONY : tests/CMakeFiles/wrapping_integers_unwrap.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/wrapping_integers_unwrap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/wrapping_integers_unwrap.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/wrapping_integers_unwrap.dir/rule
 
 # Convenience name for target.
@@ -1088,14 +1088,14 @@ tests/CMakeFiles/wrapping_integers_wrap.dir/all: libsponge/CMakeFiles/sponge.dir
 tests/CMakeFiles/wrapping_integers_wrap.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/wrapping_integers_wrap.dir/build.make tests/CMakeFiles/wrapping_integers_wrap.dir/depend
 	$(MAKE) -f tests/CMakeFiles/wrapping_integers_wrap.dir/build.make tests/CMakeFiles/wrapping_integers_wrap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=98,99 "Built target wrapping_integers_wrap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=98,99 "Built target wrapping_integers_wrap"
 .PHONY : tests/CMakeFiles/wrapping_integers_wrap.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/wrapping_integers_wrap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/wrapping_integers_wrap.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/wrapping_integers_wrap.dir/rule
 
 # Convenience name for target.
@@ -1116,14 +1116,14 @@ tests/CMakeFiles/fsm_stream_reassembler_win.dir/all: libsponge/CMakeFiles/sponge
 tests/CMakeFiles/fsm_stream_reassembler_win.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_win.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_win.dir/depend
 	$(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_win.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_win.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=36,37 "Built target fsm_stream_reassembler_win"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=36,37 "Built target fsm_stream_reassembler_win"
 .PHONY : tests/CMakeFiles/fsm_stream_reassembler_win.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/fsm_stream_reassembler_win.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fsm_stream_reassembler_win.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/fsm_stream_reassembler_win.dir/rule
 
 # Convenience name for target.
@@ -1144,14 +1144,14 @@ tests/CMakeFiles/recv_connect.dir/all: libsponge/CMakeFiles/sponge.dir/all
 tests/CMakeFiles/recv_connect.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/recv_connect.dir/build.make tests/CMakeFiles/recv_connect.dir/depend
 	$(MAKE) -f tests/CMakeFiles/recv_connect.dir/build.make tests/CMakeFiles/recv_connect.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=42,43 "Built target recv_connect"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=42,43 "Built target recv_connect"
 .PHONY : tests/CMakeFiles/recv_connect.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/recv_connect.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/recv_connect.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/recv_connect.dir/rule
 
 # Convenience name for target.
@@ -1172,14 +1172,14 @@ tests/CMakeFiles/fsm_stream_reassembler_holes.dir/all: libsponge/CMakeFiles/spon
 tests/CMakeFiles/fsm_stream_reassembler_holes.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_holes.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_holes.dir/depend
 	$(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_holes.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_holes.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=26,27 "Built target fsm_stream_reassembler_holes"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=26,27 "Built target fsm_stream_reassembler_holes"
 .PHONY : tests/CMakeFiles/fsm_stream_reassembler_holes.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/fsm_stream_reassembler_holes.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fsm_stream_reassembler_holes.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/fsm_stream_reassembler_holes.dir/rule
 
 # Convenience name for target.
@@ -1200,14 +1200,14 @@ tests/CMakeFiles/send_connect.dir/all: libsponge/CMakeFiles/sponge.dir/all
 tests/CMakeFiles/send_connect.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/send_connect.dir/build.make tests/CMakeFiles/send_connect.dir/depend
 	$(MAKE) -f tests/CMakeFiles/send_connect.dir/build.make tests/CMakeFiles/send_connect.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=56,57 "Built target send_connect"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=56,57 "Built target send_connect"
 .PHONY : tests/CMakeFiles/send_connect.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/send_connect.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/send_connect.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/send_connect.dir/rule
 
 # Convenience name for target.
@@ -1228,14 +1228,14 @@ tests/CMakeFiles/recv_transmit.dir/all: libsponge/CMakeFiles/sponge.dir/all
 tests/CMakeFiles/recv_transmit.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/recv_transmit.dir/build.make tests/CMakeFiles/recv_transmit.dir/depend
 	$(MAKE) -f tests/CMakeFiles/recv_transmit.dir/build.make tests/CMakeFiles/recv_transmit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=48,49 "Built target recv_transmit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=48,49 "Built target recv_transmit"
 .PHONY : tests/CMakeFiles/recv_transmit.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/recv_transmit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/recv_transmit.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/recv_transmit.dir/rule
 
 # Convenience name for target.
@@ -1256,14 +1256,14 @@ tests/CMakeFiles/recv_special.dir/all: libsponge/CMakeFiles/sponge.dir/all
 tests/CMakeFiles/recv_special.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/recv_special.dir/build.make tests/CMakeFiles/recv_special.dir/depend
 	$(MAKE) -f tests/CMakeFiles/recv_special.dir/build.make tests/CMakeFiles/recv_special.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=46,47 "Built target recv_special"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=46,47 "Built target recv_special"
 .PHONY : tests/CMakeFiles/recv_special.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/recv_special.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/recv_special.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/recv_special.dir/rule
 
 # Convenience name for target.
@@ -1283,14 +1283,14 @@ tests/CMakeFiles/recv_special.dir/clean:
 tests/CMakeFiles/spongechecks.dir/all:
 	$(MAKE) -f tests/CMakeFiles/spongechecks.dir/build.make tests/CMakeFiles/spongechecks.dir/depend
 	$(MAKE) -f tests/CMakeFiles/spongechecks.dir/build.make tests/CMakeFiles/spongechecks.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=86,87 "Built target spongechecks"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=86,87 "Built target spongechecks"
 .PHONY : tests/CMakeFiles/spongechecks.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/spongechecks.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/spongechecks.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/spongechecks.dir/rule
 
 # Convenience name for target.
@@ -1311,14 +1311,14 @@ tests/CMakeFiles/recv_close.dir/all: libsponge/CMakeFiles/sponge.dir/all
 tests/CMakeFiles/recv_close.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/recv_close.dir/build.make tests/CMakeFiles/recv_close.dir/depend
 	$(MAKE) -f tests/CMakeFiles/recv_close.dir/build.make tests/CMakeFiles/recv_close.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=40,41 "Built target recv_close"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=40,41 "Built target recv_close"
 .PHONY : tests/CMakeFiles/recv_close.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/recv_close.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/recv_close.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/recv_close.dir/rule
 
 # Convenience name for target.
@@ -1339,14 +1339,14 @@ tests/CMakeFiles/recv_reorder.dir/all: libsponge/CMakeFiles/sponge.dir/all
 tests/CMakeFiles/recv_reorder.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/recv_reorder.dir/build.make tests/CMakeFiles/recv_reorder.dir/depend
 	$(MAKE) -f tests/CMakeFiles/recv_reorder.dir/build.make tests/CMakeFiles/recv_reorder.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=44,45 "Built target recv_reorder"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=44,45 "Built target recv_reorder"
 .PHONY : tests/CMakeFiles/recv_reorder.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/recv_reorder.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/recv_reorder.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/recv_reorder.dir/rule
 
 # Convenience name for target.
@@ -1367,14 +1367,14 @@ tests/CMakeFiles/fsm_stream_reassembler_seq.dir/all: libsponge/CMakeFiles/sponge
 tests/CMakeFiles/fsm_stream_reassembler_seq.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_seq.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_seq.dir/depend
 	$(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_seq.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_seq.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=32,33 "Built target fsm_stream_reassembler_seq"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=32,33 "Built target fsm_stream_reassembler_seq"
 .PHONY : tests/CMakeFiles/fsm_stream_reassembler_seq.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/fsm_stream_reassembler_seq.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fsm_stream_reassembler_seq.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/fsm_stream_reassembler_seq.dir/rule
 
 # Convenience name for target.
@@ -1395,14 +1395,14 @@ tests/CMakeFiles/send_transmit.dir/all: libsponge/CMakeFiles/sponge.dir/all
 tests/CMakeFiles/send_transmit.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/send_transmit.dir/build.make tests/CMakeFiles/send_transmit.dir/depend
 	$(MAKE) -f tests/CMakeFiles/send_transmit.dir/build.make tests/CMakeFiles/send_transmit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=62,63 "Built target send_transmit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=62,63 "Built target send_transmit"
 .PHONY : tests/CMakeFiles/send_transmit.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/send_transmit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/send_transmit.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/send_transmit.dir/rule
 
 # Convenience name for target.
@@ -1423,14 +1423,14 @@ tests/CMakeFiles/send_ack.dir/all: libsponge/CMakeFiles/sponge.dir/all
 tests/CMakeFiles/send_ack.dir/all: tests/CMakeFiles/spongechecks.dir/all
 	$(MAKE) -f tests/CMakeFiles/send_ack.dir/build.make tests/CMakeFiles/send_ack.dir/depend
 	$(MAKE) -f tests/CMakeFiles/send_ack.dir/build.make tests/CMakeFiles/send_ack.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=52,53 "Built target send_ack"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=52,53 "Built target send_ack"
 .PHONY : tests/CMakeFiles/send_ack.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/send_ack.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/send_ack.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/send_ack.dir/rule
 
 # Convenience name for target.
@@ -1450,14 +1450,14 @@ tests/CMakeFiles/send_ack.dir/clean:
 doctests/CMakeFiles/parser_dt.dir/all: libsponge/CMakeFiles/sponge.dir/all
 	$(MAKE) -f doctests/CMakeFiles/parser_dt.dir/build.make doctests/CMakeFiles/parser_dt.dir/depend
 	$(MAKE) -f doctests/CMakeFiles/parser_dt.dir/build.make doctests/CMakeFiles/parser_dt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=38,39 "Built target parser_dt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=38,39 "Built target parser_dt"
 .PHONY : doctests/CMakeFiles/parser_dt.dir/all
 
 # Build rule for subdir invocation for target.
 doctests/CMakeFiles/parser_dt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 20
 	$(MAKE) -f CMakeFiles/Makefile2 doctests/CMakeFiles/parser_dt.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : doctests/CMakeFiles/parser_dt.dir/rule
 
 # Convenience name for target.
@@ -1477,14 +1477,14 @@ doctests/CMakeFiles/parser_dt.dir/clean:
 doctests/CMakeFiles/socket_dt.dir/all: libsponge/CMakeFiles/sponge.dir/all
 	$(MAKE) -f doctests/CMakeFiles/socket_dt.dir/build.make doctests/CMakeFiles/socket_dt.dir/depend
 	$(MAKE) -f doctests/CMakeFiles/socket_dt.dir/build.make doctests/CMakeFiles/socket_dt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=66,67 "Built target socket_dt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=66,67 "Built target socket_dt"
 .PHONY : doctests/CMakeFiles/socket_dt.dir/all
 
 # Build rule for subdir invocation for target.
 doctests/CMakeFiles/socket_dt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 20
 	$(MAKE) -f CMakeFiles/Makefile2 doctests/CMakeFiles/socket_dt.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : doctests/CMakeFiles/socket_dt.dir/rule
 
 # Convenience name for target.
@@ -1504,14 +1504,14 @@ doctests/CMakeFiles/socket_dt.dir/clean:
 doctests/CMakeFiles/address_dt.dir/all: libsponge/CMakeFiles/sponge.dir/all
 	$(MAKE) -f doctests/CMakeFiles/address_dt.dir/build.make doctests/CMakeFiles/address_dt.dir/depend
 	$(MAKE) -f doctests/CMakeFiles/address_dt.dir/build.make doctests/CMakeFiles/address_dt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/LJR/network/CS144-Network/build/CMakeFiles --progress-num=1,2 "Built target address_dt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Study/labs/CS144-Network/build/CMakeFiles --progress-num=1,2 "Built target address_dt"
 .PHONY : doctests/CMakeFiles/address_dt.dir/all
 
 # Build rule for subdir invocation for target.
 doctests/CMakeFiles/address_dt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 20
 	$(MAKE) -f CMakeFiles/Makefile2 doctests/CMakeFiles/address_dt.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/LJR/network/CS144-Network/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Study/labs/CS144-Network/build/CMakeFiles 0
 .PHONY : doctests/CMakeFiles/address_dt.dir/rule
 
 # Convenience name for target.

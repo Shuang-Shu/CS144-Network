@@ -48,13 +48,13 @@ system_error
 vector
 -
 
-/home/network/CS144-Network/tests/fsm_stream_reassembler_many.cc
+/mnt/d/Study/labs/CS144-Network/tests/fsm_stream_reassembler_many.cc
 byte_stream.hh
-/home/network/CS144-Network/tests/byte_stream.hh
+/mnt/d/Study/labs/CS144-Network/tests/byte_stream.hh
 stream_reassembler.hh
-/home/network/CS144-Network/tests/stream_reassembler.hh
+/mnt/d/Study/labs/CS144-Network/tests/stream_reassembler.hh
 util.hh
-/home/network/CS144-Network/tests/util.hh
+/mnt/d/Study/labs/CS144-Network/tests/util.hh
 algorithm
 -
 cstdint

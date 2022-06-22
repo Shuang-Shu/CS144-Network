@@ -1,4 +1,4 @@
-# Install script for directory: /home/LJR/network/CS144-Network/libsponge
+# Install script for directory: /mnt/d/Study/labs/CS144-Network/libsponge
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

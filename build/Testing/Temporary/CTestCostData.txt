@@ -1,42 +1,41 @@
 t_webget 27 0.0839242
-t_byte_stream_construction 156 2.98101e-05
-t_byte_stream_one_write 145 3.50832e-05
-t_byte_stream_two_writes 145 3.00561e-05
-t_byte_stream_capacity 145 0.00445494
-t_byte_stream_many_writes 153 0.000150173
-t_address_dt 159 9.68362e-05
-t_parser_dt 159 2.80247e-05
-t_socket_dt 139 4.92928e-05
-t_strm_reassem_single 53 0.000112148
-t_strm_reassem_seq 93 6.34317e-05
-t_strm_reassem_dup 90 0.000140924
-t_strm_reassem_holes 48 0.000102883
-t_strm_reassem_many 36 0.00337344
-t_strm_reassem_overlapping 36 0.000142606
-t_strm_reassem_win 30 0.00511568
-t_strm_reassem_cap 30 0.00456672
-t_wrapping_ints_cmp 41 0.00013757
-t_wrapping_ints_unwrap 27 0.000269102
-t_wrapping_ints_wrap 38 0.000144154
-t_wrapping_ints_roundtrip 27 0.00816966
-t_recv_connect 11 0.000509044
-t_recv_transmit 17 0.00485651
-t_recv_window 14 0.00041965
-t_recv_reorder 17 0.000333081
-t_recv_close 9 0.000661668
-t_recv_special 7 0.000887903
-t_send_connect 0 0
-t_send_transmit 0 0
+t_byte_stream_construction 174 0.000283936
+t_byte_stream_one_write 163 0.00029378
+t_byte_stream_two_writes 163 0.000301915
+t_byte_stream_capacity 163 0.00828067
+t_byte_stream_many_writes 171 0.000402221
+t_address_dt 177 0.000437706
+t_parser_dt 177 0.000269684
+t_socket_dt 139 0
+t_strm_reassem_single 71 0.000690242
+t_strm_reassem_seq 111 0.000454282
+t_strm_reassem_dup 108 0.000519451
+t_strm_reassem_holes 66 0.000772315
+t_strm_reassem_many 54 0.0157805
+t_strm_reassem_overlapping 54 0.000971298
+t_strm_reassem_win 48 0.0236707
+t_strm_reassem_cap 48 0.00504484
+t_wrapping_ints_cmp 58 0.00141734
+t_wrapping_ints_unwrap 44 0.00159572
+t_wrapping_ints_wrap 55 0.000832927
+t_wrapping_ints_roundtrip 44 0.0141461
+t_recv_connect 28 0.00208164
+t_recv_transmit 34 0.00470261
+t_recv_window 31 0.00177456
+t_recv_reorder 34 0.00172579
+t_recv_close 26 0.00297314
+t_recv_special 24 0.00296456
+t_send_connect 1 0.0588427
+t_send_transmit 1 0.161832
 t_send_retx 0 0
 t_send_window 0 0
 t_send_ack 0 0
 t_send_close 0 0
 t_send_extra 0 0
 ---
-t_send_connect
-t_send_transmit
 t_send_retx
 t_send_window
 t_send_ack
 t_send_close
 t_send_extra
+t_socket_dt
