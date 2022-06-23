@@ -1,39 +1,38 @@
 t_webget 27 0.0839242
-t_byte_stream_construction 180 0.000798736
-t_byte_stream_one_write 169 0.000845308
-t_byte_stream_two_writes 169 0.00071594
-t_byte_stream_capacity 169 0.0152119
-t_byte_stream_many_writes 177 0.00059745
-t_address_dt 183 0.000972233
-t_parser_dt 183 0.000481745
+t_byte_stream_construction 185 0.000520099
+t_byte_stream_one_write 174 0.000410149
+t_byte_stream_two_writes 174 0.000470443
+t_byte_stream_capacity 174 0.010595
+t_byte_stream_many_writes 182 0.000505105
+t_address_dt 188 0.000550408
+t_parser_dt 188 0.000395135
 t_socket_dt 139 0
-t_strm_reassem_single 77 0.000970778
-t_strm_reassem_seq 117 0.000653027
-t_strm_reassem_dup 114 0.000759589
-t_strm_reassem_holes 72 0.00110549
-t_strm_reassem_many 60 0.0242987
-t_strm_reassem_overlapping 60 0.00217098
-t_strm_reassem_win 54 0.0383883
-t_strm_reassem_cap 54 0.0113165
-t_wrapping_ints_cmp 64 0.00116639
-t_wrapping_ints_unwrap 50 0.00137131
-t_wrapping_ints_wrap 61 0.00110046
-t_wrapping_ints_roundtrip 50 0.0194128
-t_recv_connect 34 0.00258275
-t_recv_transmit 40 0.00606825
-t_recv_window 37 0.00214528
-t_recv_reorder 40 0.002123
-t_recv_close 32 0.00270667
-t_recv_special 30 0.00297909
-t_send_connect 2 0.044126
-t_send_transmit 2 0.119964
-t_send_retx 0 0
+t_strm_reassem_single 82 0.000899516
+t_strm_reassem_seq 122 0.000604514
+t_strm_reassem_dup 119 0.00067978
+t_strm_reassem_holes 77 0.00122815
+t_strm_reassem_many 65 0.0190533
+t_strm_reassem_overlapping 65 0.00113647
+t_strm_reassem_win 59 0.0261687
+t_strm_reassem_cap 59 0.0057605
+t_wrapping_ints_cmp 69 0.00109388
+t_wrapping_ints_unwrap 55 0.0017273
+t_wrapping_ints_wrap 66 0.00215535
+t_wrapping_ints_roundtrip 55 0.017286
+t_recv_connect 39 0.00224918
+t_recv_transmit 45 0.00576285
+t_recv_window 42 0.00183578
+t_recv_reorder 45 0.0017956
+t_recv_close 37 0.00227345
+t_recv_special 35 0.00245398
+t_send_connect 6 0.0139935
+t_send_transmit 6 0.0401578
+t_send_retx 1 0.0862917
 t_send_window 0 0
 t_send_ack 0 0
 t_send_close 0 0
 t_send_extra 0 0
 ---
-t_send_retx
 t_send_window
 t_send_ack
 t_send_close

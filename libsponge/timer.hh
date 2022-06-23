@@ -27,4 +27,6 @@ class Timer{
         void increase_retran_number();
         // 检测是否超过约定重传次数
         bool over_retrans(uint64_t);
+        // 返回连续重传次数
+        int get_retran_number() const;
 };

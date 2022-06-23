@@ -21,6 +21,7 @@ void Timer::double_rto(){
 }
 
 void Timer::reset(uint64_t init_rto){
+    retran_number=0;
     time_passed=0;
     rto=init_rto;
 }
@@ -41,4 +42,8 @@ bool Timer::over_retrans(uint64_t reTransLimit){
     if(retran_number>reTransLimit)
         return true;
     return false;
+}
+
+int Timer::get_retran_number() const{
+    return retran_number;
 }

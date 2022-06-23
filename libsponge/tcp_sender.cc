@@ -42,6 +42,7 @@ void TCPSender::fill_window() {
     maxSegSize=min(maxSegSize, leftWindowSize);
     string payload=_stream.read(maxSegSize);
     uint64_t payload_length=payload.length();
+    size_t old_next_seqno=_next_seqno;
     if(payload_length==0&&_next_seqno!=0)
         return; // 此时未从流中读取信息，不发送新报文
     // 利用std::move()函数，可以将右值引用绑定到左值
@@ -71,6 +72,8 @@ void TCPSender::fill_window() {
     
     auto &segLoad=seg0.payload();
     segLoad=buffer;
+    // 将报文加入outstandingSegBuf
+    outstandingSegBuf[old_next_seqno]=seg0;
     // 发送TCP报文
     _segments_out.push(seg0);
 }
@@ -89,7 +92,8 @@ void TCPSender::ack_received(const WrappingInt32 ackno, const uint16_t window_si
         return;
     map<size_t, TCPSegment>::iterator iter=outstandingSegBuf.begin();
     // 2. 删除所有已确认的TCP报文段
-    while((*iter).first+(*iter).second.length_in_sequence_space()<=absSeq){
+    for(size_t i=0;i<outstandingSegBuf.size();++i){
+        if((*iter).first+(*iter).second.length_in_sequence_space()>_acked_seqno) break;
         auto temp=iter;
         iter++;
         outstandingSegBuf.erase(temp);
@@ -109,6 +113,8 @@ void TCPSender::tick(const size_t ms_since_last_tick) {
         for(auto iter:outstandingSegBuf){
             _segments_out.push(iter.second);
         }
+        // 提高连续重传次数
+        timer.increase_retran_number();
         // 增大rto，并重设time_passed
         timer.double_rto();
     }else{
@@ -131,7 +137,7 @@ void TCPSender::tick(const size_t ms_since_last_tick) {
 }
 
 unsigned int TCPSender::consecutive_retransmissions() const { 
-    return {}; 
+    return timer.get_retran_number(); 
 }
 
 void TCPSender::send_empty_segment() {
