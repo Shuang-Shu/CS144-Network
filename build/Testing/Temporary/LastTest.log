@@ -1,17 +1,17 @@
-Start testing: Jun 22 15:48 CST
+Start testing: Jun 23 17:01 CST
 ----------------------------------------------------------
 1/169 Testing: t_wrapping_ints_cmp
 1/169 Test: t_wrapping_ints_cmp
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/wrapping_integers_cmp"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_wrapping_ints_cmp" start time: Jun 22 15:48 CST
+"t_wrapping_ints_cmp" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.08 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
 Test Passed.
-"t_wrapping_ints_cmp" end time: Jun 22 15:48 CST
+"t_wrapping_ints_cmp" end time: Jun 23 17:01 CST
 "t_wrapping_ints_cmp" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -19,14 +19,14 @@ Test Passed.
 2/169 Test: t_wrapping_ints_unwrap
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/wrapping_integers_unwrap"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_wrapping_ints_unwrap" start time: Jun 22 15:48 CST
+"t_wrapping_ints_unwrap" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.07 sec
 ----------------------------------------------------------
 Test Passed.
-"t_wrapping_ints_unwrap" end time: Jun 22 15:48 CST
+"t_wrapping_ints_unwrap" end time: Jun 23 17:01 CST
 "t_wrapping_ints_unwrap" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -34,14 +34,14 @@ Test Passed.
 3/169 Test: t_wrapping_ints_wrap
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/wrapping_integers_wrap"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_wrapping_ints_wrap" start time: Jun 22 15:48 CST
+"t_wrapping_ints_wrap" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
 Test Passed.
-"t_wrapping_ints_wrap" end time: Jun 22 15:48 CST
+"t_wrapping_ints_wrap" end time: Jun 23 17:01 CST
 "t_wrapping_ints_wrap" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -49,14 +49,14 @@ Test Passed.
 4/169 Test: t_wrapping_ints_roundtrip
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/wrapping_integers_roundtrip"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_wrapping_ints_roundtrip" start time: Jun 22 15:48 CST
+"t_wrapping_ints_roundtrip" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.62 sec
+Test time =   0.97 sec
 ----------------------------------------------------------
 Test Passed.
-"t_wrapping_ints_roundtrip" end time: Jun 22 15:48 CST
+"t_wrapping_ints_roundtrip" end time: Jun 23 17:01 CST
 "t_wrapping_ints_roundtrip" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -64,14 +64,14 @@ Test Passed.
 5/169 Test: t_recv_connect
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/recv_connect"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_recv_connect" start time: Jun 22 15:48 CST
+"t_recv_connect" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.06 sec
+Test time =   0.09 sec
 ----------------------------------------------------------
 Test Passed.
-"t_recv_connect" end time: Jun 22 15:48 CST
+"t_recv_connect" end time: Jun 23 17:01 CST
 "t_recv_connect" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -79,14 +79,14 @@ Test Passed.
 6/169 Test: t_recv_transmit
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/recv_transmit"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_recv_transmit" start time: Jun 22 15:48 CST
+"t_recv_transmit" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.16 sec
+Test time =   0.24 sec
 ----------------------------------------------------------
 Test Passed.
-"t_recv_transmit" end time: Jun 22 15:48 CST
+"t_recv_transmit" end time: Jun 23 17:01 CST
 "t_recv_transmit" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -94,14 +94,14 @@ Test Passed.
 7/169 Test: t_recv_window
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/recv_window"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_recv_window" start time: Jun 22 15:48 CST
+"t_recv_window" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.06 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
 Test Passed.
-"t_recv_window" end time: Jun 22 15:48 CST
+"t_recv_window" end time: Jun 23 17:01 CST
 "t_recv_window" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -109,14 +109,14 @@ Test Passed.
 8/169 Test: t_recv_reorder
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/recv_reorder"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_recv_reorder" start time: Jun 22 15:48 CST
+"t_recv_reorder" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.06 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
 Test Passed.
-"t_recv_reorder" end time: Jun 22 15:48 CST
+"t_recv_reorder" end time: Jun 23 17:01 CST
 "t_recv_reorder" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -124,14 +124,14 @@ Test Passed.
 9/169 Test: t_recv_close
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/recv_close"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_recv_close" start time: Jun 22 15:48 CST
+"t_recv_close" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.08 sec
+Test time =   0.09 sec
 ----------------------------------------------------------
 Test Passed.
-"t_recv_close" end time: Jun 22 15:48 CST
+"t_recv_close" end time: Jun 23 17:01 CST
 "t_recv_close" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -139,14 +139,14 @@ Test Passed.
 10/169 Test: t_recv_special
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/recv_special"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_recv_special" start time: Jun 22 15:48 CST
+"t_recv_special" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.07 sec
+Test time =   0.09 sec
 ----------------------------------------------------------
 Test Passed.
-"t_recv_special" end time: Jun 22 15:48 CST
+"t_recv_special" end time: Jun 23 17:01 CST
 "t_recv_special" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -154,14 +154,14 @@ Test Passed.
 11/169 Test: t_send_connect
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/send_connect"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_send_connect" start time: Jun 22 15:48 CST
+"t_send_connect" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.06 sec
+Test time =   0.09 sec
 ----------------------------------------------------------
 Test Passed.
-"t_send_connect" end time: Jun 22 15:48 CST
+"t_send_connect" end time: Jun 23 17:01 CST
 "t_send_connect" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -169,14 +169,14 @@ Test Passed.
 12/169 Test: t_send_transmit
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/send_transmit"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_send_transmit" start time: Jun 22 15:48 CST
+"t_send_transmit" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.16 sec
+Test time =   0.24 sec
 ----------------------------------------------------------
 Test Passed.
-"t_send_transmit" end time: Jun 22 15:48 CST
+"t_send_transmit" end time: Jun 23 17:01 CST
 "t_send_transmit" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -184,30 +184,30 @@ Test Passed.
 13/169 Test: t_send_retx
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/send_retx"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_send_retx" start time: Jun 22 15:48 CST
+"t_send_retx" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 Test Failure on expectation:
-	Expectation: segment sent with (A=0,R=0,S=1,F=0,seqno=2882148361,payload_size=0,...)
+	Expectation: segment sent with (A=0,R=0,S=1,F=0,seqno=843190434,payload_size=0,...)
 
 Failure message:
 	The Sender should have produced a segment that existed, but it did not
 
 List of steps that executed successfully:
-	Initialized with (retx-timeout=2926) and called fill_window()
-	Expectation: segment sent with (A=0,R=0,S=1,F=0,seqno=2882148361,payload_size=0,...)
+	Initialized with (retx-timeout=7930) and called fill_window()
+	Expectation: segment sent with (A=0,R=0,S=1,F=0,seqno=843190434,payload_size=0,...)
 	Expectation: no (more) segments
 	Expectation: in state `stream started but nothing acknowledged`
-	Action:      2925 ms pass
+	Action:      7929 ms pass
 	Expectation: no (more) segments
 	Action:      1 ms pass
 
 The test "Retx SYN twice at the right times, then ack" failed
 <end of output>
-Test time =   0.06 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
 Test Failed.
-"t_send_retx" end time: Jun 22 15:48 CST
+"t_send_retx" end time: Jun 23 17:01 CST
 "t_send_retx" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -215,7 +215,7 @@ Test Failed.
 14/169 Test: t_send_window
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/send_window"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_send_window" start time: Jun 22 15:48 CST
+"t_send_window" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 Test Failure on expectation:
@@ -226,21 +226,21 @@ Failure message:
 
 List of steps that executed successfully:
 	Initialized with (retx-timeout=1000) and called fill_window()
-	Expectation: segment sent with (A=0,R=0,S=1,F=0,seqno=2243772493,payload_size=0,...)
-	Action:      ack 2243772494 winsize 7
+	Expectation: segment sent with (A=0,R=0,S=1,F=0,seqno=1589617724,payload_size=0,...)
+	Action:      ack 1589617725 winsize 7
 	Expectation: no (more) segments
 	Action:      write bytes: "1234567"
 	Action:      close
 	Expectation: segment sent with (A=0,R=0,S=0,F=0,"1234567",...)
 	Expectation: no (more) segments
-	Action:      ack 2243772501 winsize 1
+	Action:      ack 1589617732 winsize 1
 
 The test "FIN flag occupies space in window" failed
 <end of output>
-Test time =   0.14 sec
+Test time =   0.21 sec
 ----------------------------------------------------------
 Test Failed.
-"t_send_window" end time: Jun 22 15:48 CST
+"t_send_window" end time: Jun 23 17:01 CST
 "t_send_window" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -248,7 +248,7 @@ Test Failed.
 15/169 Test: t_send_ack
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/send_ack"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_send_ack" start time: Jun 22 15:48 CST
+"t_send_ack" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 Test Failure on expectation:
@@ -260,15 +260,15 @@ Failure message:
 List of steps that executed successfully:
 	Initialized with (retx-timeout=1000) and called fill_window()
 	Expectation: in state `stream started but nothing acknowledged`
-	Expectation: segment sent with (A=0,R=0,S=1,F=0,seqno=2196521634,payload_size=0,...)
-	Action:      ack 2196521636 winsize 1000
+	Expectation: segment sent with (A=0,R=0,S=1,F=0,seqno=2245877307,payload_size=0,...)
+	Action:      ack 2245877309 winsize 1000
 
 The test "Impossible ackno (beyond next seqno) is ignored" failed
 <end of output>
-Test time =   0.06 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
 Test Failed.
-"t_send_ack" end time: Jun 22 15:48 CST
+"t_send_ack" end time: Jun 23 17:01 CST
 "t_send_ack" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -276,7 +276,7 @@ Test Failed.
 16/169 Test: t_send_close
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/send_close"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_send_close" start time: Jun 22 15:48 CST
+"t_send_close" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 Test Failure on expectation:
@@ -287,17 +287,17 @@ Failure message:
 
 List of steps that executed successfully:
 	Initialized with (retx-timeout=1000) and called fill_window()
-	Expectation: segment sent with (A=0,R=0,S=1,F=0,seqno=1429643006,payload_size=0,...)
-	Action:      ack 1429643007 winsize 137
+	Expectation: segment sent with (A=0,R=0,S=1,F=0,seqno=1568070199,payload_size=0,...)
+	Action:      ack 1568070200 winsize 137
 	Expectation: in state `stream ongoing`
 	Action:      close
 
 The test "FIN sent test" failed
 <end of output>
-Test time =   0.06 sec
+Test time =   0.09 sec
 ----------------------------------------------------------
 Test Failed.
-"t_send_close" end time: Jun 22 15:48 CST
+"t_send_close" end time: Jun 23 17:01 CST
 "t_send_close" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -305,23 +305,23 @@ Test Failed.
 17/169 Test: t_send_extra
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/send_extra"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_send_extra" start time: Jun 22 15:48 CST
+"t_send_extra" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 Test Failure on expectation:
-	Expectation: segment sent with (seqno=1246643795,payload_size=3,"abc",...)
+	Expectation: segment sent with (seqno=2281795186,payload_size=3,"abc",...)
 
 Failure message:
 	The Sender should have produced a segment that existed, but it did not
 
 List of steps that executed successfully:
-	Initialized with (retx-timeout=6625) and called fill_window()
-	Expectation: segment sent with (A=0,R=0,S=1,F=0,seqno=1246643794,payload_size=0,...)
-	Action:      ack 1246643795 winsize 1000
+	Initialized with (retx-timeout=1586) and called fill_window()
+	Expectation: segment sent with (A=0,R=0,S=1,F=0,seqno=2281795185,payload_size=0,...)
+	Action:      ack 2281795186 winsize 1000
 	Expectation: in state `stream ongoing`
 	Action:      write bytes: "abc"
-	Expectation: segment sent with (seqno=1246643795,payload_size=3,"abc",...)
-	Action:      6620 ms pass
+	Expectation: segment sent with (seqno=2281795186,payload_size=3,"abc",...)
+	Action:      1581 ms pass
 	Expectation: no (more) segments
 	Action:      write bytes: "def"
 	Expectation: segment sent with (payload_size=3,"def",...)
@@ -329,10 +329,10 @@ List of steps that executed successfully:
 
 The test "If already running, timer stays running when new segment sent" failed
 <end of output>
-Test time =   0.06 sec
+Test time =   0.09 sec
 ----------------------------------------------------------
 Test Failed.
-"t_send_extra" end time: Jun 22 15:48 CST
+"t_send_extra" end time: Jun 23 17:01 CST
 "t_send_extra" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -340,14 +340,14 @@ Test Failed.
 18/169 Test: t_strm_reassem_single
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/fsm_stream_reassembler_single"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_strm_reassem_single" start time: Jun 22 15:48 CST
+"t_strm_reassem_single" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_single" end time: Jun 22 15:48 CST
+"t_strm_reassem_single" end time: Jun 23 17:01 CST
 "t_strm_reassem_single" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -355,14 +355,14 @@ Test Passed.
 19/169 Test: t_strm_reassem_seq
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/fsm_stream_reassembler_seq"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_strm_reassem_seq" start time: Jun 22 15:48 CST
+"t_strm_reassem_seq" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_seq" end time: Jun 22 15:48 CST
+"t_strm_reassem_seq" end time: Jun 23 17:01 CST
 "t_strm_reassem_seq" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -370,14 +370,14 @@ Test Passed.
 20/169 Test: t_strm_reassem_dup
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/fsm_stream_reassembler_dup"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_strm_reassem_dup" start time: Jun 22 15:48 CST
+"t_strm_reassem_dup" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.06 sec
+Test time =   0.09 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_dup" end time: Jun 22 15:48 CST
+"t_strm_reassem_dup" end time: Jun 23 17:01 CST
 "t_strm_reassem_dup" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -385,14 +385,14 @@ Test Passed.
 21/169 Test: t_strm_reassem_holes
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/fsm_stream_reassembler_holes"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_strm_reassem_holes" start time: Jun 22 15:48 CST
+"t_strm_reassem_holes" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_holes" end time: Jun 22 15:48 CST
+"t_strm_reassem_holes" end time: Jun 23 17:01 CST
 "t_strm_reassem_holes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -400,29 +400,29 @@ Test Passed.
 22/169 Test: t_strm_reassem_many
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/fsm_stream_reassembler_many"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_strm_reassem_many" start time: Jun 22 15:48 CST
+"t_strm_reassem_many" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.85 sec
+Test time =   1.46 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_many" end time: Jun 22 15:48 CST
-"t_strm_reassem_many" time elapsed: 00:00:00
+"t_strm_reassem_many" end time: Jun 23 17:01 CST
+"t_strm_reassem_many" time elapsed: 00:00:01
 ----------------------------------------------------------
 
 23/169 Testing: t_strm_reassem_overlapping
 23/169 Test: t_strm_reassem_overlapping
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/fsm_stream_reassembler_overlapping"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_strm_reassem_overlapping" start time: Jun 22 15:48 CST
+"t_strm_reassem_overlapping" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.13 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_overlapping" end time: Jun 22 15:48 CST
+"t_strm_reassem_overlapping" end time: Jun 23 17:01 CST
 "t_strm_reassem_overlapping" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -430,29 +430,29 @@ Test Passed.
 24/169 Test: t_strm_reassem_win
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/fsm_stream_reassembler_win"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_strm_reassem_win" start time: Jun 22 15:48 CST
+"t_strm_reassem_win" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   1.14 sec
+Test time =   2.07 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_win" end time: Jun 22 15:48 CST
-"t_strm_reassem_win" time elapsed: 00:00:01
+"t_strm_reassem_win" end time: Jun 23 17:01 CST
+"t_strm_reassem_win" time elapsed: 00:00:02
 ----------------------------------------------------------
 
 25/169 Testing: t_strm_reassem_cap
 25/169 Test: t_strm_reassem_cap
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/fsm_stream_reassembler_cap"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_strm_reassem_cap" start time: Jun 22 15:48 CST
+"t_strm_reassem_cap" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.24 sec
+Test time =   0.61 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_cap" end time: Jun 22 15:48 CST
+"t_strm_reassem_cap" end time: Jun 23 17:01 CST
 "t_strm_reassem_cap" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -460,14 +460,14 @@ Test Passed.
 26/169 Test: t_byte_stream_construction
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/byte_stream_construction"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_byte_stream_construction" start time: Jun 22 15:48 CST
+"t_byte_stream_construction" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.14 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_construction" end time: Jun 22 15:48 CST
+"t_byte_stream_construction" end time: Jun 23 17:01 CST
 "t_byte_stream_construction" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -475,14 +475,14 @@ Test Passed.
 27/169 Test: t_byte_stream_one_write
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/byte_stream_one_write"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_byte_stream_one_write" start time: Jun 22 15:48 CST
+"t_byte_stream_one_write" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.14 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_one_write" end time: Jun 22 15:48 CST
+"t_byte_stream_one_write" end time: Jun 23 17:01 CST
 "t_byte_stream_one_write" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -490,14 +490,14 @@ Test Passed.
 28/169 Test: t_byte_stream_two_writes
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/byte_stream_two_writes"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_byte_stream_two_writes" start time: Jun 22 15:48 CST
+"t_byte_stream_two_writes" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.12 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_two_writes" end time: Jun 22 15:48 CST
+"t_byte_stream_two_writes" end time: Jun 23 17:01 CST
 "t_byte_stream_two_writes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -505,29 +505,29 @@ Test Passed.
 29/169 Test: t_byte_stream_capacity
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/byte_stream_capacity"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_byte_stream_capacity" start time: Jun 22 15:48 CST
+"t_byte_stream_capacity" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   1.35 sec
+Test time =   2.57 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_capacity" end time: Jun 22 15:49 CST
-"t_byte_stream_capacity" time elapsed: 00:00:01
+"t_byte_stream_capacity" end time: Jun 23 17:01 CST
+"t_byte_stream_capacity" time elapsed: 00:00:02
 ----------------------------------------------------------
 
 30/169 Testing: t_byte_stream_many_writes
 30/169 Test: t_byte_stream_many_writes
 Command: "/mnt/d/Study/labs/CS144-Network/build/tests/byte_stream_many_writes"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_byte_stream_many_writes" start time: Jun 22 15:49 CST
+"t_byte_stream_many_writes" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.07 sec
+Test time =   0.11 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_many_writes" end time: Jun 22 15:49 CST
+"t_byte_stream_many_writes" end time: Jun 23 17:01 CST
 "t_byte_stream_many_writes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -535,14 +535,14 @@ Test Passed.
 53/169 Test: t_address_dt
 Command: "/mnt/d/Study/labs/CS144-Network/build/doctests/address_dt"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_address_dt" start time: Jun 22 15:49 CST
+"t_address_dt" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.08 sec
+Test time =   0.18 sec
 ----------------------------------------------------------
 Test Passed.
-"t_address_dt" end time: Jun 22 15:49 CST
+"t_address_dt" end time: Jun 23 17:01 CST
 "t_address_dt" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -550,14 +550,14 @@ Test Passed.
 54/169 Test: t_parser_dt
 Command: "/mnt/d/Study/labs/CS144-Network/build/doctests/parser_dt"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_parser_dt" start time: Jun 22 15:49 CST
+"t_parser_dt" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.09 sec
 ----------------------------------------------------------
 Test Passed.
-"t_parser_dt" end time: Jun 22 15:49 CST
+"t_parser_dt" end time: Jun 23 17:01 CST
 "t_parser_dt" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -565,15 +565,15 @@ Test Passed.
 55/169 Test: t_socket_dt
 Command: "/mnt/d/Study/labs/CS144-Network/build/doctests/socket_dt"
 Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_socket_dt" start time: Jun 22 15:49 CST
+"t_socket_dt" start time: Jun 23 17:01 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.14 sec
 ----------------------------------------------------------
 Test Failed.
-"t_socket_dt" end time: Jun 22 15:49 CST
+"t_socket_dt" end time: Jun 23 17:01 CST
 "t_socket_dt" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jun 22 15:49 CST
+End testing: Jun 23 17:01 CST

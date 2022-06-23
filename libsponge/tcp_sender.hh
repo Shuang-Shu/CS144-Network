@@ -6,6 +6,7 @@
 #include "tcp_segment.hh"
 #include "wrapping_integers.hh"
 #include "../tcp_helpers/tcp_segment.hh"
+#include "timer.hh"
 
 #include <functional>
 #include <map>
@@ -38,6 +39,8 @@ class TCPSender {
     //! the (absolute) sequence number for the next byte to be sent
     // 下一个要发送的字节的绝对seqNo
     uint64_t _next_seqno{0};
+    // 收到确认的absSeqNo
+    uint64_t _acked_seqno{0};
     // 新定义成员变量
     // 未确认报文
     map<size_t, TCPSegment> outstandingSegBuf{};
@@ -45,8 +48,8 @@ class TCPSender {
     Timer timer;
     // 对等方剩余窗口大小(bytes)
     uint16_t peerWindowSize;
-    bool reachedLastSeg;
-    uint8_t RTO;
+    // 是否到达最后一个segment
+    bool sent_last_segment;
   public:
     //! Initialize a TCPSender
     TCPSender(const size_t capacity = TCPConfig::DEFAULT_CAPACITY,

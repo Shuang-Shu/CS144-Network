@@ -1,48 +1,44 @@
 #include "timer.hh"
 using namespace std;
 
-Timer::Timer(size_t aRTO):totalTimePassed(0),RTO(aRTO), reTransCount(0), running(false){}
+Timer::Timer(uint64_t init_rto):time_passed(0),rto(init_rto), retran_number(0), is_open(false){}
 
-// 重设Timer的时间
-void Timer::reset(){
-    totalTimePassed=0;
-    running=false;
+void Timer::add_time(uint64_t new_time_passed){
+    time_passed+=new_time_passed;
 }
 
-// 判断是否超时
-bool Timer::isEtire(){
-    if(totalTimePassed>=RTO){
+bool Timer::timeout(){
+    if(time_passed>=rto){
         return true;
     }else{
         return false;
     }
 }
 
-// 增加时间
-void Timer::addTime(size_t passTime){
-    if(!running)
-        return;
-    totalTimePassed+=passTime;
+void Timer::double_rto(){
+    rto*=2;
+    time_passed=0;
 }
 
-// 设置重传超时时间
-void Timer::setRTO(uint8_t newRTO){
-    RTO=newRTO;
+void Timer::reset(uint64_t init_rto){
+    time_passed=0;
+    rto=init_rto;
 }
 
-// 打开计时器
 void Timer::open(){
-    running=true;
+    is_open=true;
 }
 
-// 关闭计时器
 void Timer::close(){
-    running=false;
+    is_open=false;
 }
 
-// 检查连续重传是否超出次数
-bool Timer::isOverReTrans(int reTransLimit){
-    if(reTransCount>reTransLimit)
+void Timer::increase_retran_number(){
+    retran_number++;
+}
+
+bool Timer::over_retrans(uint64_t reTransLimit){
+    if(retran_number>reTransLimit)
         return true;
     return false;
 }

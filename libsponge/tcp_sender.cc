@@ -2,7 +2,6 @@
 
 #include "tcp_config.hh"
 #include "wrapping_integers.hh"
-#include "timer.hh"
 #include <random>
 #include <utility>
 
@@ -22,7 +21,7 @@ using namespace std;
 TCPSender::TCPSender(const size_t capacity, const uint16_t retx_timeout, const std::optional<WrappingInt32> fixed_isn)
     : _isn(fixed_isn.value_or(WrappingInt32{random_device()()}))
     ,_initial_retransmission_timeout{retx_timeout}
-    , _stream(capacity), outstandingSegBuf(), timer(retx_timeout), peerWindowSize(1), reachedLastSeg(false), RTO(retx_timeout) {}
+    , _stream(capacity), outstandingSegBuf(), timer(retx_timeout), peerWindowSize(1), sent_last_segment(false) {}
 
 // 参考TCPSegment::length_in_sequence_space
 /*
@@ -30,8 +29,7 @@ TCPSender::TCPSender(const size_t capacity, const uint16_t retx_timeout, const s
  * /*/
 uint64_t TCPSender::bytes_in_flight() const {
     size_t result=0;
-    for(auto iter=outstandingSegBuf.begin();iter!=outstandingSegBuf.end();++iter)
-        result+=(*iter).second.length_in_sequence_space();
+    result=_next_seqno-_acked_seqno;
     return result; 
 }
 
@@ -42,32 +40,36 @@ void TCPSender::fill_window() {
     size_t leftWindowSize=peerWindowSize-bytes_in_flight();
     // 这里的maxSegSize已经排除了SYN和FIN所占用的空间
     maxSegSize=min(maxSegSize, leftWindowSize);
-
     string payload=_stream.read(maxSegSize);
+    uint64_t payload_length=payload.length();
+    if(payload_length==0&&_next_seqno!=0)
+        return; // 此时未从流中读取信息，不发送新报文
     // 利用std::move()函数，可以将右值引用绑定到左值
     Buffer buffer(std::move(payload));
     // 生成TCPHeader
+    // 组合TCP报文
+    TCPSegment seg0;
     // 只关心 sqeno,SYN,FIN,Payload四个部分的填写
-    TCPHeader header;
-    if(_next_seqno==0)
+    TCPHeader &header=seg0.header();
+    header.seqno=wrap(_next_seqno, _isn);
+    if(_next_seqno==0){
         // 若绝对seqno为0，则为第一个发送的Segment
         header.syn=true;
+        _next_seqno+=1;
+    }
     if(_stream.eof()){
         // 此时输入流已空且输入已经结束，因此标记FIN flag
         header.fin=true;
-        if(reachedLastSeg){
+        if(sent_last_segment){
             // 如果已经到达了最后一个Seg，则不再新建空的FIN报文
             return;
         }
-        reachedLastSeg=true;
+        sent_last_segment=true;
     }
     // 更新_next_seqno
-    _next_seqno+=maxSegSize;
-    // 组合TCP报文
-    TCPSegment seg0;
-    auto segHeader=seg0.header();
-    auto segLoad=seg0.payload();
-    segHeader=header;
+    _next_seqno+=payload_length;
+    
+    auto &segLoad=seg0.payload();
     segLoad=buffer;
     // 发送TCP报文
     _segments_out.push(seg0);
@@ -81,9 +83,11 @@ void TCPSender::ack_received(const WrappingInt32 ackno, const uint16_t window_si
     peerWindowSize=window_size;
     // 更新outstandingSegBuf
     // 1. 将ackno解包为绝对序号
+    uint64_t absSeq=unwrap(ackno, _isn, _acked_seqno);
+    _acked_seqno=absSeq;
+    if(outstandingSegBuf.size()==0)
+        return;
     map<size_t, TCPSegment>::iterator iter=outstandingSegBuf.begin();
-    size_t checkpoint=(*iter).first;
-    uint64_t absSeq=unwrap(ackno, _isn, checkpoint);
     // 2. 删除所有已确认的TCP报文段
     while((*iter).first+(*iter).second.length_in_sequence_space()<=absSeq){
         auto temp=iter;
@@ -91,30 +95,39 @@ void TCPSender::ack_received(const WrappingInt32 ackno, const uint16_t window_si
         outstandingSegBuf.erase(temp);
     }
     // 3. 重设计时器
-    timer.setRTO(_initial_retransmission_timeout);
-    timer.reset();
+    timer.reset(_initial_retransmission_timeout);
 }
 
 //! \param[in] ms_since_last_tick the number of milliseconds since the last call to this method
 // 这个方法被上层调用，其参数为其距离上一次调用经过的时间(ms)
 void TCPSender::tick(const size_t ms_since_last_tick) { 
-    // DUMMY_CODE(ms_since_last_tick); 
+
     // 更新计时器
-    timer.addTime(ms_since_last_tick);
-    if(timer.isEtire()){
-        // 若已经超时
-        // 1.重传
-        consecutive_retransmissions();
-        // 2.增大2倍RTO
-        RTO*=2;
-        // 3.重设Timer
-        timer.setRTO(RTO);
-        timer.reset();
-        // 判断是否连续重传，可以检查Timer的RTO，若其不是_initial_retransmission_timeout，则说明其在进行连续重传
-    }
-    else
-        // 若未超时，
+    timer.add_time(ms_since_last_tick);
+    if(timer.timeout()){
+        // 重传
+        for(auto iter:outstandingSegBuf){
+            _segments_out.push(iter.second);
+        }
+        // 增大rto，并重设time_passed
+        timer.double_rto();
+    }else{
         fill_window();
+    }
+    // if(timer.isEtire()){
+    //     // 若已经超时
+    //     // 1.重传
+    //     consecutive_retransmissions();
+    //     // 2.增大2倍RTO
+    //     RTO*=2;
+    //     // 3.重设Timer
+    //     timer.setRTO(RTO);
+    //     timer.reset();
+    //     // 判断是否连续重传，可以检查Timer的RTO，若其不是_initial_retransmission_timeout，则说明其在进行连续重传
+    // }
+    // else
+    //     // 若未超时，
+    //     fill_window();
 }
 
 unsigned int TCPSender::consecutive_retransmissions() const { 
