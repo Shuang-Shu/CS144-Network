@@ -95,9 +95,9 @@ void TCPSender::ack_received(const WrappingInt32 ackno, const uint16_t window_si
     // 更新outstandingSegBuf
     // 1. 将ackno解包为绝对序号
     uint64_t absSeq=unwrap(ackno, _isn, _acked_seqno);
-    bool ack_has_new_data=true;
+    // bool ack_has_new_data=true;
     if(absSeq<=_acked_seqno)
-        ack_has_new_data=false;
+        return;
     if(absSeq>_next_seqno)
         return; // 不可能的确认号被忽略
     _acked_seqno=absSeq;
@@ -106,15 +106,16 @@ void TCPSender::ack_received(const WrappingInt32 ackno, const uint16_t window_si
     map<size_t, TCPSegment>::iterator iter=outstandingSegBuf.begin();
     // 2. 删除所有已确认的TCP报文段
     for(size_t i=0;i<outstandingSegBuf.size();++i){
-        if((*iter).first+(*iter).second.length_in_sequence_space()>_acked_seqno) break;
+        uint64_t target_seq_no=(*iter).first+(*iter).second.length_in_sequence_space();
+        // if((*iter).second.header().fin==true)
+        //     target_seq_no--;
+        if(target_seq_no>_acked_seqno) break;
         auto temp=iter;
         iter++;
         outstandingSegBuf.erase(temp);
     }
     // 3. 重设计时器
-    if(ack_has_new_data)
-        // 仅当ack包含了新信息时，才重设timer
-        timer.reset(_initial_retransmission_timeout);
+    timer.reset(_initial_retransmission_timeout);
 }
 
 //! \param[in] ms_since_last_tick the number of milliseconds since the last call to this method
@@ -125,6 +126,8 @@ void TCPSender::tick(const size_t ms_since_last_tick) {
     timer.add_time(ms_since_last_tick);
     if(timer.timeout()){
         // 重传（按照文档的要求，一次只重传一个segment）
+        if(outstandingSegBuf.size()==0)
+            return;
         auto iter=outstandingSegBuf.begin();
         _segments_out.push((*iter).second);
         // for(auto iter:outstandingSegBuf){
