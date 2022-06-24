@@ -34,48 +34,53 @@ uint64_t TCPSender::bytes_in_flight() const {
 }
 
 void TCPSender::fill_window() {
-    // 最大的报文长度
-    size_t maxSegSize=TCPConfig::MAX_PAYLOAD_SIZE;
-    // 剩余的窗口尺寸
-    size_t leftWindowSize=peerWindowSize-bytes_in_flight();
-    // 这里的maxSegSize已经排除了SYN和FIN所占用的空间
-    maxSegSize=min(maxSegSize, leftWindowSize);
-    string payload=_stream.read(maxSegSize);
-    uint64_t payload_length=payload.length();
-    size_t old_next_seqno=_next_seqno;
-    if(payload_length==0&&_next_seqno!=0)
-        return; // 此时未从流中读取信息，不发送新报文
-    // 利用std::move()函数，可以将右值引用绑定到左值
-    Buffer buffer(std::move(payload));
-    // 生成TCPHeader
-    // 组合TCP报文
-    TCPSegment seg0;
-    // 只关心 sqeno,SYN,FIN,Payload四个部分的填写
-    TCPHeader &header=seg0.header();
-    header.seqno=wrap(_next_seqno, _isn);
-    if(_next_seqno==0){
-        // 若绝对seqno为0，则为第一个发送的Segment
-        header.syn=true;
-        _next_seqno+=1;
-    }
-    if(_stream.eof()){
-        // 此时输入流已空且输入已经结束，因此标记FIN flag
-        header.fin=true;
-        if(sent_last_segment){
-            // 如果已经到达了最后一个Seg，则不再新建空的FIN报文
-            return;
+    for(;;){
+        // 最大的报文长度
+        size_t maxSegSize=TCPConfig::MAX_PAYLOAD_SIZE;
+        // 剩余的窗口尺寸
+        size_t leftWindowSize=peerWindowSize-bytes_in_flight();
+        // 这里的maxSegSize已经排除了SYN和FIN所占用的空间
+        maxSegSize=min(maxSegSize, leftWindowSize);
+        if(maxSegSize==0)
+            return; // 此时接收方窗口已满
+        string payload=_stream.read(maxSegSize);
+        uint64_t payload_length=payload.length();
+        size_t old_next_seqno=_next_seqno;
+        if(payload_length==0&&_next_seqno!=0&&!_stream.eof())
+            return; // 此时未从流中读取信息，不发送新报文
+        // 利用std::move()函数，可以将右值引用绑定到左值
+        Buffer buffer(std::move(payload));
+        // 生成TCPHeader
+        // 组合TCP报文
+        TCPSegment seg0;
+        // 只关心 sqeno,SYN,FIN,Payload四个部分的填写
+        TCPHeader &header=seg0.header();
+        header.seqno=wrap(_next_seqno, _isn);
+        if(_next_seqno==0){
+            // 若绝对seqno为0，则为第一个发送的Segment
+            header.syn=true;
+            _next_seqno+=1;
         }
-        sent_last_segment=true;
+        if(_stream.eof()&&payload_length<leftWindowSize){
+            // 此时输入流已空且输入已经结束，因此标记FIN flag
+            header.fin=true;
+            if(sent_last_segment){
+                // 如果已经到达了最后一个Seg，则不再新建空的FIN报文
+                return;
+            }
+            _next_seqno++;// 这是FIN的占位
+            sent_last_segment=true;
+        }
+        // 更新_next_seqno
+        _next_seqno+=payload_length;
+        
+        auto &segLoad=seg0.payload();
+        segLoad=buffer;
+        // 将报文加入outstandingSegBuf
+        outstandingSegBuf[old_next_seqno]=seg0;
+        // 发送TCP报文
+        _segments_out.push(seg0);
     }
-    // 更新_next_seqno
-    _next_seqno+=payload_length;
-    
-    auto &segLoad=seg0.payload();
-    segLoad=buffer;
-    // 将报文加入outstandingSegBuf
-    outstandingSegBuf[old_next_seqno]=seg0;
-    // 发送TCP报文
-    _segments_out.push(seg0);
 }
 
 //! \param ackno The remote receiver's ackno (acknowledgment number)
@@ -84,9 +89,17 @@ void TCPSender::fill_window() {
 void TCPSender::ack_received(const WrappingInt32 ackno, const uint16_t window_size) { 
     // 更新窗口大小
     peerWindowSize=window_size;
+    real_window_size=window_size;
+    if(window_size==0)
+        peerWindowSize=1;
     // 更新outstandingSegBuf
     // 1. 将ackno解包为绝对序号
     uint64_t absSeq=unwrap(ackno, _isn, _acked_seqno);
+    bool ack_has_new_data=true;
+    if(absSeq<=_acked_seqno)
+        ack_has_new_data=false;
+    if(absSeq>_next_seqno)
+        return; // 不可能的确认号被忽略
     _acked_seqno=absSeq;
     if(outstandingSegBuf.size()==0)
         return;
@@ -99,7 +112,9 @@ void TCPSender::ack_received(const WrappingInt32 ackno, const uint16_t window_si
         outstandingSegBuf.erase(temp);
     }
     // 3. 重设计时器
-    timer.reset(_initial_retransmission_timeout);
+    if(ack_has_new_data)
+        // 仅当ack包含了新信息时，才重设timer
+        timer.reset(_initial_retransmission_timeout);
 }
 
 //! \param[in] ms_since_last_tick the number of milliseconds since the last call to this method
@@ -109,14 +124,20 @@ void TCPSender::tick(const size_t ms_since_last_tick) {
     // 更新计时器
     timer.add_time(ms_since_last_tick);
     if(timer.timeout()){
-        // 重传
-        for(auto iter:outstandingSegBuf){
-            _segments_out.push(iter.second);
-        }
+        // 重传（按照文档的要求，一次只重传一个segment）
+        auto iter=outstandingSegBuf.begin();
+        _segments_out.push((*iter).second);
+        // for(auto iter:outstandingSegBuf){
+        //     _segments_out.push(iter.second);
+        //     break;
+        // }
         // 提高连续重传次数
         timer.increase_retran_number();
         // 增大rto，并重设time_passed
-        timer.double_rto();
+        if(real_window_size!=0)
+            timer.double_rto();
+        else
+            timer.reset_passed_time();
     }else{
         fill_window();
     }

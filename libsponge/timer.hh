@@ -29,4 +29,6 @@ class Timer{
         bool over_retrans(uint64_t);
         // 返回连续重传次数
         int get_retran_number() const;
+        // 返回当前的rto
+        void reset_passed_time();
 };

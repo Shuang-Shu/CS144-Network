@@ -46,8 +46,10 @@ class TCPSender {
     map<size_t, TCPSegment> outstandingSegBuf{};
     // 计时器
     Timer timer;
-    // 对等方剩余窗口大小(bytes)
+    // 对等方剩余窗口大小(bytes)这是用于发送的
     uint16_t peerWindowSize;
+    // 对等方的真实windowSize，可能为0
+    uint16_t real_window_size{1};
     // 是否到达最后一个segment
     bool sent_last_segment;
   public:

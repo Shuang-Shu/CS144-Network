@@ -47,3 +47,7 @@ bool Timer::over_retrans(uint64_t reTransLimit){
 int Timer::get_retran_number() const{
     return retran_number;
 }
+
+void Timer::reset_passed_time(){
+    time_passed=0;
+}

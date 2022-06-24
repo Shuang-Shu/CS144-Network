@@ -1,40 +1,37 @@
 t_webget 27 0.0839242
-t_byte_stream_construction 185 0.000520099
-t_byte_stream_one_write 174 0.000410149
-t_byte_stream_two_writes 174 0.000470443
-t_byte_stream_capacity 174 0.010595
-t_byte_stream_many_writes 182 0.000505105
-t_address_dt 188 0.000550408
-t_parser_dt 188 0.000395135
+t_byte_stream_construction 203 0.000334895
+t_byte_stream_one_write 192 0.000365802
+t_byte_stream_two_writes 192 0.000362448
+t_byte_stream_capacity 192 0.00936615
+t_byte_stream_many_writes 200 0.000440578
+t_address_dt 206 0.000539006
+t_parser_dt 206 0.000339439
 t_socket_dt 139 0
-t_strm_reassem_single 82 0.000899516
-t_strm_reassem_seq 122 0.000604514
-t_strm_reassem_dup 119 0.00067978
-t_strm_reassem_holes 77 0.00122815
-t_strm_reassem_many 65 0.0190533
-t_strm_reassem_overlapping 65 0.00113647
-t_strm_reassem_win 59 0.0261687
-t_strm_reassem_cap 59 0.0057605
-t_wrapping_ints_cmp 69 0.00109388
-t_wrapping_ints_unwrap 55 0.0017273
-t_wrapping_ints_wrap 66 0.00215535
-t_wrapping_ints_roundtrip 55 0.017286
-t_recv_connect 39 0.00224918
-t_recv_transmit 45 0.00576285
-t_recv_window 42 0.00183578
-t_recv_reorder 45 0.0017956
-t_recv_close 37 0.00227345
-t_recv_special 35 0.00245398
-t_send_connect 6 0.0139935
-t_send_transmit 6 0.0401578
-t_send_retx 1 0.0862917
-t_send_window 0 0
-t_send_ack 0 0
-t_send_close 0 0
+t_strm_reassem_single 100 0.000701604
+t_strm_reassem_seq 140 0.000522577
+t_strm_reassem_dup 137 0.000696613
+t_strm_reassem_holes 95 0.000835311
+t_strm_reassem_many 83 0.0143967
+t_strm_reassem_overlapping 83 0.000965624
+t_strm_reassem_win 77 0.0199272
+t_strm_reassem_cap 77 0.00419526
+t_wrapping_ints_cmp 87 0.000801744
+t_wrapping_ints_unwrap 73 0.000915575
+t_wrapping_ints_wrap 84 0.000786821
+t_wrapping_ints_roundtrip 73 0.0125043
+t_recv_connect 57 0.00141622
+t_recv_transmit 63 0.00339392
+t_recv_window 60 0.00128474
+t_recv_reorder 63 0.00128156
+t_recv_close 55 0.00181245
+t_recv_special 53 0.00161846
+t_send_connect 24 0.00338428
+t_send_transmit 24 0.00954198
+t_send_retx 17 0.00479665
+t_send_window 16 0.0126684
+t_send_ack 15 0.00550022
+t_send_close 15 0.00543019
 t_send_extra 0 0
 ---
-t_send_window
-t_send_ack
-t_send_close
 t_send_extra
 t_socket_dt
