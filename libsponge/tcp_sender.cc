@@ -144,26 +144,23 @@ void TCPSender::tick(const size_t ms_since_last_tick) {
     }else{
         fill_window();
     }
-    // if(timer.isEtire()){
-    //     // 若已经超时
-    //     // 1.重传
-    //     consecutive_retransmissions();
-    //     // 2.增大2倍RTO
-    //     RTO*=2;
-    //     // 3.重设Timer
-    //     timer.setRTO(RTO);
-    //     timer.reset();
-    //     // 判断是否连续重传，可以检查Timer的RTO，若其不是_initial_retransmission_timeout，则说明其在进行连续重传
-    // }
-    // else
-    //     // 若未超时，
-    //     fill_window();
 }
 
 unsigned int TCPSender::consecutive_retransmissions() const { 
     return timer.get_retran_number(); 
 }
 
-void TCPSender::send_empty_segment() {
-    
+// 发送一个空报文段
+void TCPSender::send_empty_segment(){
+    _segments_out.push(TCPSegment());
+}
+
+void TCPSender::send_ack_segment(WrappingInt32 ackno, size_t window_size) {
+    TCPSegment seg;
+    // 只关心 sqeno,SYN,FIN,Payload四个部分的填写
+    TCPHeader &header=seg.header();
+    header.ack=true;
+    header.ackno=ackno;
+    header.win=window_size;
+    _segments_out.push(seg);
 }
