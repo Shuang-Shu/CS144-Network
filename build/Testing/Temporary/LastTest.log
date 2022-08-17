@@ -1,498 +1,3028 @@
-Start testing: Jul 25 15:54 CST
+Start testing: Aug 17 14:42 CST
 ----------------------------------------------------------
 1/169 Testing: t_wrapping_ints_cmp
 1/169 Test: t_wrapping_ints_cmp
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/wrapping_integers_cmp"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_wrapping_ints_cmp" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/wrapping_integers_cmp"
+Directory: /home/network/CS144-Network/build
+"t_wrapping_ints_cmp" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_wrapping_ints_cmp" end time: Jul 25 15:54 CST
+"t_wrapping_ints_cmp" end time: Aug 17 14:42 CST
 "t_wrapping_ints_cmp" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 2/169 Testing: t_wrapping_ints_unwrap
 2/169 Test: t_wrapping_ints_unwrap
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/wrapping_integers_unwrap"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_wrapping_ints_unwrap" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/wrapping_integers_unwrap"
+Directory: /home/network/CS144-Network/build
+"t_wrapping_ints_unwrap" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_wrapping_ints_unwrap" end time: Jul 25 15:54 CST
+"t_wrapping_ints_unwrap" end time: Aug 17 14:42 CST
 "t_wrapping_ints_unwrap" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 3/169 Testing: t_wrapping_ints_wrap
 3/169 Test: t_wrapping_ints_wrap
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/wrapping_integers_wrap"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_wrapping_ints_wrap" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/wrapping_integers_wrap"
+Directory: /home/network/CS144-Network/build
+"t_wrapping_ints_wrap" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_wrapping_ints_wrap" end time: Jul 25 15:54 CST
+"t_wrapping_ints_wrap" end time: Aug 17 14:42 CST
 "t_wrapping_ints_wrap" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 4/169 Testing: t_wrapping_ints_roundtrip
 4/169 Test: t_wrapping_ints_roundtrip
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/wrapping_integers_roundtrip"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_wrapping_ints_roundtrip" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/wrapping_integers_roundtrip"
+Directory: /home/network/CS144-Network/build
+"t_wrapping_ints_roundtrip" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.56 sec
+Test time =   0.73 sec
 ----------------------------------------------------------
 Test Passed.
-"t_wrapping_ints_roundtrip" end time: Jul 25 15:54 CST
+"t_wrapping_ints_roundtrip" end time: Aug 17 14:42 CST
 "t_wrapping_ints_roundtrip" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 5/169 Testing: t_recv_connect
 5/169 Test: t_recv_connect
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/recv_connect"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_recv_connect" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/recv_connect"
+Directory: /home/network/CS144-Network/build
+"t_recv_connect" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_recv_connect" end time: Jul 25 15:54 CST
+"t_recv_connect" end time: Aug 17 14:42 CST
 "t_recv_connect" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 6/169 Testing: t_recv_transmit
 6/169 Test: t_recv_transmit
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/recv_transmit"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_recv_transmit" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/recv_transmit"
+Directory: /home/network/CS144-Network/build
+"t_recv_transmit" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.15 sec
+Test time =   0.11 sec
 ----------------------------------------------------------
 Test Passed.
-"t_recv_transmit" end time: Jul 25 15:54 CST
+"t_recv_transmit" end time: Aug 17 14:42 CST
 "t_recv_transmit" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 7/169 Testing: t_recv_window
 7/169 Test: t_recv_window
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/recv_window"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_recv_window" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/recv_window"
+Directory: /home/network/CS144-Network/build
+"t_recv_window" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_recv_window" end time: Jul 25 15:54 CST
+"t_recv_window" end time: Aug 17 14:42 CST
 "t_recv_window" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 8/169 Testing: t_recv_reorder
 8/169 Test: t_recv_reorder
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/recv_reorder"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_recv_reorder" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/recv_reorder"
+Directory: /home/network/CS144-Network/build
+"t_recv_reorder" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_recv_reorder" end time: Jul 25 15:54 CST
+"t_recv_reorder" end time: Aug 17 14:42 CST
 "t_recv_reorder" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 9/169 Testing: t_recv_close
 9/169 Test: t_recv_close
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/recv_close"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_recv_close" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/recv_close"
+Directory: /home/network/CS144-Network/build
+"t_recv_close" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_recv_close" end time: Jul 25 15:54 CST
+"t_recv_close" end time: Aug 17 14:42 CST
 "t_recv_close" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 10/169 Testing: t_recv_special
 10/169 Test: t_recv_special
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/recv_special"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_recv_special" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/recv_special"
+Directory: /home/network/CS144-Network/build
+"t_recv_special" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_recv_special" end time: Jul 25 15:54 CST
+"t_recv_special" end time: Aug 17 14:42 CST
 "t_recv_special" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 11/169 Testing: t_send_connect
 11/169 Test: t_send_connect
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/send_connect"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_send_connect" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/send_connect"
+Directory: /home/network/CS144-Network/build
+"t_send_connect" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_send_connect" end time: Jul 25 15:54 CST
+"t_send_connect" end time: Aug 17 14:42 CST
 "t_send_connect" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 12/169 Testing: t_send_transmit
 12/169 Test: t_send_transmit
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/send_transmit"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_send_transmit" start time: Jul 25 15:54 CST
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.18 sec
-----------------------------------------------------------
-Test Passed.
-"t_send_transmit" end time: Jul 25 15:54 CST
-"t_send_transmit" time elapsed: 00:00:00
-----------------------------------------------------------
-
-13/169 Testing: t_send_retx
-13/169 Test: t_send_retx
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/send_retx"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_send_retx" start time: Jul 25 15:54 CST
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.06 sec
-----------------------------------------------------------
-Test Passed.
-"t_send_retx" end time: Jul 25 15:54 CST
-"t_send_retx" time elapsed: 00:00:00
-----------------------------------------------------------
-
-14/169 Testing: t_send_window
-14/169 Test: t_send_window
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/send_window"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_send_window" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/send_transmit"
+Directory: /home/network/CS144-Network/build
+"t_send_transmit" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.13 sec
 ----------------------------------------------------------
 Test Passed.
-"t_send_window" end time: Jul 25 15:54 CST
+"t_send_transmit" end time: Aug 17 14:42 CST
+"t_send_transmit" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/169 Testing: t_send_retx
+13/169 Test: t_send_retx
+Command: "/home/network/CS144-Network/build/tests/send_retx"
+Directory: /home/network/CS144-Network/build
+"t_send_retx" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"t_send_retx" end time: Aug 17 14:42 CST
+"t_send_retx" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/169 Testing: t_send_window
+14/169 Test: t_send_window
+Command: "/home/network/CS144-Network/build/tests/send_window"
+Directory: /home/network/CS144-Network/build
+"t_send_window" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Passed.
+"t_send_window" end time: Aug 17 14:42 CST
 "t_send_window" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 15/169 Testing: t_send_ack
 15/169 Test: t_send_ack
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/send_ack"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_send_ack" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/send_ack"
+Directory: /home/network/CS144-Network/build
+"t_send_ack" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_send_ack" end time: Jul 25 15:54 CST
+"t_send_ack" end time: Aug 17 14:42 CST
 "t_send_ack" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 16/169 Testing: t_send_close
 16/169 Test: t_send_close
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/send_close"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_send_close" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/send_close"
+Directory: /home/network/CS144-Network/build
+"t_send_close" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_send_close" end time: Jul 25 15:54 CST
+"t_send_close" end time: Aug 17 14:42 CST
 "t_send_close" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 17/169 Testing: t_send_extra
 17/169 Test: t_send_extra
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/send_extra"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_send_extra" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/send_extra"
+Directory: /home/network/CS144-Network/build
+"t_send_extra" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.06 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"t_send_extra" end time: Jul 25 15:54 CST
+"t_send_extra" end time: Aug 17 14:42 CST
 "t_send_extra" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 18/169 Testing: t_strm_reassem_single
 18/169 Test: t_strm_reassem_single
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/fsm_stream_reassembler_single"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_strm_reassem_single" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/fsm_stream_reassembler_single"
+Directory: /home/network/CS144-Network/build
+"t_strm_reassem_single" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_single" end time: Jul 25 15:54 CST
+"t_strm_reassem_single" end time: Aug 17 14:42 CST
 "t_strm_reassem_single" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 19/169 Testing: t_strm_reassem_seq
 19/169 Test: t_strm_reassem_seq
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/fsm_stream_reassembler_seq"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_strm_reassem_seq" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/fsm_stream_reassembler_seq"
+Directory: /home/network/CS144-Network/build
+"t_strm_reassem_seq" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_seq" end time: Jul 25 15:54 CST
+"t_strm_reassem_seq" end time: Aug 17 14:42 CST
 "t_strm_reassem_seq" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 20/169 Testing: t_strm_reassem_dup
 20/169 Test: t_strm_reassem_dup
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/fsm_stream_reassembler_dup"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_strm_reassem_dup" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/fsm_stream_reassembler_dup"
+Directory: /home/network/CS144-Network/build
+"t_strm_reassem_dup" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_dup" end time: Jul 25 15:54 CST
+"t_strm_reassem_dup" end time: Aug 17 14:42 CST
 "t_strm_reassem_dup" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 21/169 Testing: t_strm_reassem_holes
 21/169 Test: t_strm_reassem_holes
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/fsm_stream_reassembler_holes"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_strm_reassem_holes" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/fsm_stream_reassembler_holes"
+Directory: /home/network/CS144-Network/build
+"t_strm_reassem_holes" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_holes" end time: Jul 25 15:54 CST
+"t_strm_reassem_holes" end time: Aug 17 14:42 CST
 "t_strm_reassem_holes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 22/169 Testing: t_strm_reassem_many
 22/169 Test: t_strm_reassem_many
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/fsm_stream_reassembler_many"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_strm_reassem_many" start time: Jul 25 15:54 CST
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.78 sec
-----------------------------------------------------------
-Test Passed.
-"t_strm_reassem_many" end time: Jul 25 15:54 CST
-"t_strm_reassem_many" time elapsed: 00:00:00
-----------------------------------------------------------
-
-23/169 Testing: t_strm_reassem_overlapping
-23/169 Test: t_strm_reassem_overlapping
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/fsm_stream_reassembler_overlapping"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_strm_reassem_overlapping" start time: Jul 25 15:54 CST
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.05 sec
-----------------------------------------------------------
-Test Passed.
-"t_strm_reassem_overlapping" end time: Jul 25 15:54 CST
-"t_strm_reassem_overlapping" time elapsed: 00:00:00
-----------------------------------------------------------
-
-24/169 Testing: t_strm_reassem_win
-24/169 Test: t_strm_reassem_win
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/fsm_stream_reassembler_win"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_strm_reassem_win" start time: Jul 25 15:54 CST
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   1.03 sec
-----------------------------------------------------------
-Test Passed.
-"t_strm_reassem_win" end time: Jul 25 15:54 CST
-"t_strm_reassem_win" time elapsed: 00:00:01
-----------------------------------------------------------
-
-25/169 Testing: t_strm_reassem_cap
-25/169 Test: t_strm_reassem_cap
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/fsm_stream_reassembler_cap"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_strm_reassem_cap" start time: Jul 25 15:54 CST
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.22 sec
-----------------------------------------------------------
-Test Passed.
-"t_strm_reassem_cap" end time: Jul 25 15:54 CST
-"t_strm_reassem_cap" time elapsed: 00:00:00
-----------------------------------------------------------
-
-26/169 Testing: t_byte_stream_construction
-26/169 Test: t_byte_stream_construction
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/byte_stream_construction"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_byte_stream_construction" start time: Jul 25 15:54 CST
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.04 sec
-----------------------------------------------------------
-Test Passed.
-"t_byte_stream_construction" end time: Jul 25 15:54 CST
-"t_byte_stream_construction" time elapsed: 00:00:00
-----------------------------------------------------------
-
-27/169 Testing: t_byte_stream_one_write
-27/169 Test: t_byte_stream_one_write
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/byte_stream_one_write"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_byte_stream_one_write" start time: Jul 25 15:54 CST
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.05 sec
-----------------------------------------------------------
-Test Passed.
-"t_byte_stream_one_write" end time: Jul 25 15:54 CST
-"t_byte_stream_one_write" time elapsed: 00:00:00
-----------------------------------------------------------
-
-28/169 Testing: t_byte_stream_two_writes
-28/169 Test: t_byte_stream_two_writes
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/byte_stream_two_writes"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_byte_stream_two_writes" start time: Jul 25 15:54 CST
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.05 sec
-----------------------------------------------------------
-Test Passed.
-"t_byte_stream_two_writes" end time: Jul 25 15:54 CST
-"t_byte_stream_two_writes" time elapsed: 00:00:00
-----------------------------------------------------------
-
-29/169 Testing: t_byte_stream_capacity
-29/169 Test: t_byte_stream_capacity
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/byte_stream_capacity"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_byte_stream_capacity" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/fsm_stream_reassembler_many"
+Directory: /home/network/CS144-Network/build
+"t_strm_reassem_many" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   1.19 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_capacity" end time: Jul 25 15:54 CST
+"t_strm_reassem_many" end time: Aug 17 14:42 CST
+"t_strm_reassem_many" time elapsed: 00:00:01
+----------------------------------------------------------
+
+23/169 Testing: t_strm_reassem_overlapping
+23/169 Test: t_strm_reassem_overlapping
+Command: "/home/network/CS144-Network/build/tests/fsm_stream_reassembler_overlapping"
+Directory: /home/network/CS144-Network/build
+"t_strm_reassem_overlapping" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"t_strm_reassem_overlapping" end time: Aug 17 14:42 CST
+"t_strm_reassem_overlapping" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/169 Testing: t_strm_reassem_win
+24/169 Test: t_strm_reassem_win
+Command: "/home/network/CS144-Network/build/tests/fsm_stream_reassembler_win"
+Directory: /home/network/CS144-Network/build
+"t_strm_reassem_win" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   1.36 sec
+----------------------------------------------------------
+Test Passed.
+"t_strm_reassem_win" end time: Aug 17 14:42 CST
+"t_strm_reassem_win" time elapsed: 00:00:01
+----------------------------------------------------------
+
+25/169 Testing: t_strm_reassem_cap
+25/169 Test: t_strm_reassem_cap
+Command: "/home/network/CS144-Network/build/tests/fsm_stream_reassembler_cap"
+Directory: /home/network/CS144-Network/build
+"t_strm_reassem_cap" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.23 sec
+----------------------------------------------------------
+Test Passed.
+"t_strm_reassem_cap" end time: Aug 17 14:42 CST
+"t_strm_reassem_cap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/169 Testing: t_byte_stream_construction
+26/169 Test: t_byte_stream_construction
+Command: "/home/network/CS144-Network/build/tests/byte_stream_construction"
+Directory: /home/network/CS144-Network/build
+"t_byte_stream_construction" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"t_byte_stream_construction" end time: Aug 17 14:42 CST
+"t_byte_stream_construction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/169 Testing: t_byte_stream_one_write
+27/169 Test: t_byte_stream_one_write
+Command: "/home/network/CS144-Network/build/tests/byte_stream_one_write"
+Directory: /home/network/CS144-Network/build
+"t_byte_stream_one_write" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"t_byte_stream_one_write" end time: Aug 17 14:42 CST
+"t_byte_stream_one_write" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/169 Testing: t_byte_stream_two_writes
+28/169 Test: t_byte_stream_two_writes
+Command: "/home/network/CS144-Network/build/tests/byte_stream_two_writes"
+Directory: /home/network/CS144-Network/build
+"t_byte_stream_two_writes" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"t_byte_stream_two_writes" end time: Aug 17 14:42 CST
+"t_byte_stream_two_writes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/169 Testing: t_byte_stream_capacity
+29/169 Test: t_byte_stream_capacity
+Command: "/home/network/CS144-Network/build/tests/byte_stream_capacity"
+Directory: /home/network/CS144-Network/build
+"t_byte_stream_capacity" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   1.27 sec
+----------------------------------------------------------
+Test Passed.
+"t_byte_stream_capacity" end time: Aug 17 14:42 CST
 "t_byte_stream_capacity" time elapsed: 00:00:01
 ----------------------------------------------------------
 
 30/169 Testing: t_byte_stream_many_writes
 30/169 Test: t_byte_stream_many_writes
-Command: "/mnt/d/Study/labs/CS144-Network/build/tests/byte_stream_many_writes"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_byte_stream_many_writes" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/tests/byte_stream_many_writes"
+Directory: /home/network/CS144-Network/build
+"t_byte_stream_many_writes" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.06 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_many_writes" end time: Jul 25 15:54 CST
+"t_byte_stream_many_writes" end time: Aug 17 14:42 CST
 "t_byte_stream_many_writes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/169 Testing: t_webget
+31/169 Test: t_webget
+Command: "/home/network/CS144-Network/tests/webget_t.sh"
+Directory: /home/network/CS144-Network/build
+"t_webget" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+HTTP/1.1 200 OK
+Content-type: text/plain
+
+7SmXqWkrLKzVBCEalbSPqBcvs11Pw263K7x4Wv3JckI
+<end of output>
+Test time =   2.73 sec
+----------------------------------------------------------
+Test Passed.
+"t_webget" end time: Aug 17 14:42 CST
+"t_webget" time elapsed: 00:00:02
+----------------------------------------------------------
+
+34/169 Testing: t_tcp_parser
+34/169 Test: t_tcp_parser
+Command: "/home/network/CS144-Network/build/tests/tcp_parser" "/home/network/CS144-Network/tests/ipv4_parser.data"
+Directory: /home/network/CS144-Network/build
+"t_tcp_parser" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"t_tcp_parser" end time: Aug 17 14:42 CST
+"t_tcp_parser" time elapsed: 00:00:00
+----------------------------------------------------------
+
+35/169 Testing: t_ipv4_parser
+35/169 Test: t_ipv4_parser
+Command: "/home/network/CS144-Network/build/tests/ipv4_parser" "/home/network/CS144-Network/tests/ipv4_parser.data"
+Directory: /home/network/CS144-Network/build
+"t_ipv4_parser" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"t_ipv4_parser" end time: Aug 17 14:42 CST
+"t_ipv4_parser" time elapsed: 00:00:00
+----------------------------------------------------------
+
+36/169 Testing: t_active_close
+36/169 Test: t_active_close
+Command: "/home/network/CS144-Network/build/tests/fsm_active_close"
+Directory: /home/network/CS144-Network/build
+"t_active_close" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"t_active_close" end time: Aug 17 14:42 CST
+"t_active_close" time elapsed: 00:00:00
+----------------------------------------------------------
+
+37/169 Testing: t_passive_close
+37/169 Test: t_passive_close
+Command: "/home/network/CS144-Network/build/tests/fsm_passive_close"
+Directory: /home/network/CS144-Network/build
+"t_passive_close" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+Test Failure on expectation:
+	exactly one segment sent with (F=1,)
+Failure message:
+	The TCP an extra segment when it should not have
+
+List of steps that executed successfully:
+	Action:      connect
+	Expectation: exactly one segment sent with (A=0,R=0,S=1,F=0,seqno=0,payload_size=0,)
+	Action:      packet arrives: Header(flags=SA,seqno=0,ack=1,win=137) with no payload
+	Expectation: exactly one segment sent with (A=1,R=0,S=0,F=0,ackno=1,payload_size=0,)
+	Action:      packet arrives: Header(flags=AF,seqno=1,ack=1,win=137) with no payload
+	Expectation: exactly one segment sent with (A=1,R=0,S=0,F=0,ackno=2,)
+	Action:      4000ms pass
+	Expectation: TCP in state sender=`stream ongoing`, receiver=`input to stream has ended`, active=1, linger_after_streams_finish=0
+	Action:      close
+	Action:      1ms pass
+	Expectation: TCP in state sender=`stream finished (FIN sent) but not fully acknowledged`, receiver=`input to stream has ended`, active=1, linger_after_streams_finish=0
+
+Note:
+	test 2 falied: bad seg or no FIN
+
+Warning: Unclean shutdown of TCPConnection
+The TCP an extra segment when it should not have
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"t_passive_close" end time: Aug 17 14:42 CST
+"t_passive_close" time elapsed: 00:00:00
+----------------------------------------------------------
+
+39/169 Testing: t_ack_rst
+39/169 Test: t_ack_rst
+Command: "/home/network/CS144-Network/build/tests/fsm_ack_rst_relaxed"
+Directory: /home/network/CS144-Network/build
+"t_ack_rst" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+Test 1
+Test Failure on expectation:
+	Expectation: TCP has 0 unassembled bytes
+
+Failure message:
+	The TCP has `unassembled_bytes = 1`, but unassembled_bytes was expected to be `0`
+
+List of steps that executed successfully:
+	Action:      connect
+	Expectation: exactly one segment sent with (A=0,R=0,S=1,F=0,seqno=2147483647,payload_size=0,)
+	Action:      packet arrives: Header(flags=SA,seqno=2147483647,ack=2147483648,win=137) with no payload
+	Expectation: exactly one segment sent with (A=1,R=0,S=0,F=0,ackno=2147483648,payload_size=0,)
+	Action:      packet arrives: Header(flags=A,seqno=2147483648,ack=2147483648,win=137) with no payload
+	Expectation: no (more) segments sent
+	Action:      packet arrives: Header(flags=A,seqno=2147483648,ack=2147483647,win=137) with no payload
+	Expectation: no (more) segments sent
+	Action:      packet arrives: Header(flags=A,seqno=2147483647,ack=2147483648,win=137) with 1 data bytes "<1>"
+	Expectation: TCP has 0 unassembled bytes
+	Expectation: exactly one segment sent with (A=1,ackno=2147483648,)
+	Action:      packet arrives: Header(flags=A,seqno=2147547648,ack=2147483648,win=137) with 1 data bytes "<1>"
+
+Note:
+	test 1 failed: seg queued on late seqno
+
+Warning: Unclean shutdown of TCPConnection
+The TCP has `unassembled_bytes = 1`, but unassembled_bytes was expected to be `0`
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"t_ack_rst" end time: Aug 17 14:42 CST
+"t_ack_rst" time elapsed: 00:00:00
+----------------------------------------------------------
+
+41/169 Testing: t_ack_rst_win
+41/169 Test: t_ack_rst_win
+Command: "/home/network/CS144-Network/build/tests/fsm_ack_rst_win_relaxed"
+Directory: /home/network/CS144-Network/build
+"t_ack_rst_win" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+Test Failure on expectation:
+	Expectation: TCP has 0 unassembled bytes
+
+Failure message:
+	The TCP has `unassembled_bytes = 1`, but unassembled_bytes was expected to be `0`
+
+List of steps that executed successfully:
+	Action:      connect
+	Expectation: exactly one segment sent with (A=0,R=0,S=1,F=0,seqno=2147483647,payload_size=0,)
+	Action:      packet arrives: Header(flags=SA,seqno=2147483647,ack=2147483648,win=137) with no payload
+	Expectation: exactly one segment sent with (A=1,R=0,S=0,F=0,ackno=2147483648,payload_size=0,)
+	Action:      packet arrives: Header(flags=A,seqno=2147483648,ack=2147483648,win=137) with no payload
+	Expectation: no (more) segments sent
+	Action:      packet arrives: Header(flags=A,seqno=2147483648,ack=2147483647,win=137) with no payload
+	Expectation: no (more) segments sent
+	Action:      packet arrives: Header(flags=A,seqno=2147483647,ack=2147483648,win=137) with 1 data bytes "<1>"
+	Expectation: TCP has 0 unassembled bytes
+	Expectation: exactly one segment sent with (ackno=2147483648,)
+	Action:      packet arrives: Header(flags=A,seqno=2147547648,ack=2147483648,win=137) with 1 data bytes "<1>"
+
+Note:
+	test 1 failed: seg queued on late seqno
+
+Warning: Unclean shutdown of TCPConnection
+The TCP has `unassembled_bytes = 1`, but unassembled_bytes was expected to be `0`
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"t_ack_rst_win" end time: Aug 17 14:42 CST
+"t_ack_rst_win" time elapsed: 00:00:00
+----------------------------------------------------------
+
+43/169 Testing: t_connect
+43/169 Test: t_connect
+Command: "/home/network/CS144-Network/build/tests/fsm_connect_relaxed"
+Directory: /home/network/CS144-Network/build
+"t_connect" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"t_connect" end time: Aug 17 14:42 CST
+"t_connect" time elapsed: 00:00:00
+----------------------------------------------------------
+
+45/169 Testing: t_listen
+45/169 Test: t_listen
+Command: "/home/network/CS144-Network/build/tests/fsm_listen_relaxed"
+Directory: /home/network/CS144-Network/build
+"t_listen" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+Test Failure on expectation:
+	Expectation: TCP in state sender=`waiting for stream to begin (no SYN sent)`, receiver=`waiting for SYN: ackno is empty`, active=1, linger_after_streams_finish=1
+
+Failure message:
+	The TCP was in state `sender=`stream started but nothing acknowledged`, receiver=`waiting for SYN: ackno is empty`, active=1, linger_after_streams_finish=1`, but it was expected to be in state `sender=`waiting for stream to begin (no SYN sent)`, receiver=`waiting for SYN: ackno is empty`, active=1, linger_after_streams_finish=1`
+
+List of steps that executed successfully:
+	Action:      listen
+	Expectation: TCP in state sender=`waiting for stream to begin (no SYN sent)`, receiver=`waiting for SYN: ackno is empty`, active=1, linger_after_streams_finish=1
+	Action:      1ms pass
+
+Warning: Unclean shutdown of TCPConnection
+The TCP was in state `sender=`stream started but nothing acknowledged`, receiver=`waiting for SYN: ackno is empty`, active=1, linger_after_streams_finish=1`, but it was expected to be in state `sender=`waiting for stream to begin (no SYN sent)`, receiver=`waiting for SYN: ackno is empty`, active=1, linger_after_streams_finish=1`
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"t_listen" end time: Aug 17 14:42 CST
+"t_listen" time elapsed: 00:00:00
+----------------------------------------------------------
+
+46/169 Testing: t_winsize
+46/169 Test: t_winsize
+Command: "/home/network/CS144-Network/build/tests/fsm_winsize"
+Directory: /home/network/CS144-Network/build
+"t_winsize" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+Test Failure on expectation:
+	Expectation: TCP in state sender=`stream ongoing`, receiver=`SYN received (ackno exists), and input to stream hasn't ended`, active=1, linger_after_streams_finish=1
+
+Failure message:
+	The TCP was in state `sender=`waiting for stream to begin (no SYN sent)`, receiver=`SYN received (ackno exists), and input to stream hasn't ended`, active=1, linger_after_streams_finish=1`, but it was expected to be in state `sender=`stream ongoing`, receiver=`SYN received (ackno exists), and input to stream hasn't ended`, active=1, linger_after_streams_finish=1`
+
+List of steps that executed successfully:
+	Action:      listen
+	Action:      packet arrives: Header(flags=S,seqno=2955953657,ack=0,win=137) with no payload
+	Expectation: exactly one segment sent with (A=1,ackno=2955953658,win=31409,)
+	Action:      packet arrives: Header(flags=A,seqno=2955953658,ack=1,win=18666) with no payload
+	Expectation: no (more) segments sent
+
+Warning: Unclean shutdown of TCPConnection
+The TCP was in state `sender=`waiting for stream to begin (no SYN sent)`, receiver=`SYN received (ackno exists), and input to stream hasn't ended`, active=1, linger_after_streams_finish=1`, but it was expected to be in state `sender=`stream ongoing`, receiver=`SYN received (ackno exists), and input to stream hasn't ended`, active=1, linger_after_streams_finish=1`
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"t_winsize" end time: Aug 17 14:42 CST
+"t_winsize" time elapsed: 00:00:00
+----------------------------------------------------------
+
+48/169 Testing: t_retx
+48/169 Test: t_retx
+Command: "/home/network/CS144-Network/build/tests/fsm_retx_relaxed"
+Directory: /home/network/CS144-Network/build
+"t_retx" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+Test Failure on expectation:
+	Expectation: TCP in state sender=`error (connection was reset)`, receiver=`error (connection was reset)`, active=0, linger_after_streams_finish=0
+
+Failure message:
+	The TCP was in state `sender=`stream ongoing`, receiver=`SYN received (ackno exists), and input to stream hasn't ended`, active=1, linger_after_streams_finish=1`, but it was expected to be in state `sender=`error (connection was reset)`, receiver=`error (connection was reset)`, active=0, linger_after_streams_finish=0`
+
+List of steps that executed successfully:
+	Action:      connect
+	Expectation: exactly one segment sent with (A=0,R=0,S=1,F=0,seqno=4105345836,payload_size=0,)
+	Action:      packet arrives: Header(flags=SA,seqno=4105345836,ack=4105345837,win=137) with no payload
+	Expectation: exactly one segment sent with (A=1,R=0,S=0,F=0,ackno=4105345837,payload_size=0,)
+	Action:      write (4 bytes) [61, 73, 64, 66]
+	Action:      1ms pass
+	Expectation: segment sent with (A=1,payload_size=4,data="asdf",)
+	Expectation: no (more) segments sent
+	Action:      998ms pass
+	Expectation: no (more) segments sent
+	Action:      2ms pass
+	Expectation: segment sent with (A=1,payload_size=4,data="asdf",)
+	Expectation: no (more) segments sent
+	Action:      10100ms pass
+	Expectation: segment sent with (A=1,payload_size=4,data="asdf",)
+	Expectation: no (more) segments sent
+	Action:      3998ms pass
+	Expectation: no (more) segments sent
+	Action:      2ms pass
+	Expectation: segment sent with (A=1,payload_size=4,data="asdf",)
+	Expectation: no (more) segments sent
+	Action:      7997ms pass
+	Expectation: no (more) segments sent
+	Action:      3ms pass
+	Expectation: segment sent with (A=1,payload_size=4,data="asdf",)
+	Expectation: no (more) segments sent
+	Action:      15996ms pass
+	Expectation: no (more) segments sent
+	Action:      4ms pass
+	Expectation: segment sent with (A=1,payload_size=4,data="asdf",)
+	Expectation: no (more) segments sent
+	Action:      31995ms pass
+	Expectation: no (more) segments sent
+	Action:      5ms pass
+	Expectation: segment sent with (A=1,payload_size=4,data="asdf",)
+	Expectation: no (more) segments sent
+	Action:      63994ms pass
+	Expectation: no (more) segments sent
+	Action:      6ms pass
+	Expectation: segment sent with (A=1,payload_size=4,data="asdf",)
+	Expectation: no (more) segments sent
+	Action:      127993ms pass
+	Expectation: no (more) segments sent
+	Action:      7ms pass
+	Expectation: segment sent with (A=1,payload_size=4,data="asdf",)
+	Expectation: no (more) segments sent
+	Expectation: TCP in state sender=`stream ongoing`, receiver=`SYN received (ackno exists), and input to stream hasn't ended`, active=1, linger_after_streams_finish=1
+	Action:      256001ms pass
+
+Warning: Unclean shutdown of TCPConnection
+The TCP was in state `sender=`stream ongoing`, receiver=`SYN received (ackno exists), and input to stream hasn't ended`, active=1, linger_after_streams_finish=1`, but it was expected to be in state `sender=`error (connection was reset)`, receiver=`error (connection was reset)`, active=0, linger_after_streams_finish=0`
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"t_retx" end time: Aug 17 14:42 CST
+"t_retx" time elapsed: 00:00:00
+----------------------------------------------------------
+
+49/169 Testing: t_retx_win
+49/169 Test: t_retx_win
+Command: "/home/network/CS144-Network/build/tests/fsm_retx_win"
+Directory: /home/network/CS144-Network/build
+"t_retx_win" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+Warning: Unclean shutdown of TCPConnection
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+Warning: Unclean shutdown of TCPConnection
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+Warning: Unclean shutdown of TCPConnection
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+Warning: Unclean shutdown of TCPConnection
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+Warning: Unclean shutdown of TCPConnection
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+Warning: Unclean shutdown of TCPConnection
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+Warning: Unclean shutdown of TCPConnection
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+Warning: Unclean shutdown of TCPConnection
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+Warning: Unclean shutdown of TCPConnection
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+  check_segment
+Warning: Unclean shutdown of TCPConnection
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"t_retx_win" end time: Aug 17 14:42 CST
+"t_retx_win" time elapsed: 00:00:00
+----------------------------------------------------------
+
+50/169 Testing: t_loopback
+50/169 Test: t_loopback
+Command: "/home/network/CS144-Network/build/tests/fsm_loopback"
+Directory: /home/network/CS144-Network/build
+"t_loopback" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+<end of output>
+Test time =   1.84 sec
+----------------------------------------------------------
+Test Passed.
+"t_loopback" end time: Aug 17 14:42 CST
+"t_loopback" time elapsed: 00:00:01
+----------------------------------------------------------
+
+51/169 Testing: t_loopback_win
+51/169 Test: t_loopback_win
+Command: "/home/network/CS144-Network/build/tests/fsm_loopback_win"
+Directory: /home/network/CS144-Network/build
+"t_loopback_win" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+<end of output>
+Test time =   0.93 sec
+----------------------------------------------------------
+Test Passed.
+"t_loopback_win" end time: Aug 17 14:42 CST
+"t_loopback_win" time elapsed: 00:00:00
+----------------------------------------------------------
+
+52/169 Testing: t_reorder
+52/169 Test: t_reorder
+Command: "/home/network/CS144-Network/build/tests/fsm_reorder"
+Directory: /home/network/CS144-Network/build
+"t_reorder" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+Warning: Unclean shutdown of TCPConnection
+<end of output>
+Test time =   1.29 sec
+----------------------------------------------------------
+Test Passed.
+"t_reorder" end time: Aug 17 14:42 CST
+"t_reorder" time elapsed: 00:00:01
 ----------------------------------------------------------
 
 53/169 Testing: t_address_dt
 53/169 Test: t_address_dt
-Command: "/mnt/d/Study/labs/CS144-Network/build/doctests/address_dt"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_address_dt" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/doctests/address_dt"
+Directory: /home/network/CS144-Network/build
+"t_address_dt" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.06 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_address_dt" end time: Jul 25 15:54 CST
+"t_address_dt" end time: Aug 17 14:42 CST
 "t_address_dt" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 54/169 Testing: t_parser_dt
 54/169 Test: t_parser_dt
-Command: "/mnt/d/Study/labs/CS144-Network/build/doctests/parser_dt"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_parser_dt" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/doctests/parser_dt"
+Directory: /home/network/CS144-Network/build
+"t_parser_dt" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.04 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_parser_dt" end time: Jul 25 15:54 CST
+"t_parser_dt" end time: Aug 17 14:42 CST
 "t_parser_dt" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 55/169 Testing: t_socket_dt
 55/169 Test: t_socket_dt
-Command: "/mnt/d/Study/labs/CS144-Network/build/doctests/socket_dt"
-Directory: /mnt/d/Study/labs/CS144-Network/build
-"t_socket_dt" start time: Jul 25 15:54 CST
+Command: "/home/network/CS144-Network/build/doctests/socket_dt"
+Directory: /home/network/CS144-Network/build
+"t_socket_dt" start time: Aug 17 14:42 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
-Test Failed.
-"t_socket_dt" end time: Jul 25 15:54 CST
+Test Passed.
+"t_socket_dt" end time: Aug 17 14:42 CST
 "t_socket_dt" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jul 25 15:54 CST
+56/169 Testing: t_udp_client_send
+56/169 Test: t_udp_client_send
+Command: "/home/network/CS144-Network/txrx.sh" "-ucS"
+Directory: /home/network/CS144-Network/build
+"t_udp_client_send" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... DEBUG: Connecting to 169.254.144.1:29890... new connection from 169.254.144.1:49954.
+DEBUG: Outbound stream to 169.254.144.1:49954 finished (2 bytes still in flight).
+done.
+DEBUG: Outbound stream to 169.254.144.1:29890 finished (1 byte still in flight).
+DEBUG: Waiting for clean shutdown... DEBUG: Inbound stream from 169.254.144.1:29890 finished cleanly.
+DEBUG: Outbound stream to 169.254.144.1:49954 has been fully acknowledged.
+DEBUG: Outbound stream to 169.254.144.1:29890 has been fully acknowledged.
+DEBUG: Inbound stream from 169.254.144.1:49954 finished cleanly.
+DEBUG: Waiting for lingering segments (e.g. retransmissions of FIN) from peer...
+DEBUG: Waiting for clean shutdown... DEBUG: TCP connection finished cleanly.
+done.
+<end of output>
+Test time =  10.01 sec
+----------------------------------------------------------
+Test Failed.
+"t_udp_client_send" end time: Aug 17 14:42 CST
+"t_udp_client_send" time elapsed: 00:00:10
+----------------------------------------------------------
+
+57/169 Testing: t_udp_server_send
+57/169 Test: t_udp_server_send
+Command: "/home/network/CS144-Network/txrx.sh" "-usS"
+Directory: /home/network/CS144-Network/build
+"t_udp_server_send" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_udp_server_send" end time: Aug 17 14:42 CST
+"t_udp_server_send" time elapsed: 00:00:00
+----------------------------------------------------------
+
+58/169 Testing: t_udp_client_recv
+58/169 Test: t_udp_client_recv
+Command: "/home/network/CS144-Network/txrx.sh" "-ucR"
+Directory: /home/network/CS144-Network/build
+"t_udp_client_recv" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_udp_client_recv" end time: Aug 17 14:42 CST
+"t_udp_client_recv" time elapsed: 00:00:00
+----------------------------------------------------------
+
+59/169 Testing: t_udp_server_recv
+59/169 Test: t_udp_server_recv
+Command: "/home/network/CS144-Network/txrx.sh" "-usR"
+Directory: /home/network/CS144-Network/build
+"t_udp_server_recv" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_udp_server_recv" end time: Aug 17 14:42 CST
+"t_udp_server_recv" time elapsed: 00:00:00
+----------------------------------------------------------
+
+60/169 Testing: t_udp_client_dupl
+60/169 Test: t_udp_client_dupl
+Command: "/home/network/CS144-Network/txrx.sh" "-ucD"
+Directory: /home/network/CS144-Network/build
+"t_udp_client_dupl" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.14 sec
+----------------------------------------------------------
+Test Failed.
+"t_udp_client_dupl" end time: Aug 17 14:42 CST
+"t_udp_client_dupl" time elapsed: 00:00:00
+----------------------------------------------------------
+
+61/169 Testing: t_udp_server_dupl
+61/169 Test: t_udp_server_dupl
+Command: "/home/network/CS144-Network/txrx.sh" "-usD"
+Directory: /home/network/CS144-Network/build
+"t_udp_server_dupl" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_udp_server_dupl" end time: Aug 17 14:42 CST
+"t_udp_server_dupl" time elapsed: 00:00:00
+----------------------------------------------------------
+
+62/169 Testing: t_ucS_1M_32k
+62/169 Test: t_ucS_1M_32k
+Command: "/home/network/CS144-Network/txrx.sh" "-ucSd" "1M" "-w" "32K"
+Directory: /home/network/CS144-Network/build
+"t_ucS_1M_32k" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucS_1M_32k" end time: Aug 17 14:42 CST
+"t_ucS_1M_32k" time elapsed: 00:00:00
+----------------------------------------------------------
+
+63/169 Testing: t_ucS_128K_8K
+63/169 Test: t_ucS_128K_8K
+Command: "/home/network/CS144-Network/txrx.sh" "-ucSd" "128K" "-w" "8K"
+Directory: /home/network/CS144-Network/build
+"t_ucS_128K_8K" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucS_128K_8K" end time: Aug 17 14:42 CST
+"t_ucS_128K_8K" time elapsed: 00:00:00
+----------------------------------------------------------
+
+64/169 Testing: t_ucS_16_1
+64/169 Test: t_ucS_16_1
+Command: "/home/network/CS144-Network/txrx.sh" "-ucSd" "16" "-w" "1"
+Directory: /home/network/CS144-Network/build
+"t_ucS_16_1" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucS_16_1" end time: Aug 17 14:42 CST
+"t_ucS_16_1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+65/169 Testing: t_ucS_32K_d
+65/169 Test: t_ucS_32K_d
+Command: "/home/network/CS144-Network/txrx.sh" "-ucSd" "32K"
+Directory: /home/network/CS144-Network/build
+"t_ucS_32K_d" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucS_32K_d" end time: Aug 17 14:42 CST
+"t_ucS_32K_d" time elapsed: 00:00:00
+----------------------------------------------------------
+
+66/169 Testing: t_ucR_1M_32k
+66/169 Test: t_ucR_1M_32k
+Command: "/home/network/CS144-Network/txrx.sh" "-ucRd" "1M" "-w" "32K"
+Directory: /home/network/CS144-Network/build
+"t_ucR_1M_32k" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.14 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucR_1M_32k" end time: Aug 17 14:42 CST
+"t_ucR_1M_32k" time elapsed: 00:00:00
+----------------------------------------------------------
+
+67/169 Testing: t_ucR_128K_8K
+67/169 Test: t_ucR_128K_8K
+Command: "/home/network/CS144-Network/txrx.sh" "-ucRd" "128K" "-w" "8K"
+Directory: /home/network/CS144-Network/build
+"t_ucR_128K_8K" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucR_128K_8K" end time: Aug 17 14:42 CST
+"t_ucR_128K_8K" time elapsed: 00:00:00
+----------------------------------------------------------
+
+68/169 Testing: t_ucR_16_1
+68/169 Test: t_ucR_16_1
+Command: "/home/network/CS144-Network/txrx.sh" "-ucRd" "16" "-w" "1"
+Directory: /home/network/CS144-Network/build
+"t_ucR_16_1" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucR_16_1" end time: Aug 17 14:42 CST
+"t_ucR_16_1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+69/169 Testing: t_ucR_32K_d
+69/169 Test: t_ucR_32K_d
+Command: "/home/network/CS144-Network/txrx.sh" "-ucRd" "32K"
+Directory: /home/network/CS144-Network/build
+"t_ucR_32K_d" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucR_32K_d" end time: Aug 17 14:42 CST
+"t_ucR_32K_d" time elapsed: 00:00:00
+----------------------------------------------------------
+
+70/169 Testing: t_ucD_1M_32k
+70/169 Test: t_ucD_1M_32k
+Command: "/home/network/CS144-Network/txrx.sh" "-ucDd" "1M" "-w" "32K"
+Directory: /home/network/CS144-Network/build
+"t_ucD_1M_32k" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucD_1M_32k" end time: Aug 17 14:42 CST
+"t_ucD_1M_32k" time elapsed: 00:00:00
+----------------------------------------------------------
+
+71/169 Testing: t_ucD_128K_8K
+71/169 Test: t_ucD_128K_8K
+Command: "/home/network/CS144-Network/txrx.sh" "-ucDd" "128K" "-w" "8K"
+Directory: /home/network/CS144-Network/build
+"t_ucD_128K_8K" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucD_128K_8K" end time: Aug 17 14:42 CST
+"t_ucD_128K_8K" time elapsed: 00:00:00
+----------------------------------------------------------
+
+72/169 Testing: t_ucD_16_1
+72/169 Test: t_ucD_16_1
+Command: "/home/network/CS144-Network/txrx.sh" "-ucDd" "16" "-w" "1"
+Directory: /home/network/CS144-Network/build
+"t_ucD_16_1" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucD_16_1" end time: Aug 17 14:42 CST
+"t_ucD_16_1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+73/169 Testing: t_ucD_32K_d
+73/169 Test: t_ucD_32K_d
+Command: "/home/network/CS144-Network/txrx.sh" "-ucDd" "32K"
+Directory: /home/network/CS144-Network/build
+"t_ucD_32K_d" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucD_32K_d" end time: Aug 17 14:42 CST
+"t_ucD_32K_d" time elapsed: 00:00:00
+----------------------------------------------------------
+
+74/169 Testing: t_usS_1M_32k
+74/169 Test: t_usS_1M_32k
+Command: "/home/network/CS144-Network/txrx.sh" "-usSd" "1M" "-w" "32K"
+Directory: /home/network/CS144-Network/build
+"t_usS_1M_32k" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.15 sec
+----------------------------------------------------------
+Test Failed.
+"t_usS_1M_32k" end time: Aug 17 14:42 CST
+"t_usS_1M_32k" time elapsed: 00:00:00
+----------------------------------------------------------
+
+75/169 Testing: t_usS_128K_8K
+75/169 Test: t_usS_128K_8K
+Command: "/home/network/CS144-Network/txrx.sh" "-usSd" "128K" "-w" "8K"
+Directory: /home/network/CS144-Network/build
+"t_usS_128K_8K" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_usS_128K_8K" end time: Aug 17 14:42 CST
+"t_usS_128K_8K" time elapsed: 00:00:00
+----------------------------------------------------------
+
+76/169 Testing: t_usS_16_1
+76/169 Test: t_usS_16_1
+Command: "/home/network/CS144-Network/txrx.sh" "-usSd" "16" "-w" "1"
+Directory: /home/network/CS144-Network/build
+"t_usS_16_1" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_usS_16_1" end time: Aug 17 14:42 CST
+"t_usS_16_1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+77/169 Testing: t_usS_32K_d
+77/169 Test: t_usS_32K_d
+Command: "/home/network/CS144-Network/txrx.sh" "-usSd" "32K"
+Directory: /home/network/CS144-Network/build
+"t_usS_32K_d" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_usS_32K_d" end time: Aug 17 14:42 CST
+"t_usS_32K_d" time elapsed: 00:00:00
+----------------------------------------------------------
+
+78/169 Testing: t_usR_1M_32k
+78/169 Test: t_usR_1M_32k
+Command: "/home/network/CS144-Network/txrx.sh" "-usRd" "1M" "-w" "32K"
+Directory: /home/network/CS144-Network/build
+"t_usR_1M_32k" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.14 sec
+----------------------------------------------------------
+Test Failed.
+"t_usR_1M_32k" end time: Aug 17 14:42 CST
+"t_usR_1M_32k" time elapsed: 00:00:00
+----------------------------------------------------------
+
+79/169 Testing: t_usR_128K_8K
+79/169 Test: t_usR_128K_8K
+Command: "/home/network/CS144-Network/txrx.sh" "-usRd" "128K" "-w" "8K"
+Directory: /home/network/CS144-Network/build
+"t_usR_128K_8K" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Failed.
+"t_usR_128K_8K" end time: Aug 17 14:42 CST
+"t_usR_128K_8K" time elapsed: 00:00:00
+----------------------------------------------------------
+
+80/169 Testing: t_usR_16_1
+80/169 Test: t_usR_16_1
+Command: "/home/network/CS144-Network/txrx.sh" "-usRd" "16" "-w" "1"
+Directory: /home/network/CS144-Network/build
+"t_usR_16_1" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_usR_16_1" end time: Aug 17 14:42 CST
+"t_usR_16_1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+81/169 Testing: t_usR_32K_d
+81/169 Test: t_usR_32K_d
+Command: "/home/network/CS144-Network/txrx.sh" "-usRd" "32K"
+Directory: /home/network/CS144-Network/build
+"t_usR_32K_d" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_usR_32K_d" end time: Aug 17 14:42 CST
+"t_usR_32K_d" time elapsed: 00:00:00
+----------------------------------------------------------
+
+82/169 Testing: t_usD_1M_32k
+82/169 Test: t_usD_1M_32k
+Command: "/home/network/CS144-Network/txrx.sh" "-usDd" "1M" "-w" "32K"
+Directory: /home/network/CS144-Network/build
+"t_usD_1M_32k" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Failed.
+"t_usD_1M_32k" end time: Aug 17 14:42 CST
+"t_usD_1M_32k" time elapsed: 00:00:00
+----------------------------------------------------------
+
+83/169 Testing: t_usD_128K_8K
+83/169 Test: t_usD_128K_8K
+Command: "/home/network/CS144-Network/txrx.sh" "-usDd" "128K" "-w" "8K"
+Directory: /home/network/CS144-Network/build
+"t_usD_128K_8K" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_usD_128K_8K" end time: Aug 17 14:42 CST
+"t_usD_128K_8K" time elapsed: 00:00:00
+----------------------------------------------------------
+
+84/169 Testing: t_usD_16_1
+84/169 Test: t_usD_16_1
+Command: "/home/network/CS144-Network/txrx.sh" "-usDd" "16" "-w" "1"
+Directory: /home/network/CS144-Network/build
+"t_usD_16_1" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.15 sec
+----------------------------------------------------------
+Test Failed.
+"t_usD_16_1" end time: Aug 17 14:42 CST
+"t_usD_16_1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+85/169 Testing: t_usD_32K_d
+85/169 Test: t_usD_32K_d
+Command: "/home/network/CS144-Network/txrx.sh" "-usDd" "32K"
+Directory: /home/network/CS144-Network/build
+"t_usD_32K_d" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_usD_32K_d" end time: Aug 17 14:42 CST
+"t_usD_32K_d" time elapsed: 00:00:00
+----------------------------------------------------------
+
+86/169 Testing: t_ucS_128K_8K_l
+86/169 Test: t_ucS_128K_8K_l
+Command: "/home/network/CS144-Network/txrx.sh" "-ucSd" "128K" "-w" "8K" "-l" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_ucS_128K_8K_l" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucS_128K_8K_l" end time: Aug 17 14:42 CST
+"t_ucS_128K_8K_l" time elapsed: 00:00:00
+----------------------------------------------------------
+
+87/169 Testing: t_ucS_128K_8K_L
+87/169 Test: t_ucS_128K_8K_L
+Command: "/home/network/CS144-Network/txrx.sh" "-ucSd" "128K" "-w" "8K" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_ucS_128K_8K_L" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucS_128K_8K_L" end time: Aug 17 14:42 CST
+"t_ucS_128K_8K_L" time elapsed: 00:00:00
+----------------------------------------------------------
+
+88/169 Testing: t_ucS_128K_8K_lL
+88/169 Test: t_ucS_128K_8K_lL
+Command: "/home/network/CS144-Network/txrx.sh" "-ucSd" "128K" "-w" "8K" "-l" "0.1" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_ucS_128K_8K_lL" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucS_128K_8K_lL" end time: Aug 17 14:42 CST
+"t_ucS_128K_8K_lL" time elapsed: 00:00:00
+----------------------------------------------------------
+
+89/169 Testing: t_ucR_128K_8K_l
+89/169 Test: t_ucR_128K_8K_l
+Command: "/home/network/CS144-Network/txrx.sh" "-ucRd" "128K" "-w" "8K" "-l" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_ucR_128K_8K_l" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucR_128K_8K_l" end time: Aug 17 14:42 CST
+"t_ucR_128K_8K_l" time elapsed: 00:00:00
+----------------------------------------------------------
+
+90/169 Testing: t_ucR_128K_8K_L
+90/169 Test: t_ucR_128K_8K_L
+Command: "/home/network/CS144-Network/txrx.sh" "-ucRd" "128K" "-w" "8K" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_ucR_128K_8K_L" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucR_128K_8K_L" end time: Aug 17 14:42 CST
+"t_ucR_128K_8K_L" time elapsed: 00:00:00
+----------------------------------------------------------
+
+91/169 Testing: t_ucR_128K_8K_lL
+91/169 Test: t_ucR_128K_8K_lL
+Command: "/home/network/CS144-Network/txrx.sh" "-ucRd" "128K" "-w" "8K" "-l" "0.1" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_ucR_128K_8K_lL" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.14 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucR_128K_8K_lL" end time: Aug 17 14:42 CST
+"t_ucR_128K_8K_lL" time elapsed: 00:00:00
+----------------------------------------------------------
+
+92/169 Testing: t_ucD_128K_8K_l
+92/169 Test: t_ucD_128K_8K_l
+Command: "/home/network/CS144-Network/txrx.sh" "-ucDd" "128K" "-w" "8K" "-l" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_ucD_128K_8K_l" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucD_128K_8K_l" end time: Aug 17 14:42 CST
+"t_ucD_128K_8K_l" time elapsed: 00:00:00
+----------------------------------------------------------
+
+93/169 Testing: t_ucD_128K_8K_L
+93/169 Test: t_ucD_128K_8K_L
+Command: "/home/network/CS144-Network/txrx.sh" "-ucDd" "128K" "-w" "8K" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_ucD_128K_8K_L" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucD_128K_8K_L" end time: Aug 17 14:42 CST
+"t_ucD_128K_8K_L" time elapsed: 00:00:00
+----------------------------------------------------------
+
+94/169 Testing: t_ucD_128K_8K_lL
+94/169 Test: t_ucD_128K_8K_lL
+Command: "/home/network/CS144-Network/txrx.sh" "-ucDd" "128K" "-w" "8K" "-l" "0.1" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_ucD_128K_8K_lL" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_ucD_128K_8K_lL" end time: Aug 17 14:42 CST
+"t_ucD_128K_8K_lL" time elapsed: 00:00:00
+----------------------------------------------------------
+
+95/169 Testing: t_usS_128K_8K_l
+95/169 Test: t_usS_128K_8K_l
+Command: "/home/network/CS144-Network/txrx.sh" "-usSd" "128K" "-w" "8K" "-l" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_usS_128K_8K_l" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_usS_128K_8K_l" end time: Aug 17 14:42 CST
+"t_usS_128K_8K_l" time elapsed: 00:00:00
+----------------------------------------------------------
+
+96/169 Testing: t_usS_128K_8K_L
+96/169 Test: t_usS_128K_8K_L
+Command: "/home/network/CS144-Network/txrx.sh" "-usSd" "128K" "-w" "8K" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_usS_128K_8K_L" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Failed.
+"t_usS_128K_8K_L" end time: Aug 17 14:42 CST
+"t_usS_128K_8K_L" time elapsed: 00:00:00
+----------------------------------------------------------
+
+97/169 Testing: t_usS_128K_8K_lL
+97/169 Test: t_usS_128K_8K_lL
+Command: "/home/network/CS144-Network/txrx.sh" "-usSd" "128K" "-w" "8K" "-l" "0.1" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_usS_128K_8K_lL" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_usS_128K_8K_lL" end time: Aug 17 14:42 CST
+"t_usS_128K_8K_lL" time elapsed: 00:00:00
+----------------------------------------------------------
+
+98/169 Testing: t_usR_128K_8K_l
+98/169 Test: t_usR_128K_8K_l
+Command: "/home/network/CS144-Network/txrx.sh" "-usRd" "128K" "-w" "8K" "-l" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_usR_128K_8K_l" start time: Aug 17 14:42 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... DEBUG: Connecting to 169.254.144.1:14458... new connection from 169.254.144.1:37507.
+DEBUG: Outbound stream to 169.254.144.1:37507 finished (2 bytes still in flight).
+done.
+DEBUG: Inbound stream from 169.254.144.1:14458 finished cleanly.
+DEBUG: Outbound stream to 169.254.144.1:37507 has been fully acknowledged.
+<end of output>
+Test time =  10.01 sec
+----------------------------------------------------------
+Test Failed.
+"t_usR_128K_8K_l" end time: Aug 17 14:43 CST
+"t_usR_128K_8K_l" time elapsed: 00:00:10
+----------------------------------------------------------
+
+99/169 Testing: t_usR_128K_8K_L
+99/169 Test: t_usR_128K_8K_L
+Command: "/home/network/CS144-Network/txrx.sh" "-usRd" "128K" "-w" "8K" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_usR_128K_8K_L" start time: Aug 17 14:43 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Failed.
+"t_usR_128K_8K_L" end time: Aug 17 14:43 CST
+"t_usR_128K_8K_L" time elapsed: 00:00:00
+----------------------------------------------------------
+
+100/169 Testing: t_usR_128K_8K_lL
+100/169 Test: t_usR_128K_8K_lL
+Command: "/home/network/CS144-Network/txrx.sh" "-usRd" "128K" "-w" "8K" "-l" "0.1" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_usR_128K_8K_lL" start time: Aug 17 14:43 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Failed.
+"t_usR_128K_8K_lL" end time: Aug 17 14:43 CST
+"t_usR_128K_8K_lL" time elapsed: 00:00:00
+----------------------------------------------------------
+
+101/169 Testing: t_usD_128K_8K_l
+101/169 Test: t_usD_128K_8K_l
+Command: "/home/network/CS144-Network/txrx.sh" "-usDd" "128K" "-w" "8K" "-l" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_usD_128K_8K_l" start time: Aug 17 14:43 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Failed.
+"t_usD_128K_8K_l" end time: Aug 17 14:43 CST
+"t_usD_128K_8K_l" time elapsed: 00:00:00
+----------------------------------------------------------
+
+102/169 Testing: t_usD_128K_8K_L
+102/169 Test: t_usD_128K_8K_L
+Command: "/home/network/CS144-Network/txrx.sh" "-usDd" "128K" "-w" "8K" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_usD_128K_8K_L" start time: Aug 17 14:43 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Failed.
+"t_usD_128K_8K_L" end time: Aug 17 14:43 CST
+"t_usD_128K_8K_L" time elapsed: 00:00:00
+----------------------------------------------------------
+
+103/169 Testing: t_usD_128K_8K_lL
+103/169 Test: t_usD_128K_8K_lL
+Command: "/home/network/CS144-Network/txrx.sh" "-usDd" "128K" "-w" "8K" "-l" "0.1" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_usD_128K_8K_lL" start time: Aug 17 14:43 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... Warning: Unclean shutdown of TCPConnection
+Exception: sendmsg: Invalid argument
+Error in _rt_listen
+<end of output>
+Test time =   0.14 sec
+----------------------------------------------------------
+Test Failed.
+"t_usD_128K_8K_lL" end time: Aug 17 14:43 CST
+"t_usD_128K_8K_lL" time elapsed: 00:00:00
+----------------------------------------------------------
+
+104/169 Testing: t_ipv4_client_send
+104/169 Test: t_ipv4_client_send
+Command: "/home/network/CS144-Network/txrx.sh" "-icS"
+Directory: /home/network/CS144-Network/build
+"t_ipv4_client_send" start time: Aug 17 14:43 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_ipv4_client_send" end time: Aug 17 14:43 CST
+"t_ipv4_client_send" time elapsed: 00:00:10
+----------------------------------------------------------
+
+105/169 Testing: t_ipv4_server_send
+105/169 Test: t_ipv4_server_send
+Command: "/home/network/CS144-Network/txrx.sh" "-isS"
+Directory: /home/network/CS144-Network/build
+"t_ipv4_server_send" start time: Aug 17 14:43 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_ipv4_server_send" end time: Aug 17 14:43 CST
+"t_ipv4_server_send" time elapsed: 00:00:10
+----------------------------------------------------------
+
+106/169 Testing: t_ipv4_client_recv
+106/169 Test: t_ipv4_client_recv
+Command: "/home/network/CS144-Network/txrx.sh" "-icR"
+Directory: /home/network/CS144-Network/build
+"t_ipv4_client_recv" start time: Aug 17 14:43 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_ipv4_client_recv" end time: Aug 17 14:43 CST
+"t_ipv4_client_recv" time elapsed: 00:00:10
+----------------------------------------------------------
+
+107/169 Testing: t_ipv4_server_recv
+107/169 Test: t_ipv4_server_recv
+Command: "/home/network/CS144-Network/txrx.sh" "-isR"
+Directory: /home/network/CS144-Network/build
+"t_ipv4_server_recv" start time: Aug 17 14:43 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_ipv4_server_recv" end time: Aug 17 14:43 CST
+"t_ipv4_server_recv" time elapsed: 00:00:10
+----------------------------------------------------------
+
+108/169 Testing: t_ipv4_client_dupl
+108/169 Test: t_ipv4_client_dupl
+Command: "/home/network/CS144-Network/txrx.sh" "-icD"
+Directory: /home/network/CS144-Network/build
+"t_ipv4_client_dupl" start time: Aug 17 14:43 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_ipv4_client_dupl" end time: Aug 17 14:43 CST
+"t_ipv4_client_dupl" time elapsed: 00:00:10
+----------------------------------------------------------
+
+109/169 Testing: t_ipv4_server_dupl
+109/169 Test: t_ipv4_server_dupl
+Command: "/home/network/CS144-Network/txrx.sh" "-isD"
+Directory: /home/network/CS144-Network/build
+"t_ipv4_server_dupl" start time: Aug 17 14:43 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_ipv4_server_dupl" end time: Aug 17 14:44 CST
+"t_ipv4_server_dupl" time elapsed: 00:00:10
+----------------------------------------------------------
+
+110/169 Testing: t_icS_1M_32k
+110/169 Test: t_icS_1M_32k
+Command: "/home/network/CS144-Network/txrx.sh" "-icSd" "1M" "-w" "32K"
+Directory: /home/network/CS144-Network/build
+"t_icS_1M_32k" start time: Aug 17 14:44 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icS_1M_32k" end time: Aug 17 14:44 CST
+"t_icS_1M_32k" time elapsed: 00:00:10
+----------------------------------------------------------
+
+111/169 Testing: t_icS_128K_8K
+111/169 Test: t_icS_128K_8K
+Command: "/home/network/CS144-Network/txrx.sh" "-icSd" "128K" "-w" "8K"
+Directory: /home/network/CS144-Network/build
+"t_icS_128K_8K" start time: Aug 17 14:44 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icS_128K_8K" end time: Aug 17 14:44 CST
+"t_icS_128K_8K" time elapsed: 00:00:10
+----------------------------------------------------------
+
+112/169 Testing: t_icS_16_1
+112/169 Test: t_icS_16_1
+Command: "/home/network/CS144-Network/txrx.sh" "-icSd" "16" "-w" "1"
+Directory: /home/network/CS144-Network/build
+"t_icS_16_1" start time: Aug 17 14:44 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icS_16_1" end time: Aug 17 14:44 CST
+"t_icS_16_1" time elapsed: 00:00:10
+----------------------------------------------------------
+
+113/169 Testing: t_icS_32K_d
+113/169 Test: t_icS_32K_d
+Command: "/home/network/CS144-Network/txrx.sh" "-icSd" "32K"
+Directory: /home/network/CS144-Network/build
+"t_icS_32K_d" start time: Aug 17 14:44 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icS_32K_d" end time: Aug 17 14:44 CST
+"t_icS_32K_d" time elapsed: 00:00:10
+----------------------------------------------------------
+
+114/169 Testing: t_icR_1M_32k
+114/169 Test: t_icR_1M_32k
+Command: "/home/network/CS144-Network/txrx.sh" "-icRd" "1M" "-w" "32K"
+Directory: /home/network/CS144-Network/build
+"t_icR_1M_32k" start time: Aug 17 14:44 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icR_1M_32k" end time: Aug 17 14:44 CST
+"t_icR_1M_32k" time elapsed: 00:00:10
+----------------------------------------------------------
+
+115/169 Testing: t_icR_128K_8K
+115/169 Test: t_icR_128K_8K
+Command: "/home/network/CS144-Network/txrx.sh" "-icRd" "128K" "-w" "8K"
+Directory: /home/network/CS144-Network/build
+"t_icR_128K_8K" start time: Aug 17 14:44 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icR_128K_8K" end time: Aug 17 14:45 CST
+"t_icR_128K_8K" time elapsed: 00:00:10
+----------------------------------------------------------
+
+116/169 Testing: t_icR_16_1
+116/169 Test: t_icR_16_1
+Command: "/home/network/CS144-Network/txrx.sh" "-icRd" "16" "-w" "1"
+Directory: /home/network/CS144-Network/build
+"t_icR_16_1" start time: Aug 17 14:45 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icR_16_1" end time: Aug 17 14:45 CST
+"t_icR_16_1" time elapsed: 00:00:10
+----------------------------------------------------------
+
+117/169 Testing: t_icR_32K_d
+117/169 Test: t_icR_32K_d
+Command: "/home/network/CS144-Network/txrx.sh" "-icRd" "32K"
+Directory: /home/network/CS144-Network/build
+"t_icR_32K_d" start time: Aug 17 14:45 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icR_32K_d" end time: Aug 17 14:45 CST
+"t_icR_32K_d" time elapsed: 00:00:10
+----------------------------------------------------------
+
+118/169 Testing: t_icD_1M_32k
+118/169 Test: t_icD_1M_32k
+Command: "/home/network/CS144-Network/txrx.sh" "-icDd" "1M" "-w" "32K"
+Directory: /home/network/CS144-Network/build
+"t_icD_1M_32k" start time: Aug 17 14:45 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icD_1M_32k" end time: Aug 17 14:45 CST
+"t_icD_1M_32k" time elapsed: 00:00:10
+----------------------------------------------------------
+
+119/169 Testing: t_icD_128K_8K
+119/169 Test: t_icD_128K_8K
+Command: "/home/network/CS144-Network/txrx.sh" "-icDd" "128K" "-w" "8K"
+Directory: /home/network/CS144-Network/build
+"t_icD_128K_8K" start time: Aug 17 14:45 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icD_128K_8K" end time: Aug 17 14:45 CST
+"t_icD_128K_8K" time elapsed: 00:00:10
+----------------------------------------------------------
+
+120/169 Testing: t_icD_16_1
+120/169 Test: t_icD_16_1
+Command: "/home/network/CS144-Network/txrx.sh" "-icDd" "16" "-w" "1"
+Directory: /home/network/CS144-Network/build
+"t_icD_16_1" start time: Aug 17 14:45 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icD_16_1" end time: Aug 17 14:45 CST
+"t_icD_16_1" time elapsed: 00:00:10
+----------------------------------------------------------
+
+121/169 Testing: t_icD_32K_d
+121/169 Test: t_icD_32K_d
+Command: "/home/network/CS144-Network/txrx.sh" "-icDd" "32K"
+Directory: /home/network/CS144-Network/build
+"t_icD_32K_d" start time: Aug 17 14:45 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icD_32K_d" end time: Aug 17 14:46 CST
+"t_icD_32K_d" time elapsed: 00:00:10
+----------------------------------------------------------
+
+122/169 Testing: t_isS_1M_32k
+122/169 Test: t_isS_1M_32k
+Command: "/home/network/CS144-Network/txrx.sh" "-isSd" "1M" "-w" "32K"
+Directory: /home/network/CS144-Network/build
+"t_isS_1M_32k" start time: Aug 17 14:46 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isS_1M_32k" end time: Aug 17 14:46 CST
+"t_isS_1M_32k" time elapsed: 00:00:10
+----------------------------------------------------------
+
+123/169 Testing: t_isS_128K_8K
+123/169 Test: t_isS_128K_8K
+Command: "/home/network/CS144-Network/txrx.sh" "-isSd" "128K" "-w" "8K"
+Directory: /home/network/CS144-Network/build
+"t_isS_128K_8K" start time: Aug 17 14:46 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isS_128K_8K" end time: Aug 17 14:46 CST
+"t_isS_128K_8K" time elapsed: 00:00:10
+----------------------------------------------------------
+
+124/169 Testing: t_isS_16_1
+124/169 Test: t_isS_16_1
+Command: "/home/network/CS144-Network/txrx.sh" "-isSd" "16" "-w" "1"
+Directory: /home/network/CS144-Network/build
+"t_isS_16_1" start time: Aug 17 14:46 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isS_16_1" end time: Aug 17 14:46 CST
+"t_isS_16_1" time elapsed: 00:00:10
+----------------------------------------------------------
+
+125/169 Testing: t_isS_32K_d
+125/169 Test: t_isS_32K_d
+Command: "/home/network/CS144-Network/txrx.sh" "-isSd" "32K"
+Directory: /home/network/CS144-Network/build
+"t_isS_32K_d" start time: Aug 17 14:46 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isS_32K_d" end time: Aug 17 14:46 CST
+"t_isS_32K_d" time elapsed: 00:00:10
+----------------------------------------------------------
+
+126/169 Testing: t_isR_1M_32k
+126/169 Test: t_isR_1M_32k
+Command: "/home/network/CS144-Network/txrx.sh" "-isRd" "1M" "-w" "32K"
+Directory: /home/network/CS144-Network/build
+"t_isR_1M_32k" start time: Aug 17 14:46 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isR_1M_32k" end time: Aug 17 14:46 CST
+"t_isR_1M_32k" time elapsed: 00:00:10
+----------------------------------------------------------
+
+127/169 Testing: t_isR_128K_8K
+127/169 Test: t_isR_128K_8K
+Command: "/home/network/CS144-Network/txrx.sh" "-isRd" "128K" "-w" "8K"
+Directory: /home/network/CS144-Network/build
+"t_isR_128K_8K" start time: Aug 17 14:46 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.01 sec
+----------------------------------------------------------
+Test Failed.
+"t_isR_128K_8K" end time: Aug 17 14:47 CST
+"t_isR_128K_8K" time elapsed: 00:00:10
+----------------------------------------------------------
+
+128/169 Testing: t_isR_16_1
+128/169 Test: t_isR_16_1
+Command: "/home/network/CS144-Network/txrx.sh" "-isRd" "16" "-w" "1"
+Directory: /home/network/CS144-Network/build
+"t_isR_16_1" start time: Aug 17 14:47 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isR_16_1" end time: Aug 17 14:47 CST
+"t_isR_16_1" time elapsed: 00:00:10
+----------------------------------------------------------
+
+129/169 Testing: t_isR_32K_d
+129/169 Test: t_isR_32K_d
+Command: "/home/network/CS144-Network/txrx.sh" "-isRd" "32K"
+Directory: /home/network/CS144-Network/build
+"t_isR_32K_d" start time: Aug 17 14:47 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isR_32K_d" end time: Aug 17 14:47 CST
+"t_isR_32K_d" time elapsed: 00:00:10
+----------------------------------------------------------
+
+130/169 Testing: t_isD_1M_32k
+130/169 Test: t_isD_1M_32k
+Command: "/home/network/CS144-Network/txrx.sh" "-isDd" "1M" "-w" "32K"
+Directory: /home/network/CS144-Network/build
+"t_isD_1M_32k" start time: Aug 17 14:47 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isD_1M_32k" end time: Aug 17 14:47 CST
+"t_isD_1M_32k" time elapsed: 00:00:10
+----------------------------------------------------------
+
+131/169 Testing: t_isD_128K_8K
+131/169 Test: t_isD_128K_8K
+Command: "/home/network/CS144-Network/txrx.sh" "-isDd" "128K" "-w" "8K"
+Directory: /home/network/CS144-Network/build
+"t_isD_128K_8K" start time: Aug 17 14:47 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isD_128K_8K" end time: Aug 17 14:47 CST
+"t_isD_128K_8K" time elapsed: 00:00:10
+----------------------------------------------------------
+
+132/169 Testing: t_isD_16_1
+132/169 Test: t_isD_16_1
+Command: "/home/network/CS144-Network/txrx.sh" "-isDd" "16" "-w" "1"
+Directory: /home/network/CS144-Network/build
+"t_isD_16_1" start time: Aug 17 14:47 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isD_16_1" end time: Aug 17 14:47 CST
+"t_isD_16_1" time elapsed: 00:00:10
+----------------------------------------------------------
+
+133/169 Testing: t_isD_32K_d
+133/169 Test: t_isD_32K_d
+Command: "/home/network/CS144-Network/txrx.sh" "-isDd" "32K"
+Directory: /home/network/CS144-Network/build
+"t_isD_32K_d" start time: Aug 17 14:47 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isD_32K_d" end time: Aug 17 14:48 CST
+"t_isD_32K_d" time elapsed: 00:00:10
+----------------------------------------------------------
+
+134/169 Testing: t_icS_128K_8K_l
+134/169 Test: t_icS_128K_8K_l
+Command: "/home/network/CS144-Network/txrx.sh" "-icSd" "128K" "-w" "8K" "-l" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_icS_128K_8K_l" start time: Aug 17 14:48 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icS_128K_8K_l" end time: Aug 17 14:48 CST
+"t_icS_128K_8K_l" time elapsed: 00:00:10
+----------------------------------------------------------
+
+135/169 Testing: t_icS_128K_8K_L
+135/169 Test: t_icS_128K_8K_L
+Command: "/home/network/CS144-Network/txrx.sh" "-icSd" "128K" "-w" "8K" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_icS_128K_8K_L" start time: Aug 17 14:48 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.01 sec
+----------------------------------------------------------
+Test Failed.
+"t_icS_128K_8K_L" end time: Aug 17 14:48 CST
+"t_icS_128K_8K_L" time elapsed: 00:00:10
+----------------------------------------------------------
+
+136/169 Testing: t_icS_128K_8K_lL
+136/169 Test: t_icS_128K_8K_lL
+Command: "/home/network/CS144-Network/txrx.sh" "-icSd" "128K" "-w" "8K" "-l" "0.1" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_icS_128K_8K_lL" start time: Aug 17 14:48 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icS_128K_8K_lL" end time: Aug 17 14:48 CST
+"t_icS_128K_8K_lL" time elapsed: 00:00:10
+----------------------------------------------------------
+
+137/169 Testing: t_icR_128K_8K_l
+137/169 Test: t_icR_128K_8K_l
+Command: "/home/network/CS144-Network/txrx.sh" "-icRd" "128K" "-w" "8K" "-l" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_icR_128K_8K_l" start time: Aug 17 14:48 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icR_128K_8K_l" end time: Aug 17 14:48 CST
+"t_icR_128K_8K_l" time elapsed: 00:00:10
+----------------------------------------------------------
+
+138/169 Testing: t_icR_128K_8K_L
+138/169 Test: t_icR_128K_8K_L
+Command: "/home/network/CS144-Network/txrx.sh" "-icRd" "128K" "-w" "8K" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_icR_128K_8K_L" start time: Aug 17 14:48 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icR_128K_8K_L" end time: Aug 17 14:48 CST
+"t_icR_128K_8K_L" time elapsed: 00:00:10
+----------------------------------------------------------
+
+139/169 Testing: t_icR_128K_8K_lL
+139/169 Test: t_icR_128K_8K_lL
+Command: "/home/network/CS144-Network/txrx.sh" "-icRd" "128K" "-w" "8K" "-l" "0.1" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_icR_128K_8K_lL" start time: Aug 17 14:48 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icR_128K_8K_lL" end time: Aug 17 14:49 CST
+"t_icR_128K_8K_lL" time elapsed: 00:00:10
+----------------------------------------------------------
+
+140/169 Testing: t_icD_128K_8K_l
+140/169 Test: t_icD_128K_8K_l
+Command: "/home/network/CS144-Network/txrx.sh" "-icDd" "128K" "-w" "8K" "-l" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_icD_128K_8K_l" start time: Aug 17 14:49 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icD_128K_8K_l" end time: Aug 17 14:49 CST
+"t_icD_128K_8K_l" time elapsed: 00:00:10
+----------------------------------------------------------
+
+141/169 Testing: t_icD_128K_8K_L
+141/169 Test: t_icD_128K_8K_L
+Command: "/home/network/CS144-Network/txrx.sh" "-icDd" "128K" "-w" "8K" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_icD_128K_8K_L" start time: Aug 17 14:49 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icD_128K_8K_L" end time: Aug 17 14:49 CST
+"t_icD_128K_8K_L" time elapsed: 00:00:10
+----------------------------------------------------------
+
+142/169 Testing: t_icD_128K_8K_lL
+142/169 Test: t_icD_128K_8K_lL
+Command: "/home/network/CS144-Network/txrx.sh" "-icDd" "128K" "-w" "8K" "-l" "0.1" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_icD_128K_8K_lL" start time: Aug 17 14:49 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icD_128K_8K_lL" end time: Aug 17 14:49 CST
+"t_icD_128K_8K_lL" time elapsed: 00:00:10
+----------------------------------------------------------
+
+143/169 Testing: t_isS_128K_8K_l
+143/169 Test: t_isS_128K_8K_l
+Command: "/home/network/CS144-Network/txrx.sh" "-isSd" "128K" "-w" "8K" "-l" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_isS_128K_8K_l" start time: Aug 17 14:49 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isS_128K_8K_l" end time: Aug 17 14:49 CST
+"t_isS_128K_8K_l" time elapsed: 00:00:10
+----------------------------------------------------------
+
+144/169 Testing: t_isS_128K_8K_L
+144/169 Test: t_isS_128K_8K_L
+Command: "/home/network/CS144-Network/txrx.sh" "-isSd" "128K" "-w" "8K" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_isS_128K_8K_L" start time: Aug 17 14:49 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isS_128K_8K_L" end time: Aug 17 14:49 CST
+"t_isS_128K_8K_L" time elapsed: 00:00:10
+----------------------------------------------------------
+
+145/169 Testing: t_isS_128K_8K_lL
+145/169 Test: t_isS_128K_8K_lL
+Command: "/home/network/CS144-Network/txrx.sh" "-isSd" "128K" "-w" "8K" "-l" "0.1" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_isS_128K_8K_lL" start time: Aug 17 14:49 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isS_128K_8K_lL" end time: Aug 17 14:50 CST
+"t_isS_128K_8K_lL" time elapsed: 00:00:10
+----------------------------------------------------------
+
+146/169 Testing: t_isR_128K_8K_l
+146/169 Test: t_isR_128K_8K_l
+Command: "/home/network/CS144-Network/txrx.sh" "-isRd" "128K" "-w" "8K" "-l" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_isR_128K_8K_l" start time: Aug 17 14:50 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isR_128K_8K_l" end time: Aug 17 14:50 CST
+"t_isR_128K_8K_l" time elapsed: 00:00:10
+----------------------------------------------------------
+
+147/169 Testing: t_isR_128K_8K_L
+147/169 Test: t_isR_128K_8K_L
+Command: "/home/network/CS144-Network/txrx.sh" "-isRd" "128K" "-w" "8K" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_isR_128K_8K_L" start time: Aug 17 14:50 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isR_128K_8K_L" end time: Aug 17 14:50 CST
+"t_isR_128K_8K_L" time elapsed: 00:00:10
+----------------------------------------------------------
+
+148/169 Testing: t_isR_128K_8K_lL
+148/169 Test: t_isR_128K_8K_lL
+Command: "/home/network/CS144-Network/txrx.sh" "-isRd" "128K" "-w" "8K" "-l" "0.1" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_isR_128K_8K_lL" start time: Aug 17 14:50 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isR_128K_8K_lL" end time: Aug 17 14:50 CST
+"t_isR_128K_8K_lL" time elapsed: 00:00:10
+----------------------------------------------------------
+
+149/169 Testing: t_isD_128K_8K_l
+149/169 Test: t_isD_128K_8K_l
+Command: "/home/network/CS144-Network/txrx.sh" "-isDd" "128K" "-w" "8K" "-l" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_isD_128K_8K_l" start time: Aug 17 14:50 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isD_128K_8K_l" end time: Aug 17 14:50 CST
+"t_isD_128K_8K_l" time elapsed: 00:00:10
+----------------------------------------------------------
+
+150/169 Testing: t_isD_128K_8K_L
+150/169 Test: t_isD_128K_8K_L
+Command: "/home/network/CS144-Network/txrx.sh" "-isDd" "128K" "-w" "8K" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_isD_128K_8K_L" start time: Aug 17 14:50 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isD_128K_8K_L" end time: Aug 17 14:50 CST
+"t_isD_128K_8K_L" time elapsed: 00:00:10
+----------------------------------------------------------
+
+151/169 Testing: t_isD_128K_8K_lL
+151/169 Test: t_isD_128K_8K_lL
+Command: "/home/network/CS144-Network/txrx.sh" "-isDd" "128K" "-w" "8K" "-l" "0.1" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_isD_128K_8K_lL" start time: Aug 17 14:50 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isD_128K_8K_lL" end time: Aug 17 14:51 CST
+"t_isD_128K_8K_lL" time elapsed: 00:00:10
+----------------------------------------------------------
+
+152/169 Testing: t_icnS_128K_8K_l
+152/169 Test: t_icnS_128K_8K_l
+Command: "/home/network/CS144-Network/txrx.sh" "-icSnd" "128K" "-w" "8K" "-l" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_icnS_128K_8K_l" start time: Aug 17 14:51 CST
+Output:
+----------------------------------------------------------
+DEBUG: Connecting to 169.254.144.1:15532... done.
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icnS_128K_8K_l" end time: Aug 17 14:51 CST
+"t_icnS_128K_8K_l" time elapsed: 00:00:10
+----------------------------------------------------------
+
+153/169 Testing: t_icnS_128K_8K_L
+153/169 Test: t_icnS_128K_8K_L
+Command: "/home/network/CS144-Network/txrx.sh" "-icSnd" "128K" "-w" "8K" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_icnS_128K_8K_L" start time: Aug 17 14:51 CST
+Output:
+----------------------------------------------------------
+DEBUG: Connecting to 169.254.144.1:23141... done.
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icnS_128K_8K_L" end time: Aug 17 14:51 CST
+"t_icnS_128K_8K_L" time elapsed: 00:00:10
+----------------------------------------------------------
+
+154/169 Testing: t_icnS_128K_8K_lL
+154/169 Test: t_icnS_128K_8K_lL
+Command: "/home/network/CS144-Network/txrx.sh" "-icSnd" "128K" "-w" "8K" "-l" "0.1" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_icnS_128K_8K_lL" start time: Aug 17 14:51 CST
+Output:
+----------------------------------------------------------
+DEBUG: Connecting to 169.254.144.1:3538... done.
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icnS_128K_8K_lL" end time: Aug 17 14:51 CST
+"t_icnS_128K_8K_lL" time elapsed: 00:00:10
+----------------------------------------------------------
+
+155/169 Testing: t_icnR_128K_8K_l
+155/169 Test: t_icnR_128K_8K_l
+Command: "/home/network/CS144-Network/txrx.sh" "-icRnd" "128K" "-w" "8K" "-l" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_icnR_128K_8K_l" start time: Aug 17 14:51 CST
+Output:
+----------------------------------------------------------
+DEBUG: Connecting to 169.254.144.1:14232... done.
+DEBUG: Outbound stream to 169.254.144.1:14232 finished (1 byte still in flight).
+DEBUG: Outbound stream to 169.254.144.1:14232 has been fully acknowledged.
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icnR_128K_8K_l" end time: Aug 17 14:51 CST
+"t_icnR_128K_8K_l" time elapsed: 00:00:10
+----------------------------------------------------------
+
+156/169 Testing: t_icnR_128K_8K_L
+156/169 Test: t_icnR_128K_8K_L
+Command: "/home/network/CS144-Network/txrx.sh" "-icRnd" "128K" "-w" "8K" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_icnR_128K_8K_L" start time: Aug 17 14:51 CST
+Output:
+----------------------------------------------------------
+DEBUG: Connecting to 169.254.144.1:11763... done.
+DEBUG: Outbound stream to 169.254.144.1:11763 finished (1 byte still in flight).
+DEBUG: Outbound stream to 169.254.144.1:11763 has been fully acknowledged.
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icnR_128K_8K_L" end time: Aug 17 14:51 CST
+"t_icnR_128K_8K_L" time elapsed: 00:00:10
+----------------------------------------------------------
+
+157/169 Testing: t_icnR_128K_8K_lL
+157/169 Test: t_icnR_128K_8K_lL
+Command: "/home/network/CS144-Network/txrx.sh" "-icRnd" "128K" "-w" "8K" "-l" "0.1" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_icnR_128K_8K_lL" start time: Aug 17 14:51 CST
+Output:
+----------------------------------------------------------
+DEBUG: Connecting to 169.254.144.1:7564... done.
+DEBUG: Outbound stream to 169.254.144.1:7564 finished (1 byte still in flight).
+DEBUG: Outbound stream to 169.254.144.1:7564 has been fully acknowledged.
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icnR_128K_8K_lL" end time: Aug 17 14:52 CST
+"t_icnR_128K_8K_lL" time elapsed: 00:00:10
+----------------------------------------------------------
+
+158/169 Testing: t_icnD_128K_8K_l
+158/169 Test: t_icnD_128K_8K_l
+Command: "/home/network/CS144-Network/txrx.sh" "-icDnd" "128K" "-w" "8K" "-l" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_icnD_128K_8K_l" start time: Aug 17 14:52 CST
+Output:
+----------------------------------------------------------
+DEBUG: Connecting to 169.254.144.1:18190... done.
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icnD_128K_8K_l" end time: Aug 17 14:52 CST
+"t_icnD_128K_8K_l" time elapsed: 00:00:10
+----------------------------------------------------------
+
+159/169 Testing: t_icnD_128K_8K_L
+159/169 Test: t_icnD_128K_8K_L
+Command: "/home/network/CS144-Network/txrx.sh" "-icDnd" "128K" "-w" "8K" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_icnD_128K_8K_L" start time: Aug 17 14:52 CST
+Output:
+----------------------------------------------------------
+DEBUG: Connecting to 169.254.144.1:9710... done.
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icnD_128K_8K_L" end time: Aug 17 14:52 CST
+"t_icnD_128K_8K_L" time elapsed: 00:00:10
+----------------------------------------------------------
+
+160/169 Testing: t_icnD_128K_8K_lL
+160/169 Test: t_icnD_128K_8K_lL
+Command: "/home/network/CS144-Network/txrx.sh" "-icDnd" "128K" "-w" "8K" "-l" "0.1" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_icnD_128K_8K_lL" start time: Aug 17 14:52 CST
+Output:
+----------------------------------------------------------
+DEBUG: Connecting to 169.254.144.1:10643... done.
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_icnD_128K_8K_lL" end time: Aug 17 14:52 CST
+"t_icnD_128K_8K_lL" time elapsed: 00:00:10
+----------------------------------------------------------
+
+161/169 Testing: t_isnS_128K_8K_l
+161/169 Test: t_isnS_128K_8K_l
+Command: "/home/network/CS144-Network/txrx.sh" "-isSnd" "128K" "-w" "8K" "-l" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_isnS_128K_8K_l" start time: Aug 17 14:52 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... new connection from 169.254.144.1:54762.
+DEBUG: Outbound stream to 169.254.144.1:54762 finished (64000 bytes still in flight).
+DEBUG: Outbound stream to 169.254.144.1:54762 has been fully acknowledged.
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isnS_128K_8K_l" end time: Aug 17 14:52 CST
+"t_isnS_128K_8K_l" time elapsed: 00:00:10
+----------------------------------------------------------
+
+162/169 Testing: t_isnS_128K_8K_L
+162/169 Test: t_isnS_128K_8K_L
+Command: "/home/network/CS144-Network/txrx.sh" "-isSnd" "128K" "-w" "8K" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_isnS_128K_8K_L" start time: Aug 17 14:52 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... new connection from 169.254.144.1:45794.
+DEBUG: Outbound stream to 169.254.144.1:45794 finished (64000 bytes still in flight).
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isnS_128K_8K_L" end time: Aug 17 14:52 CST
+"t_isnS_128K_8K_L" time elapsed: 00:00:10
+----------------------------------------------------------
+
+163/169 Testing: t_isnS_128K_8K_lL
+163/169 Test: t_isnS_128K_8K_lL
+Command: "/home/network/CS144-Network/txrx.sh" "-isSnd" "128K" "-w" "8K" "-l" "0.1" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_isnS_128K_8K_lL" start time: Aug 17 14:52 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... new connection from 169.254.144.1:46888.
+DEBUG: Outbound stream to 169.254.144.1:46888 finished (64000 bytes still in flight).
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isnS_128K_8K_lL" end time: Aug 17 14:53 CST
+"t_isnS_128K_8K_lL" time elapsed: 00:00:10
+----------------------------------------------------------
+
+164/169 Testing: t_isnR_128K_8K_l
+164/169 Test: t_isnR_128K_8K_l
+Command: "/home/network/CS144-Network/txrx.sh" "-isRnd" "128K" "-w" "8K" "-l" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_isnR_128K_8K_l" start time: Aug 17 14:53 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... new connection from 169.254.144.1:33142.
+DEBUG: Outbound stream to 169.254.144.1:33142 finished (1 byte still in flight).
+DEBUG: Outbound stream to 169.254.144.1:33142 has been fully acknowledged.
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isnR_128K_8K_l" end time: Aug 17 14:53 CST
+"t_isnR_128K_8K_l" time elapsed: 00:00:10
+----------------------------------------------------------
+
+165/169 Testing: t_isnR_128K_8K_L
+165/169 Test: t_isnR_128K_8K_L
+Command: "/home/network/CS144-Network/txrx.sh" "-isRnd" "128K" "-w" "8K" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_isnR_128K_8K_L" start time: Aug 17 14:53 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... new connection from 169.254.144.1:37862.
+DEBUG: Outbound stream to 169.254.144.1:37862 finished (1 byte still in flight).
+DEBUG: Outbound stream to 169.254.144.1:37862 has been fully acknowledged.
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isnR_128K_8K_L" end time: Aug 17 14:53 CST
+"t_isnR_128K_8K_L" time elapsed: 00:00:10
+----------------------------------------------------------
+
+166/169 Testing: t_isnR_128K_8K_lL
+166/169 Test: t_isnR_128K_8K_lL
+Command: "/home/network/CS144-Network/txrx.sh" "-isRnd" "128K" "-w" "8K" "-l" "0.1" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_isnR_128K_8K_lL" start time: Aug 17 14:53 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... new connection from 169.254.144.1:50200.
+DEBUG: Outbound stream to 169.254.144.1:50200 finished (1 byte still in flight).
+DEBUG: Outbound stream to 169.254.144.1:50200 has been fully acknowledged.
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isnR_128K_8K_lL" end time: Aug 17 14:53 CST
+"t_isnR_128K_8K_lL" time elapsed: 00:00:10
+----------------------------------------------------------
+
+167/169 Testing: t_isnD_128K_8K_l
+167/169 Test: t_isnD_128K_8K_l
+Command: "/home/network/CS144-Network/txrx.sh" "-isDnd" "128K" "-w" "8K" "-l" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_isnD_128K_8K_l" start time: Aug 17 14:53 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... new connection from 169.254.144.1:36910.
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isnD_128K_8K_l" end time: Aug 17 14:53 CST
+"t_isnD_128K_8K_l" time elapsed: 00:00:10
+----------------------------------------------------------
+
+168/169 Testing: t_isnD_128K_8K_L
+168/169 Test: t_isnD_128K_8K_L
+Command: "/home/network/CS144-Network/txrx.sh" "-isDnd" "128K" "-w" "8K" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_isnD_128K_8K_L" start time: Aug 17 14:53 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... new connection from 169.254.144.1:47920.
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isnD_128K_8K_L" end time: Aug 17 14:53 CST
+"t_isnD_128K_8K_L" time elapsed: 00:00:10
+----------------------------------------------------------
+
+169/169 Testing: t_isnD_128K_8K_lL
+169/169 Test: t_isnD_128K_8K_lL
+Command: "/home/network/CS144-Network/txrx.sh" "-isDnd" "128K" "-w" "8K" "-l" "0.1" "-L" "0.1"
+Directory: /home/network/CS144-Network/build
+"t_isnD_128K_8K_lL" start time: Aug 17 14:53 CST
+Output:
+----------------------------------------------------------
+DEBUG: Listening for incoming connection... new connection from 169.254.144.1:53674.
+<end of output>
+Test time =  10.02 sec
+----------------------------------------------------------
+Test Failed.
+"t_isnD_128K_8K_lL" end time: Aug 17 14:54 CST
+"t_isnD_128K_8K_lL" time elapsed: 00:00:10
+----------------------------------------------------------
+
+End testing: Aug 17 14:54 CST

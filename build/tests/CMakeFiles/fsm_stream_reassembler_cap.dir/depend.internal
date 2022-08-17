@@ -5,5 +5,5 @@ tests/CMakeFiles/fsm_stream_reassembler_cap.dir/fsm_stream_reassembler_cap.cc.o
  ../libsponge/byte_stream.hh
  ../libsponge/stream_reassembler.hh
  ../libsponge/util/util.hh
- /mnt/d/Study/labs/CS144-Network/tests/fsm_stream_reassembler_cap.cc
- /mnt/d/Study/labs/CS144-Network/tests/fsm_stream_reassembler_harness.hh
+ /home/network/CS144-Network/tests/fsm_stream_reassembler_cap.cc
+ /home/network/CS144-Network/tests/fsm_stream_reassembler_harness.hh

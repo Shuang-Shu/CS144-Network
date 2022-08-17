@@ -4,5 +4,5 @@
 tests/CMakeFiles/byte_stream_one_write.dir/byte_stream_one_write.cc.o
  ../libsponge/byte_stream.hh
  ../libsponge/util/util.hh
- /mnt/d/Study/labs/CS144-Network/tests/byte_stream_one_write.cc
- /mnt/d/Study/labs/CS144-Network/tests/byte_stream_test_harness.hh
+ /home/network/CS144-Network/tests/byte_stream_one_write.cc
+ /home/network/CS144-Network/tests/byte_stream_test_harness.hh

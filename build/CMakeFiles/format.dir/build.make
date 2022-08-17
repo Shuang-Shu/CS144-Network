@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/Study/labs/CS144-Network
+CMAKE_SOURCE_DIR = /home/network/CS144-Network
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/Study/labs/CS144-Network/build
+CMAKE_BINARY_DIR = /home/network/CS144-Network/build
 
 # Utility rule file for format.
 
@@ -71,6 +71,6 @@ CMakeFiles/format.dir/clean:
 .PHONY : CMakeFiles/format.dir/clean
 
 CMakeFiles/format.dir/depend:
-	cd /mnt/d/Study/labs/CS144-Network/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/d/Study/labs/CS144-Network /mnt/d/Study/labs/CS144-Network /mnt/d/Study/labs/CS144-Network/build /mnt/d/Study/labs/CS144-Network/build /mnt/d/Study/labs/CS144-Network/build/CMakeFiles/format.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/network/CS144-Network/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/network/CS144-Network /home/network/CS144-Network /home/network/CS144-Network/build /home/network/CS144-Network/build /home/network/CS144-Network/build/CMakeFiles/format.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/format.dir/depend
 

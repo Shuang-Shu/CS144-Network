@@ -4,5 +4,5 @@
 tests/CMakeFiles/byte_stream_capacity.dir/byte_stream_capacity.cc.o
  ../libsponge/byte_stream.hh
  ../libsponge/util/util.hh
- /mnt/d/Study/labs/CS144-Network/tests/byte_stream_capacity.cc
- /mnt/d/Study/labs/CS144-Network/tests/byte_stream_test_harness.hh
+ /home/network/CS144-Network/tests/byte_stream_capacity.cc
+ /home/network/CS144-Network/tests/byte_stream_test_harness.hh

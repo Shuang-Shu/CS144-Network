@@ -164,3 +164,7 @@ void TCPSender::send_ack_segment(WrappingInt32 ackno, size_t window_size) {
     header.win=window_size;
     _segments_out.push(seg);
 }
+
+bool TCPSender::timeout(){
+    return timer.timeout();
+}

@@ -34,21 +34,21 @@ system_error
 vector
 -
 
-/mnt/d/Study/labs/CS144-Network/tests/byte_stream_capacity.cc
+/home/network/CS144-Network/tests/byte_stream_capacity.cc
 byte_stream.hh
-/mnt/d/Study/labs/CS144-Network/tests/byte_stream.hh
+/home/network/CS144-Network/tests/byte_stream.hh
 byte_stream_test_harness.hh
-/mnt/d/Study/labs/CS144-Network/tests/byte_stream_test_harness.hh
+/home/network/CS144-Network/tests/byte_stream_test_harness.hh
 exception
 -
 iostream
 -
 
-/mnt/d/Study/labs/CS144-Network/tests/byte_stream_test_harness.hh
+/home/network/CS144-Network/tests/byte_stream_test_harness.hh
 byte_stream.hh
-/mnt/d/Study/labs/CS144-Network/tests/byte_stream.hh
+/home/network/CS144-Network/tests/byte_stream.hh
 util.hh
-/mnt/d/Study/labs/CS144-Network/tests/util.hh
+/home/network/CS144-Network/tests/util.hh
 exception
 -
 initializer_list

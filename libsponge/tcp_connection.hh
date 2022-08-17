@@ -30,9 +30,9 @@ class TCPConnection {
     // 连接是否仍然活动
     bool isActive{true};
     // 4个干净结束流的先决条件
-    bool inboundReassembled{false};
-    bool outboundFinished{false};
-    bool outboundAckedByPeer{false};
+    bool inboundReassembled{false}; // 输入流已经完全组装
+    bool outboundFinished{false}; // 输出流已经结束
+    bool outboundAckedByPeer{false}; // 输出流被对等方结束
     // 最后一个先决条件通过徘徊或直接结束来确认
     bool finished{false};
     WrappingInt32 finAckno{0};
@@ -55,6 +55,7 @@ class TCPConnection {
     size_t remaining_outbound_capacity() const;
 
     //! \brief Shut down the outbound byte stream (still allows reading incoming data)
+    // 关闭出站字节流(仍然允许读取传入数据)，事实上这等同于主动关闭TCP连接
     void end_input_stream();
     //!@}
 
@@ -92,6 +93,8 @@ class TCPConnection {
     //! Called periodically when time elapses
     void tick(const size_t ms_since_last_tick);
 
+    // 发送所有sender中的报文
+    void sendAll();
     //! \brief TCPSegments that the TCPConnection has enqueued for transmission.
     //! \note The owner or operating system will dequeue these and
     //! put each one into the payload of a lower-layer datagram (usually Internet datagrams (IP),

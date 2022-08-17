@@ -4,16 +4,16 @@
 tests/CMakeFiles/spongechecks.dir/byte_stream_test_harness.cc.o
  ../libsponge/byte_stream.hh
  ../libsponge/util/util.hh
- /mnt/d/Study/labs/CS144-Network/tests/byte_stream_test_harness.cc
- /mnt/d/Study/labs/CS144-Network/tests/byte_stream_test_harness.hh
+ /home/network/CS144-Network/tests/byte_stream_test_harness.cc
+ /home/network/CS144-Network/tests/byte_stream_test_harness.hh
 tests/CMakeFiles/spongechecks.dir/send_equivalence_checker.cc.o
  ../libsponge/tcp_helpers/tcp_header.hh
  ../libsponge/tcp_helpers/tcp_segment.hh
  ../libsponge/util/buffer.hh
  ../libsponge/util/parser.hh
  ../libsponge/wrapping_integers.hh
- /mnt/d/Study/labs/CS144-Network/tests/send_equivalence_checker.cc
- /mnt/d/Study/labs/CS144-Network/tests/send_equivalence_checker.hh
+ /home/network/CS144-Network/tests/send_equivalence_checker.cc
+ /home/network/CS144-Network/tests/send_equivalence_checker.hh
 tests/CMakeFiles/spongechecks.dir/tcp_fsm_test_harness.cc.o
  ../libsponge/byte_stream.hh
  ../libsponge/stream_reassembler.hh
@@ -34,7 +34,7 @@ tests/CMakeFiles/spongechecks.dir/tcp_fsm_test_harness.cc.o
  ../libsponge/util/socket.hh
  ../libsponge/util/util.hh
  ../libsponge/wrapping_integers.hh
- /mnt/d/Study/labs/CS144-Network/tests/tcp_expectation.hh
- /mnt/d/Study/labs/CS144-Network/tests/tcp_expectation_forward.hh
- /mnt/d/Study/labs/CS144-Network/tests/tcp_fsm_test_harness.cc
- /mnt/d/Study/labs/CS144-Network/tests/tcp_fsm_test_harness.hh
+ /home/network/CS144-Network/tests/tcp_expectation.hh
+ /home/network/CS144-Network/tests/tcp_expectation_forward.hh
+ /home/network/CS144-Network/tests/tcp_fsm_test_harness.cc
+ /home/network/CS144-Network/tests/tcp_fsm_test_harness.hh

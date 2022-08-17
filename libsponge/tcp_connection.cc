@@ -44,25 +44,29 @@ void TCPConnection::segment_received(const TCPSegment &seg) {
         // 确认输入的segment是否都已经被组装，且inbound流已经结束
         if(_receiver.unassembled_bytes()==0&&_receiver.stream_out().eof()==true)
             inboundReassembled=true;
-        // FIN的报文是否已经被确认？
-        if(finished and seg.header().ackno.raw_value()>=finAckno.raw_value())
+        // FIN的报文是否已经被确认？（主动关闭时的判断）
+        if(finished and seg.header().ackno.raw_value()>=finAckno.raw_value()){
             outboundAckedByPeer=true;
-        // 如果输入流已经被关闭，将linger设置为false
-        if(_receiver.stream_out().eof())
+        }
+        // FIN的报文是否已经被确认？（被动关闭时的判断）
+        // 如果输入流在 被动 接收fin报文时已经被关闭，将linger设置为false
+        // 如果是主动关闭连接，则linger一定为true
+        if(seg.header().fin&&(!finished))
             _linger_after_streams_finish=false;
         // 如果segment中的ack被置位，将相关信息告知_sender
         if(seg.header().ack){
             _sender.ack_received(seg.header().ackno, seg.header().win);
         }
         // 如果收到的segment占用了序列空间，回复一个segment反应当前的ackno和窗口大小
-        if(seg.length_in_sequence_space()>0)
+        if(seg.length_in_sequence_space()>0){
+            // 直接使用TCPConnection发送一个请求
             _sender.send_ack_segment(_receiver.ackno().value(), _receiver.window_size());
-        // 
-        if ((_receiver.ackno().has_value() && (seg.length_in_sequence_space() == 0) and (seg.header().seqno == _receiver.ackno().value() - 1))) {
-            _sender.send_empty_segment();
+            // _sender.fill_window();
         }
     }
     // DUMMY_CODE(seg); 
+    // sendAll();
+    write("");
 }
 
 bool TCPConnection::active() const { 
@@ -71,8 +75,9 @@ bool TCPConnection::active() const {
 
 size_t TCPConnection::write(const string &data) {
     // 将data写入_sender的输出流
-    size_t written=_sender.stream_in().write(data);
-    // _sender.fill_window();
+    size_t written=0;
+    if(data.length()!=0)
+        written=_sender.stream_in().write(data);
     // 将TCPSender中的Segments**全部**弹出，并使用TCPReceiver的信息进行处理，然后发送
     bool hasAckno=false;
     WrappingInt32 ackno(0);
@@ -106,30 +111,59 @@ void TCPConnection::tick(const size_t ms_since_last_tick) {
     ms_since_last_segment_received+=ms_since_last_tick;
     _sender.tick(ms_since_last_tick);
     // 在ms_since_last_segment_received达到某个值后，需要“干净的”结束连接
-    if(inboundReassembled and outboundFinished and outboundAckedByPeer){
-        if(!_linger_after_streams_finish){
-            // 此时不需要徘徊
-            isActive=false;
-        }
-        if(ms_since_last_segment_received>=10*_cfg.rt_timeout){
-            // 徘徊时间超过了10*_cfg.rt_timeout
-            isActive=false;
+    if(inboundReassembled and outboundFinished){
+        if(outboundAckedByPeer){
+            if(!_linger_after_streams_finish){
+                // 此时不需要徘徊
+                isActive=false;
+                return;
+            }
+            if(ms_since_last_segment_received>=10*_cfg.rt_timeout){
+                // 徘徊时间超过了10*_cfg.rt_timeout
+                isActive=false;
+                return;
+            }
         }
     }
-    
+    if(_sender.timeout())
+        write("");
+    // sendAll();
     // if(ms_since_last_segment_received>)
 }
 
 void TCPConnection::end_input_stream() {
+    
+    // 发送包含FIN的报文，该工作也由TCPConnection直接完成
+    // TCPSegment segment;
+    // TCPHeader &header=segment.header();
+    // header.fin=true;
+    // header.ack=true;
+    // header.seqno=_sender.next_seqno();
+    // header.ackno=_receiver.ackno().value();
+    // header.win=_receiver.window_size();
+    // _segments_out.push(segment);
+    // _sender.stream_in().eof();
     _sender.stream_in().end_input();
+    _sender.fill_window();
+    write("");
 }
 
 void TCPConnection::connect() {
-    TCPSegment synSeg{};
-    TCPHeader &header=synSeg.header();
-    header.syn=true;
-    // 发送synSeg的工作由TCPConnection完成
-    _segments_out.push(synSeg);
+    // TCPSegment synSeg{};
+    // TCPHeader &header=synSeg.header();
+    // header.syn=true;
+    // // 发送synSeg的工作由TCPConnection完成
+    // _segments_out.push(synSeg);
+    _sender.fill_window();
+    write("");
+}
+
+void TCPConnection::sendAll(){
+    while (!_sender.segments_out().empty())
+    {
+        _segments_out.push(_sender.segments_out().front());
+        _sender.segments_out().pop();
+    }
 }
 
 // 析构函数
@@ -141,8 +175,16 @@ TCPConnection::~TCPConnection() {
             TCPSegment segment;
             segment.header().rst=true;
             _segments_out.push(segment);
+        }else{
+            TCPSegment segment;
+            segment.header().fin=true;
+            segment.header().ack=true;
+            segment.header().ackno=_receiver.ackno().value();
+            segment.header().seqno=_sender.next_seqno();
+            _segments_out.push(segment);
         }
     } catch (const exception &e) {
         std::cerr << "Exception destructing TCP FSM: " << e.what() << std::endl;
     }
 }
+

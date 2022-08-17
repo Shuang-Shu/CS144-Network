@@ -67,6 +67,9 @@ class TCPSender {
     //! \name Methods that can cause the TCPSender to send a segment
     //!@{
 
+    // 返回sender的计时器是否超时
+    bool timeout();
+
     //! \brief A new acknowledgment was received
     void ack_received(const WrappingInt32 ackno, const uint16_t window_size);
 
