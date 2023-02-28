@@ -18,7 +18,6 @@ ByteStream::ByteStream(const size_t capacity): cap(capacity), is_end(false), tot
 }
 
 size_t ByteStream::write(const string &data) {
-    //DUMMY_CODE(data);
     if(this->is_end)
         return 0;
     size_t p=0;

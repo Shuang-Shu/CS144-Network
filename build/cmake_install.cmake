@@ -1,4 +1,4 @@
-# Install script for directory: /home/shuangshu/network/sponge
+# Install script for directory: /home/network/CS144-Network
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,10 +39,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/shuangshu/network/sponge/build/libsponge/cmake_install.cmake")
-  include("/home/shuangshu/network/sponge/build/apps/cmake_install.cmake")
-  include("/home/shuangshu/network/sponge/build/tests/cmake_install.cmake")
-  include("/home/shuangshu/network/sponge/build/doctests/cmake_install.cmake")
+  include("/home/network/CS144-Network/build/libsponge/cmake_install.cmake")
+  include("/home/network/CS144-Network/build/apps/cmake_install.cmake")
+  include("/home/network/CS144-Network/build/tests/cmake_install.cmake")
+  include("/home/network/CS144-Network/build/doctests/cmake_install.cmake")
 
 endif()
 
@@ -54,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/shuangshu/network/sponge/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/network/CS144-Network/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

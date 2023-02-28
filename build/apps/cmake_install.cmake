@@ -1,4 +1,4 @@
-# Install script for directory: /home/shuangshu/network/sponge/apps
+# Install script for directory: /home/network/CS144-Network/apps
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

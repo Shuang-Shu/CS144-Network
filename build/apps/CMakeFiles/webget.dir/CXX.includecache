@@ -90,11 +90,11 @@ system_error
 vector
 -
 
-/home/shuangshu/network/sponge/apps/webget.cc
+/home/network/CS144-Network/apps/webget.cc
 socket.hh
-/home/shuangshu/network/sponge/apps/socket.hh
+/home/network/CS144-Network/apps/socket.hh
 util.hh
-/home/shuangshu/network/sponge/apps/util.hh
+/home/network/CS144-Network/apps/util.hh
 cstdlib
 -
 iostream
