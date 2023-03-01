@@ -1,23 +1,19 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/network/CS144-Network/doctests/address_dt.cc" "/home/network/CS144-Network/build/doctests/CMakeFiles/address_dt.dir/address_dt.cc.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../libsponge/util"
-  "../libsponge/tcp_helpers"
-  "../libsponge"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/shuangshu/study/lab/CS144-Network/doctests/address_dt.cc" "doctests/CMakeFiles/address_dt.dir/address_dt.cc.o" "gcc" "doctests/CMakeFiles/address_dt.dir/address_dt.cc.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/DependInfo.cmake"
+  "/home/shuangshu/study/lab/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

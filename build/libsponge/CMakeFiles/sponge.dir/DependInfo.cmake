@@ -1,27 +1,24 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/network/CS144-Network/libsponge/byte_stream.cc" "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/byte_stream.cc.o"
-  "/home/network/CS144-Network/libsponge/stream_reassembler.cc" "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/stream_reassembler.cc.o"
-  "/home/network/CS144-Network/libsponge/util/address.cc" "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/util/address.cc.o"
-  "/home/network/CS144-Network/libsponge/util/buffer.cc" "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/util/buffer.cc.o"
-  "/home/network/CS144-Network/libsponge/util/eventloop.cc" "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/util/eventloop.cc.o"
-  "/home/network/CS144-Network/libsponge/util/file_descriptor.cc" "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/util/file_descriptor.cc.o"
-  "/home/network/CS144-Network/libsponge/util/parser.cc" "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/util/parser.cc.o"
-  "/home/network/CS144-Network/libsponge/util/socket.cc" "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/util/socket.cc.o"
-  "/home/network/CS144-Network/libsponge/util/tun.cc" "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/util/tun.cc.o"
-  "/home/network/CS144-Network/libsponge/util/util.cc" "/home/network/CS144-Network/build/libsponge/CMakeFiles/sponge.dir/util/util.cc.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../libsponge/util"
-  "../libsponge/tcp_helpers"
-  "../libsponge"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/shuangshu/study/lab/CS144-Network/libsponge/byte_stream.cc" "libsponge/CMakeFiles/sponge.dir/byte_stream.cc.o" "gcc" "libsponge/CMakeFiles/sponge.dir/byte_stream.cc.o.d"
+  "/home/shuangshu/study/lab/CS144-Network/libsponge/cycle_array.cc" "libsponge/CMakeFiles/sponge.dir/cycle_array.cc.o" "gcc" "libsponge/CMakeFiles/sponge.dir/cycle_array.cc.o.d"
+  "/home/shuangshu/study/lab/CS144-Network/libsponge/stream_reassembler.cc" "libsponge/CMakeFiles/sponge.dir/stream_reassembler.cc.o" "gcc" "libsponge/CMakeFiles/sponge.dir/stream_reassembler.cc.o.d"
+  "/home/shuangshu/study/lab/CS144-Network/libsponge/util/address.cc" "libsponge/CMakeFiles/sponge.dir/util/address.cc.o" "gcc" "libsponge/CMakeFiles/sponge.dir/util/address.cc.o.d"
+  "/home/shuangshu/study/lab/CS144-Network/libsponge/util/buffer.cc" "libsponge/CMakeFiles/sponge.dir/util/buffer.cc.o" "gcc" "libsponge/CMakeFiles/sponge.dir/util/buffer.cc.o.d"
+  "/home/shuangshu/study/lab/CS144-Network/libsponge/util/eventloop.cc" "libsponge/CMakeFiles/sponge.dir/util/eventloop.cc.o" "gcc" "libsponge/CMakeFiles/sponge.dir/util/eventloop.cc.o.d"
+  "/home/shuangshu/study/lab/CS144-Network/libsponge/util/file_descriptor.cc" "libsponge/CMakeFiles/sponge.dir/util/file_descriptor.cc.o" "gcc" "libsponge/CMakeFiles/sponge.dir/util/file_descriptor.cc.o.d"
+  "/home/shuangshu/study/lab/CS144-Network/libsponge/util/parser.cc" "libsponge/CMakeFiles/sponge.dir/util/parser.cc.o" "gcc" "libsponge/CMakeFiles/sponge.dir/util/parser.cc.o.d"
+  "/home/shuangshu/study/lab/CS144-Network/libsponge/util/socket.cc" "libsponge/CMakeFiles/sponge.dir/util/socket.cc.o" "gcc" "libsponge/CMakeFiles/sponge.dir/util/socket.cc.o.d"
+  "/home/shuangshu/study/lab/CS144-Network/libsponge/util/tun.cc" "libsponge/CMakeFiles/sponge.dir/util/tun.cc.o" "gcc" "libsponge/CMakeFiles/sponge.dir/util/tun.cc.o.d"
+  "/home/shuangshu/study/lab/CS144-Network/libsponge/util/util.cc" "libsponge/CMakeFiles/sponge.dir/util/util.cc.o" "gcc" "libsponge/CMakeFiles/sponge.dir/util/util.cc.o.d"
   )
 
 # Targets to which this target links.

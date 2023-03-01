@@ -28,39 +28,52 @@ StreamReassembler::StreamReassembler(const size_t capacity)
 //! possibly out-of-order, from the logical stream, and assembles any newly
 //! contiguous substrings and writes them into the output stream in order.
 void StreamReassembler::push_substring(const string &data, const size_t index, const bool eof) {
+    push_to_stream();
     if (eof) {
         _eof_index = index + data.length();
     }
-    if (data.length() + _unassembled_bytes + _assembled_bytes > _capacity) {
-        return;
-    }
-    if (index + data.length() > _unassembled.get_head_index_in_stream() + _capacity) {
-        return;
-    }
+    // if (data.length() + _unassembled_bytes + _assembled_bytes > _capacity) {
+    //     return;
+    // }
+    // if (index + data.length() > _unassembled.get_head_index_in_stream() + _capacity) {
+    //     return;
+    // }
     size_t set_in_count = 0;
+    size_t offset = index - _unassembled.get_head_index_in_stream();
     for (size_t i = 0; i < data.length(); i++) {
-        size_t offset = index - _unassembled.get_head_index_in_stream();
+        if (i + index < _unassembled.get_head_index_in_stream()||offset+i>=_capacity)
+            continue;
         if (_unassembled.set_at_index_zero(offset + i, data[i]))
             set_in_count++;
     }
-    _unassembled_bytes++;
+    _unassembled_bytes = _unassembled_bytes + set_in_count;
     // push assembled char in _unassembled to _assembled
-    if (index == _expect) {
+    if (index <= _expect) {
         auto head_length = _unassembled.peek_head_length();
-        // char *buffer = new char[head_length];
         for (size_t i = 0; i < head_length; i++) {
-            // buffer[i] = _unassembled.pop_head();
             _assembled.push(_unassembled.pop_head());
         }
-        // string seg=string(buffer, buffer+head_length);
-        // _assembled.push(seg);
-        // _output.write(seg);
         _unassembled_bytes -= head_length;
         _assembled_bytes += head_length;
+        _expect += head_length;
     }
     // try to send assembled chars
+    push_to_stream();
+    // close the output stream when the last char has arrived
+    if (_expect == _eof_index && _unassembled_bytes == 0 && _assembled_bytes == 0) {
+        _output.end_input();
+    }
+}
+
+size_t StreamReassembler::unassembled_bytes() const { return _unassembled_bytes; }
+
+bool StreamReassembler::empty() const { return _unassembled_bytes == 0; }
+
+bool StreamReassembler::push_to_stream() {
     bool output_sufficient = true;
     do {
+        if (_assembled.size() == 0)
+            break;
         auto head = _assembled.front();
         string temp(CHAR_LENGTH, head);
         if (_output.write(temp) == 0) {
@@ -70,23 +83,5 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
             _assembled.pop();
         }
     } while (output_sufficient);
-    // close the output stream when the last char has arrived
-    if (_expect == _eof_index && _unassembled_bytes == 0 && _assembled_bytes == 0) {
-        _output.end_input();
-    }
-    // do{
-    //     auto head=_assembled.front();
-    //     auto head_length=head.length();
-    //     auto write_chars=_output.write(head);
-    //     if(write_chars<head_length){
-
-    //     }else{
-    //         _assembled.pop();
-    //         _assembled_bytes-=head_length;
-    //     }
-    // }while(output_sufficientv)
+    return output_sufficient;
 }
-
-size_t StreamReassembler::unassembled_bytes() const { return _unassembled_bytes; }
-
-bool StreamReassembler::empty() const { return _unassembled_bytes == 0; }

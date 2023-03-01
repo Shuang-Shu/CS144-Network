@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/socket_dt.dir/socket_dt.cc.o"
+  "CMakeFiles/socket_dt.dir/socket_dt.cc.o.d"
   "socket_dt"
   "socket_dt.pdb"
 )

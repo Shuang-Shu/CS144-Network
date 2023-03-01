@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/webget.dir/webget.cc.o"
+  "CMakeFiles/webget.dir/webget.cc.o.d"
   "webget"
   "webget.pdb"
 )

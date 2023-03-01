@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/byte_stream_two_writes.dir/byte_stream_two_writes.cc.o"
+  "CMakeFiles/byte_stream_two_writes.dir/byte_stream_two_writes.cc.o.d"
   "byte_stream_two_writes"
   "byte_stream_two_writes.pdb"
 )
