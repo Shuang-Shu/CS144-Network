@@ -20,6 +20,7 @@
 /home/shuangshu/study/lab/CS144-Network/build/apps/CMakeFiles/edit_cache.dir
 /home/shuangshu/study/lab/CS144-Network/build/apps/CMakeFiles/rebuild_cache.dir
 /home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/spongechecks.dir
+/home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/tcp_parser.dir
 /home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/fsm_stream_reassembler_single.dir
 /home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/fsm_stream_reassembler_seq.dir
 /home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/fsm_stream_reassembler_dup.dir
@@ -33,6 +34,16 @@
 /home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/byte_stream_two_writes.dir
 /home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/byte_stream_capacity.dir
 /home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/byte_stream_many_writes.dir
+/home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/wrapping_integers_cmp.dir
+/home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/wrapping_integers_unwrap.dir
+/home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/wrapping_integers_wrap.dir
+/home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/wrapping_integers_roundtrip.dir
+/home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/recv_connect.dir
+/home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/recv_transmit.dir
+/home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/recv_window.dir
+/home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/recv_reorder.dir
+/home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/recv_close.dir
+/home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/recv_special.dir
 /home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/test.dir
 /home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/edit_cache.dir
 /home/shuangshu/study/lab/CS144-Network/build/tests/CMakeFiles/rebuild_cache.dir

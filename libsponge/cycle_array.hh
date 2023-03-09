@@ -15,7 +15,7 @@ class CycleArray {
     // convert login index to real index
     size_t _logic_index_to_real(size_t logic_index);
     // convert real index to logic
-    size_t _real_index_to_logic(size_t real_index); // TODO
+    size_t _real_index_to_logic(size_t real_index); 
 
   public:
     CycleArray(size_t cap);
@@ -27,8 +27,8 @@ class CycleArray {
     // set char at logic index when there is zero
     bool set_at_index_zero(size_t l_index, char c);
     // set value of element to 0 from l_index, until meet 0, then reset _head
-    char pop_head(); // TODO
-    size_t peek_head_length(); // TODO
-    size_t get_head_index_in_stream(); // TODO
+    char pop_head(); 
+    size_t peek_head_length(); 
+    size_t get_head_index_in_stream(); 
 };
 #endif

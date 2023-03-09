@@ -17,6 +17,8 @@ class WrappingInt32 {
     uint32_t raw_value() const { return _raw_value; }  //!< Access raw stored value
 };
 
+uint64_t cacul_result(uint64_t base, uint64_t n_64, uint64_t isn_64);
+
 //! Transform a 64-bit absolute sequence number (zero-indexed) into a 32-bit relative sequence number
 //! \param n the absolute sequence number
 //! \param isn the initial sequence number

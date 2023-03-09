@@ -43,7 +43,7 @@ int main() {
             check_roundtrip(isn, val - big_offset, val);
         }
     } catch (const exception &e) {
-        cerr << e.what() << endl;
+        cout << e.what() << endl;
         return 1;
     }
 
