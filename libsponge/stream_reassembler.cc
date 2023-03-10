@@ -32,12 +32,6 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
     if (eof) {
         _eof_index = index + data.length();
     }
-    // if (data.length() + _unassembled_bytes + _assembled_bytes > _capacity) {
-    //     return;
-    // }
-    // if (index + data.length() > _unassembled.get_head_index_in_stream() + _capacity) {
-    //     return;
-    // }
     size_t set_in_count = 0;
     size_t offset = index - _unassembled.get_head_index_in_stream();
     for (size_t i = 0; i < data.length(); i++) {

@@ -92,3 +92,7 @@ size_t ByteStream::bytes_written() const { return this->total_bytes_written; }
 size_t ByteStream::bytes_read() const { return this->total_bytes_read; }
 
 size_t ByteStream::remaining_capacity() const { return this->cap-this->buf.size(); }
+
+size_t ByteStream::bytes_not_read() const{
+    return this->cap-this->remaining_capacity();
+}

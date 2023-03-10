@@ -20,12 +20,39 @@ class TCPReceiver {
     //! The maximum number of bytes we'll store.
     size_t _capacity;
 
+    // state of tcp receiver
+    // LISTEN: 0 (default)
+    // SYN_RECEIVE: 1
+    // FIN_RECEIVE: 2
+    unsigned short _state;
+    // current receiving window size
+    size_t _window_size;
+    // isn of connection
+    WrappingInt32 _isn;
+    // first byte not received yet, can be used as checkpoint
+    uint64_t _ack_no_64;
+    // index of last byte
+    uint64_t _last_no;
+    // has received syn?
+    bool _received_syn;
+    // has received fin?
+    bool _received_fin;
+
   public:
     //! \brief Construct a TCP receiver
     //!
     //! \param capacity the maximum number of bytes that the receiver will
     //!                 store in its buffers at any give time.
-    TCPReceiver(const size_t capacity) : _reassembler(capacity), _capacity(capacity) {}
+    TCPReceiver(const size_t capacity)
+        : _reassembler(capacity)
+        , _capacity(capacity)
+        , _state(0)
+        , _window_size(_capacity)
+        , _isn{0}
+        , _ack_no_64{0}
+        , _last_no{0}
+        , _received_syn(false)
+        ,_received_fin{false} {}
 
     //! \name Accessors to provide feedback to the remote TCPSender
     //!@{
