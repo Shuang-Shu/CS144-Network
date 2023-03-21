@@ -2,8 +2,10 @@
 #define SPONGE_LIBSPONGE_TCP_SENDER_HH
 
 #include "byte_stream.hh"
+#include "node.hh"
 #include "tcp_config.hh"
 #include "tcp_segment.hh"
+#include "timer.hh"
 #include "wrapping_integers.hh"
 
 #include <functional>
@@ -31,6 +33,21 @@ class TCPSender {
 
     //! the (absolute) sequence number for the next byte to be sent
     uint64_t _next_seqno{0};
+
+    //! the next (absolute) sequence number for the first acked byte
+    uint64_t _acked_next{0};
+
+    //! timer used to log time
+    Timer _timer{_initial_retransmission_timeout};
+
+    //! linked list of outstanding segment
+    LinkedBuffer<TCPSegment> _outstanding_buffer;
+
+    //! current peer window size
+    uint16_t _peer_window_size{0};
+
+    //! has SYN segment sent
+    bool _syn_sent{false};
 
   public:
     //! Initialize a TCPSender
