@@ -2,15 +2,36 @@
 #define SPONGE_LIBSPONGE_TCP_SENDER_HH
 
 #include "byte_stream.hh"
-#include "node.hh"
 #include "tcp_config.hh"
 #include "tcp_segment.hh"
 #include "timer.hh"
 #include "wrapping_integers.hh"
 
 #include <functional>
+#include <memory>
 #include <queue>
 
+using namespace std;
+
+template <class T>
+class Node {
+  public:
+    T val;
+    shared_ptr<Node> next;
+    shared_ptr<Node> prev;
+    Node(T v) : val(v), next(nullptr), prev(nullptr) {}
+};
+
+template <class T>
+class LinkedBuffer {
+  public:
+    shared_ptr<Node<T>> head;
+    shared_ptr<Node<T>> tail;
+    void addTail(T);
+    void removeTail();
+    T pop();
+    T peek();
+};
 //! \brief The "sender" part of a TCP implementation.
 
 //! Accepts a ByteStream, divides it up into segments and sends the
@@ -44,10 +65,19 @@ class TCPSender {
     LinkedBuffer<TCPSegment> _outstanding_buffer;
 
     //! current peer window size
-    uint16_t _peer_window_size{0};
+    uint16_t _peer_window_size{1};
+
+    // newest received window_size from ack
+    uint64_t _received_window_size{1};
 
     //! has SYN segment sent
     bool _syn_sent{false};
+
+    //! has FIN segment sent
+    bool _fin_sent{false};
+
+    //! bytes sent but not acked yet
+    uint64_t _bytes_in_flight{0};
 
   public:
     //! Initialize a TCPSender

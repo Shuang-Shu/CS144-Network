@@ -34,5 +34,11 @@ class Timer {
     bool is_expire();
     // get the continous fail count
     uint16_t fail_count() const;
+    // double the rto
+    void double_rto();
+    // is this timer running
+    bool is_running() { return _running; }
+    // reset the rto
+    void reset_rto();
 };
 #endif
