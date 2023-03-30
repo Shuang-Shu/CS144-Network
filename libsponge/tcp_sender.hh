@@ -134,6 +134,15 @@ class TCPSender {
     //! \brief relative seqno for the next byte to be sent
     WrappingInt32 next_seqno() const { return wrap(_next_seqno, _isn); }
     //!@}
+    uint16_t peer_win() const { return _peer_window_size; }
+
+    //! \brief return the continous failed number of the timer
+    uint16_t fail_count() { return _timer.fail_count(); }
+
+    //! \brief
+    bool fin_acked(uint64_t fin_next_seqno){
+      return _acked_next>=fin_next_seqno;
+    }
 };
 
 #endif  // SPONGE_LIBSPONGE_TCP_SENDER_HH

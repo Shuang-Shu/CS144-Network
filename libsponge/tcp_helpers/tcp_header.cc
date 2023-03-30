@@ -101,7 +101,7 @@ string TCPHeader::summary() const {
 }
 
 bool TCPHeader::operator==(const TCPHeader &other) const {
-    // TODO(aozdemir) more complete check (right now we omit cksum, src, dst
+    // (aozdemir) more complete check (right now we omit cksum, src, dst
     return seqno == other.seqno && ackno == other.ackno && doff == other.doff && urg == other.urg && ack == other.ack &&
            psh == other.psh && rst == other.rst && syn == other.syn && fin == other.fin && win == other.win &&
            uptr == other.uptr;

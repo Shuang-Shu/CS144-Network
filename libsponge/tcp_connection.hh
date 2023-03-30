@@ -20,6 +20,25 @@ class TCPConnection {
     //! for 10 * _cfg.rt_timeout milliseconds after both streams have ended,
     //! in case the remote TCPConnection doesn't know we've received its whole stream?
     bool _linger_after_streams_finish{true};
+    // has _sender send a FIN seg
+    bool _fin{false};
+    // Is the TCPConnection is lingering?
+    bool _is_lingering{false};
+
+    //! current time
+    //! do not use timer, because it only resets
+    //! its time when seg contains newer ackno,
+    //! while the time_since_last_segment_received
+    //! should consider the seg which contains no
+    //! new ackno
+    uint64_t _crt_time{0};
+    uint64_t _last_seg_rcv_time{0};
+    //! \brief send all segs in _sender
+    void _send_segs();
+    //! \brief reset the connection
+    void _reset();
+    //! \brief
+    uint64_t _fin_next_seqno{0};
 
   public:
     //! \name "Input" interface for the writer
@@ -88,6 +107,7 @@ class TCPConnection {
 
     //!@{
     ~TCPConnection();  //!< destructor sends a RST if the connection is still open
+
     TCPConnection() = delete;
     TCPConnection(TCPConnection &&other) = default;
     TCPConnection &operator=(TCPConnection &&other) = default;
