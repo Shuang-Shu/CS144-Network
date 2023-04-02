@@ -64,6 +64,7 @@ void TCPConnection::send_segs() {
 
 void TCPConnection::fill_seg_fields(TCPSegment &seg) {
     TCPHeader &header = seg.header();
+    // header.sport = 
     header.win = _receiver.window_size();
     auto ackno = _receiver.ackno();
     if (ackno.has_value()) {
@@ -109,7 +110,12 @@ uint64_t TCPConnection::unwrap_in_connection(WrappingInt32 number) {
     return unwrap(number, _cfg.fixed_isn.value(), _sender.next_seqno_absolute());
 }
 
-size_t TCPConnection::write(const string &data) { return _sender.stream_in().write(data); }
+size_t TCPConnection::write(const string &data) {
+    auto res = _sender.stream_in().write(data);
+    _sender.fill_window();
+    send_segs();
+    return res;
+}
 
 //! \param[in] ms_since_last_tick number of milliseconds since the last call to this method
 void TCPConnection::tick(const size_t ms_since_last_tick) {
@@ -121,9 +127,10 @@ void TCPConnection::tick(const size_t ms_since_last_tick) {
     if (!_lingering) {
         // not lingering, show resend all outstanding
         // segments as usual
-        if (_sender.stream_in().bytes_written() == 0 && !_receiver.ackno().has_value())
-            return;
+        // TODO syn segment should also been resent
         _sender.tick(ms_since_last_tick);
+        // if (_sender.stream_in().bytes_written() == 0 && !_receiver.ackno().has_value())
+        //     return;
     } else {
         // lingering
         if (_crt_time - _newest_seg_time >= 10 * _cfg.rt_timeout) {
@@ -166,7 +173,6 @@ void TCPConnection::_check_linger() {
 }
 
 void TCPConnection::connect() {
-    _do_connect = true;
     _sender.fill_window();
     send_segs();
 }
@@ -176,9 +182,7 @@ TCPConnection::~TCPConnection() {
         if (active()) {
             cerr << "Warning: Unclean shutdown of TCPConnection\n";
             // Your code here: need to send a RST segment to the peer
-            TCPSegment seg;
-            seg.header().rst = true;
-            _segments_out.push(seg);
+            _reset(true);
         }
     } catch (const exception &e) {
         std::cerr << "Exception destructing TCP FSM: " << e.what() << std::endl;

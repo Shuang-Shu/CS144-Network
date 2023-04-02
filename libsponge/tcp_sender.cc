@@ -181,7 +181,6 @@ void TCPSender::ack_received(const WrappingInt32 ackno, const uint16_t window_si
 
 //! \param[in] ms_since_last_tick the number of milliseconds since the last call to this method
 void TCPSender::tick(const size_t ms_since_last_tick) {
-    fill_window();
     _timer.pass(ms_since_last_tick);
     if (_timer.is_expire()) {
         if (_received_window_size != 0)

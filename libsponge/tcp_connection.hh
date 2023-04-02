@@ -28,29 +28,14 @@ class TCPConnection {
     uint64_t _crt_time{0};
     // time of receiving the newest segment
     uint64_t _newest_seg_time{0};
-    // -------- active close case --------
-    // sending FIN before receiving FIN
     bool _first_send_fin{false};
-    // // the absolute seqno of FIN flag in active close case
-    // uint64_t _abs_active_fin_seqno{0};
-    // // ack the passive peer's FIN
-    // uint64_t _abs_ack_passive_peer_fin{0};
-    // -------- passive close case --------
-    // receiving FIN before sending FIN
     bool _first_receive_fin{false};
-    // // the absolute seqno of FIN flag in passive close case
-    // uint64_t _abs_passive_fin_seqno{0};
-    // // ack the active peer's FIN
-    // uint64_t _abs_ack_active_peer_fin{0};
-    // -------- FIN fields --------
     uint64_t _self_fin_seqno{0};
     bool _self_fin_acked{false};
     uint64_t _peer_fin_seqno{0};
     bool _peer_fin_acking{false};
     // connection RST flag
     bool _rst{false};
-    // has connected?
-    bool _do_connect{false};
     // reset the connection
     void _reset(bool);
     // check the statements of connection and transfering it to lingering in proper time
