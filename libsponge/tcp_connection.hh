@@ -5,6 +5,7 @@
 #include "tcp_receiver.hh"
 #include "tcp_sender.hh"
 #include "tcp_state.hh"
+#include <limits>
 
 //! \brief A complete endpoint of a TCP connection
 class TCPConnection {
@@ -14,48 +15,22 @@ class TCPConnection {
     TCPSender _sender{_cfg.send_capacity, _cfg.rt_timeout, _cfg.fixed_isn};
 
     //! outbound queue of segments that the TCPConnection wants sent
-    std::queue<TCPSegment> _segments_out{};
+    // the segments TCPConnection wants to sent is what sender wants to sent
+    // so _segments_out is a reference of _sender.segments_out
+    std::queue<TCPSegment> &_segments_out{_sender.segments_out()};
 
     //! Should the TCPConnection stay active (and keep ACKing)
     //! for 10 * _cfg.rt_timeout milliseconds after both streams have ended,
     //! in case the remote TCPConnection doesn't know we've received its whole stream?
     bool _linger_after_streams_finish{true};
-    // is connection in lingering state?
-    bool _lingering{false};
-    // has the FIN segment acked
-    bool _fin_acked{false};
-    // current time from start
-    uint64_t _crt_time{0};
-    // time of receiving the newest segment
-    uint64_t _newest_seg_time{0};
-    // -------- active close case --------
-    // sending FIN before receiving FIN
-    bool _first_send_fin{false};
-    // // the absolute seqno of FIN flag in active close case
-    // uint64_t _abs_active_fin_seqno{0};
-    // // ack the passive peer's FIN
-    // uint64_t _abs_ack_passive_peer_fin{0};
-    // -------- passive close case --------
-    // receiving FIN before sending FIN
-    bool _first_receive_fin{false};
-    // // the absolute seqno of FIN flag in passive close case
-    // uint64_t _abs_passive_fin_seqno{0};
-    // // ack the active peer's FIN
-    // uint64_t _abs_ack_active_peer_fin{0};
-    // -------- FIN fields --------
-    uint64_t _self_fin_seqno{0};
-    bool _self_fin_acked{false};
-    uint64_t _peer_fin_seqno{0};
-    bool _peer_fin_acking{false};
-    // connection RST flag
-    bool _rst{false};
-    // has connected?
-    bool _do_connect{false};
-    // reset the connection
-    void _reset(bool);
-    // check the statements of connection and transfering it to lingering in proper time
-    void _check_linger();
-
+    
+    size_t _time_since_last_segment_received{0};
+    bool _active{true};
+    void fill_and_update(bool send_syn,bool send_rst); 
+    void clean_shutdown();
+    void rst_happen(bool is_sending);
+    std::string sender_state();
+    std::string receiver_state();
   public:
     //! \name "Input" interface for the writer
     //!@{
@@ -115,18 +90,6 @@ class TCPConnection {
     bool active() const;
     //!@}
 
-    // seg all segments in _sender out
-    void send_segs();
-
-    // fill _receiver's fields in segment
-    void fill_seg_fields(TCPSegment &seg);
-
-    // check FIN flag in sent segments
-    void check_send_fin(const TCPSegment &);
-    // check FIN flag in received segments
-    void check_rcv_fin(const TCPSegment &);
-    // unwrap the abs seqno in this specified TCPConnection
-    uint64_t unwrap_in_connection(WrappingInt32 number);
     //! Construct a new connection from a configuration
     explicit TCPConnection(const TCPConfig &cfg) : _cfg{cfg} {}
 
@@ -141,6 +104,7 @@ class TCPConnection {
     TCPConnection(const TCPConnection &other) = delete;
     TCPConnection &operator=(const TCPConnection &other) = delete;
     //!@}
+
 };
 
 #endif  // SPONGE_LIBSPONGE_TCP_FACTORED_HH

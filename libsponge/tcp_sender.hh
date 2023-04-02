@@ -4,34 +4,12 @@
 #include "byte_stream.hh"
 #include "tcp_config.hh"
 #include "tcp_segment.hh"
-#include "timer.hh"
 #include "wrapping_integers.hh"
 
 #include <functional>
-#include <memory>
 #include <queue>
-
-using namespace std;
-
-template <class T>
-class Node {
-  public:
-    T val;
-    shared_ptr<Node> next;
-    shared_ptr<Node> prev;
-    Node(T v) : val(v), next(nullptr), prev(nullptr) {}
-};
-
-template <class T>
-class LinkedBuffer {
-  public:
-    shared_ptr<Node<T>> head;
-    shared_ptr<Node<T>> tail;
-    void addTail(T);
-    void removeTail();
-    T pop();
-    T peek();
-};
+#include <deque>
+#include <iostream>
 //! \brief The "sender" part of a TCP implementation.
 
 //! Accepts a ByteStream, divides it up into segments and sends the
@@ -45,9 +23,14 @@ class TCPSender {
 
     //! outbound queue of segments that the TCPSender wants sent
     std::queue<TCPSegment> _segments_out{};
+    // segemnts sent but not acked
+    std::queue<TCPSegment> _segments_not_ack{};
 
     //! retransmission timer for the connection
     unsigned int _initial_retransmission_timeout;
+
+    // retransmission time out
+    unsigned int RTO;
 
     //! outgoing stream of bytes that have not yet been sent
     ByteStream _stream;
@@ -55,30 +38,21 @@ class TCPSender {
     //! the (absolute) sequence number for the next byte to be sent
     uint64_t _next_seqno{0};
 
-    //! the next (absolute) sequence number for the first acked byte
-    uint64_t _acked_next{0};
+    uint16_t cur_window_size{1};
 
-    //! timer used to log time
-    Timer _timer{_initial_retransmission_timeout};
+    uint64_t _input_end_index{0}; //the ending index of input
 
-    //! linked list of outstanding segment
-    LinkedBuffer<TCPSegment> _outstanding_buffer;
+    bool syn_loaded{false};//is syn is loaded into _segment_out
+    bool fin_loaded{false};//is fin is loaded into _segment_out
+  
+    unsigned int consecutive_retrans_cnt{0};
 
-    //! current peer window size
-    uint16_t _peer_window_size{1};
-
-    // newest received window_size from ack
-    uint64_t _received_window_size{1};
-
-    //! has SYN segment sent
-    bool _syn_sent{false};
-
-    //! has FIN segment sent
-    bool _fin_sent{false};
-
-    //! bytes sent but not acked yet
+    //timer relates
+    bool timer_run{false};
+    size_t timer_ms{0};
+    uint64_t checkpoint{0};
     uint64_t _bytes_in_flight{0};
-
+    bool _fully_acked{false};
   public:
     //! Initialize a TCPSender
     TCPSender(const size_t capacity = TCPConfig::DEFAULT_CAPACITY,
@@ -95,10 +69,12 @@ class TCPSender {
     //!@{
 
     //! \brief A new acknowledgment was received
-    void ack_received(const WrappingInt32 ackno, const uint16_t window_size);
+    bool ack_received(const WrappingInt32 ackno, const uint16_t window_size);
 
     //! \brief Generate an empty-payload segment (useful for creating empty ACK segments)
     void send_empty_segment();
+
+    bool &fully_acked() {return _fully_acked;}
 
     //! \brief create and send segments to fill as much of the window as possible
     void fill_window();
@@ -134,9 +110,12 @@ class TCPSender {
     //! \brief relative seqno for the next byte to be sent
     WrappingInt32 next_seqno() const { return wrap(_next_seqno, _isn); }
     //!@}
-
-    //! \brief the continous failed number of expiration
-    uint64_t fail_count() { return _timer.fail_count(); }
+    
+    bool in_closed();
+    bool in_syn_sent();
+    bool in_syn_acked();
+    bool in_fin_sent();
+    bool in_fin_acked();
 };
 
 #endif  // SPONGE_LIBSPONGE_TCP_SENDER_HH

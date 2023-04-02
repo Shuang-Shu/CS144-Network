@@ -2,12 +2,12 @@
 #define SPONGE_LIBSPONGE_STREAM_REASSEMBLER_HH
 
 #include "byte_stream.hh"
-#include "cycle_array.hh"
 
 #include <cstdint>
 #include <string>
-#include <queue>
-
+#include <vector>
+#include <deque>
+#include <iostream>
 //! \brief A class that assembles a series of excerpts from a byte stream (possibly out of order,
 //! possibly overlapping) into an in-order byte stream.
 class StreamReassembler {
@@ -16,13 +16,11 @@ class StreamReassembler {
 
     ByteStream _output;  //!< The reassembled in-order byte stream
     size_t _capacity;    //!< The maximum number of bytes
-    CycleArray _unassembled; // unassesbled buffer
-    std::queue<char> _assembled; // assembled char stream of input
-    size_t _assembled_bytes;  // bytes of assembled bytes
-    size_t _unassembled_bytes; // bytes of unassembled bytes
-    size_t _expect; // index of closest unreceived byte
-    size_t _eof_index; // index which is behind last char
-    static const int CHAR_LENGTH=1;
+    std::deque<char> bytes;
+    std::deque<bool> state;//state[i]=0 bytes[i] unused state[i]=1 bytes[i] used
+    size_t unassembled_bytes_cnt;
+    size_t input_end_index;//end index of input eof
+    size_t last_read_index;//last time that pushs a string,the last bytes of read index 
   public:
     //! \brief Construct a `StreamReassembler` that will store up to `capacity` bytes.
     //! \note This capacity limits both the bytes that have been reassembled,
@@ -54,9 +52,6 @@ class StreamReassembler {
     //! \brief Is the internal state empty (other than the output stream)?
     //! \returns `true` if no substrings are waiting to be assembled
     bool empty() const;
-
-    // push chars in _assembled to _output
-    bool push_to_stream();
 };
 
 #endif  // SPONGE_LIBSPONGE_STREAM_REASSEMBLER_HH
