@@ -164,7 +164,7 @@ void TCPSender::ack_received(const WrappingInt32 ackno, const uint16_t window_si
         }
     }
     // if the receiver anounced that its window size is ZERO,
-    // the _peer_window_size should be set to ONE
+    // the _peer_window_size should be ONE
     if (window_size_copy > _bytes_in_flight)
         _peer_window_size = window_size_copy - _bytes_in_flight;
     else
@@ -175,7 +175,7 @@ void TCPSender::ack_received(const WrappingInt32 ackno, const uint16_t window_si
     } else if (new_data) {
         _timer.reset();
     }
-    // when received a ack, show fill peer's window
+    // when received a ack, should fill peer's window
     fill_window();
 }
 

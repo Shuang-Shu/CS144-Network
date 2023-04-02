@@ -20,6 +20,41 @@ class TCPConnection {
     //! for 10 * _cfg.rt_timeout milliseconds after both streams have ended,
     //! in case the remote TCPConnection doesn't know we've received its whole stream?
     bool _linger_after_streams_finish{true};
+    // is connection in lingering state?
+    bool _lingering{false};
+    // has the FIN segment acked
+    bool _fin_acked{false};
+    // current time from start
+    uint64_t _crt_time{0};
+    // time of receiving the newest segment
+    uint64_t _newest_seg_time{0};
+    // -------- active close case --------
+    // sending FIN before receiving FIN
+    bool _first_send_fin{false};
+    // // the absolute seqno of FIN flag in active close case
+    // uint64_t _abs_active_fin_seqno{0};
+    // // ack the passive peer's FIN
+    // uint64_t _abs_ack_passive_peer_fin{0};
+    // -------- passive close case --------
+    // receiving FIN before sending FIN
+    bool _first_receive_fin{false};
+    // // the absolute seqno of FIN flag in passive close case
+    // uint64_t _abs_passive_fin_seqno{0};
+    // // ack the active peer's FIN
+    // uint64_t _abs_ack_active_peer_fin{0};
+    // -------- FIN fields --------
+    uint64_t _self_fin_seqno{0};
+    bool _self_fin_acked{false};
+    uint64_t _peer_fin_seqno{0};
+    bool _peer_fin_acking{false};
+    // connection RST flag
+    bool _rst{false};
+    // has connected?
+    bool _do_connect{false};
+    // reset the connection
+    void _reset(bool);
+    // check the statements of connection and transfering it to lingering in proper time
+    void _check_linger();
 
   public:
     //! \name "Input" interface for the writer
@@ -80,6 +115,18 @@ class TCPConnection {
     bool active() const;
     //!@}
 
+    // seg all segments in _sender out
+    void send_segs();
+
+    // fill _receiver's fields in segment
+    void fill_seg_fields(TCPSegment &seg);
+
+    // check FIN flag in sent segments
+    void check_send_fin(const TCPSegment &);
+    // check FIN flag in received segments
+    void check_rcv_fin(const TCPSegment &);
+    // unwrap the abs seqno in this specified TCPConnection
+    uint64_t unwrap_in_connection(WrappingInt32 number);
     //! Construct a new connection from a configuration
     explicit TCPConnection(const TCPConfig &cfg) : _cfg{cfg} {}
 

@@ -134,6 +134,9 @@ class TCPSender {
     //! \brief relative seqno for the next byte to be sent
     WrappingInt32 next_seqno() const { return wrap(_next_seqno, _isn); }
     //!@}
+
+    //! \brief the continous failed number of expiration
+    uint64_t fail_count() { return _timer.fail_count(); }
 };
 
 #endif  // SPONGE_LIBSPONGE_TCP_SENDER_HH
