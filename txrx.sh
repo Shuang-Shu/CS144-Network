@@ -101,6 +101,7 @@ _socat_connect () {
 }
 
 _rt_listen () {
+    echo "DEBUG:" $3 $4 ${SERVER_PORT} ">" $1 "<" $2 "&&" "sleep 0.1"
     coproc $3 -l $4 ${SERVER_PORT} >"$1" <"$2" && sleep 0.1
     set +u
     [ -z "$COPROC_PID" ] && { echo "Error in _rt_listen"; exit 1; }
@@ -108,6 +109,7 @@ _rt_listen () {
 }
 
 _rt_connect () {
+    echo "DEBUG: "$3 $4 ${SERVER_PORT} ">" $1 "<" $2 "||" "{ echo \"Error in _rt_connect\"; exit 1; }"
     $3 $4 ${SERVER_PORT} >"$1" <"$2" || { echo "Error in _rt_connect"; exit 1; }
 }
 
@@ -164,7 +166,7 @@ ip link show tun144 &>/dev/null || { echo "please enable tun144 and re-run"; exi
 ip link show tun145 &>/dev/null || { echo "please enable tun145 and re-run"; exit 1; }
 
 set -u
-trap exit_cleanup EXIT
+# trap exit_cleanup EXIT
 
 get_cmdline_options "$@"
 
@@ -185,6 +187,8 @@ if [ "$IUMODE" = "i" ]; then
     fi
 else
     # UDP mode
+    echo "./apps/tcp_udp ${RTTO} ${WINSIZE} ${LOSS_UP} ${LOSS_DN}"
+    echo "./apps/tcp_udp ${RTTO} ${WINSIZE}"
     REF_PROG="./apps/tcp_udp ${RTTO} ${WINSIZE} ${LOSS_UP} ${LOSS_DN}"
     TEST_PROG="./apps/tcp_udp ${RTTO} ${WINSIZE}"
 fi

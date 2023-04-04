@@ -2,6 +2,7 @@
 
 #include "tcp_config.hh"
 
+#include <iostream>
 #include <memory>
 #include <random>
 
@@ -130,6 +131,7 @@ void TCPSender::fill_window() {
 //! \param ackno The remote receiver's ackno (acknowledgment number)
 //! \param window_size The remote receiver's advertised window size
 void TCPSender::ack_received(const WrappingInt32 ackno, const uint16_t window_size) {
+    cerr << "WIN MY DEBUG: peer win=" << window_size << endl;
     auto window_size_copy = window_size;
     _received_window_size = window_size;
     if (window_size == 0) {
@@ -153,6 +155,7 @@ void TCPSender::ack_received(const WrappingInt32 ackno, const uint16_t window_si
         if (abs_ackno > head_seg_seqno) {
             new_data = true;
             if (abs_ackno - head_seg_seqno >= length_in_seq) {
+                cerr << "MY DEBUG: acked seqno=" << ackno << endl;
                 _bytes_in_flight -= length_in_seq;
                 _acked_next += length_in_seq;
                 _outstanding_buffer.pop();
@@ -172,7 +175,8 @@ void TCPSender::ack_received(const WrappingInt32 ackno, const uint16_t window_si
     // reset the timer
     if (_outstanding_buffer.head == nullptr) {
         _timer.stop();
-    } else if (new_data) {
+    }
+    if (new_data) {
         _timer.reset();
     }
     // when received a ack, should fill peer's window
@@ -183,13 +187,14 @@ void TCPSender::ack_received(const WrappingInt32 ackno, const uint16_t window_si
 void TCPSender::tick(const size_t ms_since_last_tick) {
     _timer.pass(ms_since_last_tick);
     if (_timer.is_expire()) {
+        cerr << "DEBUG: timer has expired!\n";
         if (_received_window_size != 0)
             _timer.double_rto();
         else
             _timer.reset_rto();
         shared_ptr<Node<TCPSegment>> p = _outstanding_buffer.head;
         auto peer_window_size = _peer_window_size;
-        if (p != nullptr && (peer_window_size >= 1 ? peer_window_size : 1) >= p->val.length_in_sequence_space()) {
+        if (p != nullptr) {
             _segments_out.push(p->val);
             peer_window_size -= p->val.length_in_sequence_space();
             p = p->next;

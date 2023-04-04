@@ -111,7 +111,8 @@ class TCPConnection {
     // check FIN flag in received segments
     void check_rcv_fin(const TCPSegment &);
     // unwrap the abs seqno in this specified TCPConnection
-    uint64_t unwrap_in_connection(WrappingInt32 number);
+    uint64_t unwrap_in_connection_sender(WrappingInt32);
+    uint64_t unwrap_in_connection_receiver(WrappingInt32);
     //! Construct a new connection from a configuration
     explicit TCPConnection(const TCPConfig &cfg) : _cfg{cfg} {}
 

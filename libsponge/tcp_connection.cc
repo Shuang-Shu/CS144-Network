@@ -12,7 +12,7 @@ void DUMMY_CODE(Targs &&.../* unused */) {}
 
 using namespace std;
 
-size_t TCPConnection::remaining_outbound_capacity() const { return {}; }
+size_t TCPConnection::remaining_outbound_capacity() const { return _sender.stream_in().remaining_capacity(); }
 
 size_t TCPConnection::bytes_in_flight() const { return _sender.bytes_in_flight(); }
 
@@ -21,6 +21,11 @@ size_t TCPConnection::unassembled_bytes() const { return _receiver.unassembled_b
 size_t TCPConnection::time_since_last_segment_received() const { return _crt_time - _newest_seg_time; }
 
 void TCPConnection::segment_received(const TCPSegment &seg) {
+    if (!active()) {
+        return;
+    }
+    cerr << "MY DEBUG: segment received: header=" << seg.header().summary() << ", data length=" << seg.payload().size()
+         << endl;
     if (seg.header().rst) {
         // special case, reset both of inbound and outbound stream
         _reset(false);
@@ -54,8 +59,10 @@ bool TCPConnection::active() const {
 void TCPConnection::send_segs() {
     queue<TCPSegment> &seg_queue = _sender.segments_out();
     while (!seg_queue.empty()) {
-        auto seg = seg_queue.front();
+        TCPSegment &seg = seg_queue.front();
         fill_seg_fields(seg);
+        cerr << "MY DEBUG: send a segment: header=" << seg.header().summary()
+             << ", data length=" << seg.payload().size() << endl;
         check_send_fin(seg);
         seg_queue.pop();
         _segments_out.push(seg);
@@ -64,7 +71,7 @@ void TCPConnection::send_segs() {
 
 void TCPConnection::fill_seg_fields(TCPSegment &seg) {
     TCPHeader &header = seg.header();
-    // header.sport = 
+    // header.sport =
     header.win = _receiver.window_size();
     auto ackno = _receiver.ackno();
     if (ackno.has_value()) {
@@ -79,10 +86,10 @@ void TCPConnection::check_send_fin(const TCPSegment &seg) {
             // active close
             _first_send_fin = true;
         }
-        _self_fin_seqno = unwrap_in_connection(seg.header().seqno) + seg.length_in_sequence_space();
+        _self_fin_seqno = unwrap_in_connection_sender(seg.header().seqno) + seg.length_in_sequence_space();
     }
     if (_peer_fin_seqno > 0 && seg.header().ack) {
-        if (unwrap_in_connection(seg.header().ackno) >= _peer_fin_seqno) {
+        if (unwrap_in_connection_receiver(seg.header().ackno) >= _peer_fin_seqno) {
             _peer_fin_acking = true;
             _check_linger();
         }
@@ -96,22 +103,31 @@ void TCPConnection::check_rcv_fin(const TCPSegment &seg) {
             _first_receive_fin = true;
             _linger_after_streams_finish = false;
         }
-        _peer_fin_seqno = unwrap_in_connection(seg.header().seqno) + seg.length_in_sequence_space();
+        _peer_fin_seqno = unwrap_in_connection_receiver(seg.header().seqno) + seg.length_in_sequence_space();
     }
     if (_self_fin_seqno > 0 && seg.header().ack) {
-        if (unwrap_in_connection(seg.header().ackno) >= _self_fin_seqno) {
+        if (unwrap_in_connection_sender(seg.header().ackno) >= _self_fin_seqno) {
             _self_fin_acked = true;
             _check_linger();
         }
     }
 }
 
-uint64_t TCPConnection::unwrap_in_connection(WrappingInt32 number) {
-    return unwrap(number, _cfg.fixed_isn.value(), _sender.next_seqno_absolute());
+uint64_t TCPConnection::unwrap_in_connection_sender(WrappingInt32 number) {
+    return unwrap(number, _sender.isn(), _sender.next_seqno_absolute());
+}
+
+uint64_t TCPConnection::unwrap_in_connection_receiver(WrappingInt32 number) {
+    return unwrap(number, _receiver.isn(), _receiver.abs_ackno());
 }
 
 size_t TCPConnection::write(const string &data) {
+    // cerr << "MY DEBUG: data size=" << data.length() << endl;
+    if (data.size() == 0) {
+        return 0;
+    }
     auto res = _sender.stream_in().write(data);
+    // cerr << "MY DEBUG: written size=" << res << endl;
     _sender.fill_window();
     send_segs();
     return res;
@@ -121,16 +137,12 @@ size_t TCPConnection::write(const string &data) {
 void TCPConnection::tick(const size_t ms_since_last_tick) {
     _crt_time += ms_since_last_tick;
     if (_sender.fail_count() >= _cfg.MAX_RETX_ATTEMPTS) {
+        cerr << "MYDEBUG: RESET, because of fail_count()\n";
         _reset(true);
         return;
     }
     if (!_lingering) {
-        // not lingering, show resend all outstanding
-        // segments as usual
-        // TODO syn segment should also been resent
         _sender.tick(ms_since_last_tick);
-        // if (_sender.stream_in().bytes_written() == 0 && !_receiver.ackno().has_value())
-        //     return;
     } else {
         // lingering
         if (_crt_time - _newest_seg_time >= 10 * _cfg.rt_timeout) {

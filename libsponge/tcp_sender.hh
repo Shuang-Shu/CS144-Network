@@ -137,6 +137,11 @@ class TCPSender {
 
     //! \brief the continous failed number of expiration
     uint64_t fail_count() { return _timer.fail_count(); }
+
+    // just for test
+    bool sender_isn_has_value() { return _isn.raw_value() != 0; }
+
+    WrappingInt32 isn() const { return _isn; }
 };
 
 #endif  // SPONGE_LIBSPONGE_TCP_SENDER_HH

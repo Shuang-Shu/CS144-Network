@@ -124,7 +124,6 @@ int main(int argc, char **argv) {
         } else {
             tcp_socket.connect(c_fsm, c_filt);
         }
-
         bidirectional_stream_copy(tcp_socket);
         tcp_socket.wait_until_closed();
     } catch (const exception &e) {

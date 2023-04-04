@@ -52,7 +52,7 @@ class TCPReceiver {
         , _ack_no_64{0}
         , _last_no{0}
         , _received_syn(false)
-        ,_received_fin{false} {}
+        , _received_fin{false} {}
 
     //! \name Accessors to provide feedback to the remote TCPSender
     //!@{
@@ -82,6 +82,12 @@ class TCPReceiver {
 
     //! \brief handle an inbound segment
     void segment_received(const TCPSegment &seg);
+
+    //! \brief return the isn
+    WrappingInt32 isn() { return _isn; }
+
+    //! \brief the abs ackno
+    uint64_t abs_ackno() { return _ack_no_64; }
 
     //! \name "Output" interface for the reader
     //!@{

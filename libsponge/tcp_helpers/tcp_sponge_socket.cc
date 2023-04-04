@@ -28,7 +28,7 @@ void TCPSpongeSocket<AdaptT>::_tcp_loop(const function<bool()> &condition) {
         if (ret == EventLoop::Result::Exit or _abort) {
             break;
         }
-
+        // cerr << _tcp.has_value() << endl;
         if (_tcp.value().active()) {
             const auto next_time = timestamp_ms();
             _tcp.value().tick(next_time - base_time);
@@ -77,7 +77,6 @@ void TCPSpongeSocket<AdaptT>::_initialize_TCP(const TCPConfig &config) {
         Direction::In,
         [&] {
             auto seg = _datagram_adapter.read();
-            cout << "DEBUG: Received a segment from _datagram_adapter" << endl;
             if (seg) {
                 _tcp->segment_received(move(seg.value()));
             }
@@ -156,10 +155,10 @@ void TCPSpongeSocket<AdaptT>::_initialize_TCP(const TCPConfig &config) {
         Direction::Out,
         [&] {
             while (not _tcp->segments_out().empty()) {
-                cout << endl << "DEBUG: received a segment for _tcp.segments_out()" << endl;
+                // cout << endl << "DEBUG: received a segment for _tcp.segments_out()" << endl;
                 TCPSegment &seg = _tcp->segments_out().front();
-                cout << "DEBUG: seg.header().syn: " << seg.header().syn << endl;
-                cout << "DEBUG: sport: " << seg.header().sport << ", dport: " << seg.header().dport << endl;
+                // cout << "DEBUG: seg.header().syn: " << seg.header().syn << endl;
+                // cout << "DEBUG: sport: " << seg.header().sport << ", dport: " << seg.header().dport << endl;
                 _datagram_adapter.write(seg);
                 _tcp->segments_out().pop();
             }
@@ -199,7 +198,7 @@ template <typename AdaptT>
 void TCPSpongeSocket<AdaptT>::wait_until_closed() {
     shutdown(SHUT_RDWR);
     if (_tcp_thread.joinable()) {
-        cerr << "DEBUG: Waiting for clean shutdown... ";
+        cerr << "DEBUG: Waiting for clean shutdown... \n";
         _tcp_thread.join();
         cerr << "done.\n";
     }
@@ -263,6 +262,7 @@ void TCPSpongeSocket<AdaptT>::_tcp_main() {
             throw runtime_error("no TCP");
         }
         _tcp_loop([] { return true; });
+        // cerr << "DEBUG: jump out of loop\n";
         shutdown(SHUT_RDWR);
         if (not _tcp.value().active()) {
             cerr << "DEBUG: TCP connection finished "
