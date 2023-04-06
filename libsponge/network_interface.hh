@@ -5,8 +5,12 @@
 #include "tcp_over_ip.hh"
 #include "tun.hh"
 
+#include <map>
 #include <optional>
 #include <queue>
+#include <utility>
+
+using namespace std;
 
 //! \brief A "network interface" that connects IP (the internet layer, or network layer)
 //! with Ethernet (the network access layer, or link layer).
@@ -40,7 +44,21 @@ class NetworkInterface {
     //! outbound queue of Ethernet frames that the NetworkInterface wants sent
     std::queue<EthernetFrame> _frames_out{};
 
+    //! current time
+    uint64_t _crt_time{0};
+
+    //! map from Ip addr -> (Ethernet addr, ttl)
+    map<uint32_t, pair<EthernetAddress, uint64_t>> _ip_map{};
+
+    //! Ethernet addr unkonwn datagrams
+    map<uint32_t, InternetDatagram> _unknown_datagram_map{};
+
+    //! log the send time of broadcast ip addr
+    map<uint32_t, uint64_t> _ip_arp_time{};
+
   public:
+    const uint64_t MAPPING_EXPIRE_TIME_MS = 30000LL;
+    const uint64_t DST_IP_EXPIRE_TIME_MS = 5000LL;
     //! \brief Construct a network interface with given Ethernet (network-access-layer) and IP (internet-layer) addresses
     NetworkInterface(const EthernetAddress &ethernet_address, const Address &ip_address);
 
@@ -62,6 +80,19 @@ class NetworkInterface {
 
     //! \brief Called periodically when time elapses
     void tick(const size_t ms_since_last_tick);
+
+    //! \brief Broadcast for Ethernet Address of specified Ipv4
+    // Address
+    void broad_cast(Address);
+
+    //! \breif flush expire mappings
+    void flush_expire_mapping();
+
+    //! \brief flush expire logs of arp
+    void flush_expire_arp_log();
+
+    //! \brief send datagram using ethernet addr
+    void send_payload(const EthernetAddress &, BufferList, uint16_t);
 };
 
 #endif  // SPONGE_LIBSPONGE_NETWORK_INTERFACE_HH
