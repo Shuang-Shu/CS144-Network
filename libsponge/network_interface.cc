@@ -68,6 +68,7 @@ optional<InternetDatagram> NetworkInterface::recv_frame(const EthernetFrame &fra
             if (_unknown_datagram_map.count(s_ip)) {
                 // cerr << "MY DEBUG: send new" << endl;
                 send_payload(s_eaddr, _unknown_datagram_map[s_ip].serialize(), EthernetHeader::TYPE_IPv4);
+                _unknown_datagram_map.erase(s_ip);
             }
             auto t_ip = msg.target_ip_address;
             if (msg.opcode == 2) {
@@ -90,13 +91,6 @@ optional<InternetDatagram> NetworkInterface::recv_frame(const EthernetFrame &fra
                     reply_msg.target_ip_address = s_ip;
                     send_payload(s_eaddr, reply_msg.serialize(), EthernetHeader::TYPE_ARP);
                 }
-                // else
-                //  {
-                //     if (!_ip_arp_time.count(t_ip)) {
-                //         // send broadcast frame, if its dst ip is not expire
-                //         // _frames_out.push(frame);
-                //     }
-                // }
             }
         } else {
             // cerr << "MY DEBUG: parse ArpMessage error\n";

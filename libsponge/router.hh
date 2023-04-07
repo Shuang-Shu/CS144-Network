@@ -3,8 +3,41 @@
 
 #include "network_interface.hh"
 
+#include <map>
 #include <optional>
 #include <queue>
+#include <vector>
+// #include <utility>
+
+// template <typename MapSaver>
+// class IpMapper {
+//   private:
+//     MapSaver _saver{};
+
+//   public:
+//     //! \brief construct function
+//     IpMapper();
+
+//     //! Add a route (a forwarding rule)
+//     void add_route(const uint32_t route_prefix,
+//                    const uint8_t prefix_length,
+//                    const std::optional<Address> next_hop,
+//                    const size_t interface_num);
+
+//     //! get the address and interface_num of a InternetDatagram
+//     pair<std::optional<Address>, size_t> route_one_datagram(InternetDatagram &);
+// };
+
+class MapItem {
+  public:
+    uint32_t route_prefix;
+    uint8_t prefix_length;
+    std::optional<Address> next_hop;
+    size_t interface_num;
+
+    MapItem(uint32_t prefix, uint8_t length, std::optional<Address> hop, size_t interface)
+        : route_prefix(prefix), prefix_length(length), next_hop(hop), interface_num(interface) {}
+};
 
 //! \brief A wrapper for NetworkInterface that makes the host-side
 //! interface asynchronous: instead of returning received datagrams
@@ -43,6 +76,7 @@ class AsyncNetworkInterface : public NetworkInterface {
 class Router {
     //! The router's collection of network interfaces
     std::vector<AsyncNetworkInterface> _interfaces{};
+    std::vector<MapItem> _map_vec{};
 
     //! Send a single datagram from the appropriate outbound interface to the next hop,
     //! as specified by the route with the longest prefix_length that matches the
