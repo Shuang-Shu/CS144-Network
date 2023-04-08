@@ -24,8 +24,6 @@ class TCPConnection {
     bool _lingering{false};
     // has the FIN segment acked
     bool _fin_acked{false};
-    // current time from start
-    uint64_t _crt_time{0};
     // time of receiving the newest segment
     uint64_t _newest_seg_time{0};
     bool _first_send_fin{false};

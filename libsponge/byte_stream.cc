@@ -16,7 +16,7 @@ using namespace std;
 
 ByteStream::ByteStream(const size_t capacity)
     : cap(capacity), is_end(false), total_bytes_written(0), total_bytes_read(0), buf() {
-    cerr << "MY DEBUG, cap=" << cap << endl;
+    // cerr << "MY DEBUG, cap=" << cap << endl;
     // ByteStream的构造函数，在初始化列表中对成员进行初始化
 }
 

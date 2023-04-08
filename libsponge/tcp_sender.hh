@@ -4,14 +4,54 @@
 #include "byte_stream.hh"
 #include "tcp_config.hh"
 #include "tcp_segment.hh"
-#include "timer.hh"
 #include "wrapping_integers.hh"
 
 #include <functional>
 #include <memory>
 #include <queue>
+#include <deque>
 
 using namespace std;
+
+class Timer {
+  private:
+    uint64_t _rto;
+    uint64_t _initial_rto;
+    uint64_t _time_pass;
+    uint16_t _fail_count;
+    bool _running;
+    // shift of _initial_retransmission_timeout
+    // current_isn=_initial_retransmission_timeout<<_retransmission_timeout_shift
+    unsigned int _retransmission_timeout_shift{0};
+
+  public:
+    Timer(uint64_t _init_rto)
+        : _rto(_init_rto)
+        , _initial_rto(_init_rto)
+        , _time_pass(0)
+        , _fail_count(0)
+        , _running(false)
+        , _retransmission_timeout_shift(0) {}
+
+    // call this function to change time
+    void pass(uint64_t);
+    // stop the timer
+    void stop();
+    // start the timer
+    void start();
+    // reset the timer
+    void reset();
+    // check whether the timer is expire
+    bool is_expire();
+    // get the continous fail count
+    uint16_t fail_count() const;
+    // double the rto
+    void double_rto();
+    // is this timer running
+    bool is_running() { return _running; }
+    // reset the rto
+    void reset_rto();
+};
 
 template <class T>
 class Node {
@@ -22,16 +62,6 @@ class Node {
     Node(T v) : val(v), next(nullptr), prev(nullptr) {}
 };
 
-template <class T>
-class LinkedBuffer {
-  public:
-    shared_ptr<Node<T>> head;
-    shared_ptr<Node<T>> tail;
-    void addTail(T);
-    void removeTail();
-    T pop();
-    T peek();
-};
 //! \brief The "sender" part of a TCP implementation.
 
 //! Accepts a ByteStream, divides it up into segments and sends the
@@ -62,7 +92,7 @@ class TCPSender {
     Timer _timer{_initial_retransmission_timeout};
 
     //! linked list of outstanding segment
-    LinkedBuffer<TCPSegment> _outstanding_buffer;
+    deque<TCPSegment> _outstanding_buffer;
 
     //! current peer window size
     uint16_t _peer_window_size{1};

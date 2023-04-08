@@ -13,51 +13,42 @@
 
 using namespace std;
 
-template <class T>
-void LinkedBuffer<T>::addTail(T val) {
-    shared_ptr<Node<T>> new_node = make_shared<Node<T>>(val);
-    if (head == nullptr) {
-        head = new_node;
-        tail = new_node;
+void Timer::pass(uint64_t ms) {
+    if (!_running) {
         return;
     }
-    tail->next = new_node;
-    new_node->prev = tail;
-    tail = new_node;
+    _time_pass += ms;
 }
 
-template <class T>
-void LinkedBuffer<T>::removeTail() {
-    if (tail == head) {
-        tail = nullptr;
-        head = nullptr;
-    }
-    if (tail != nullptr) {
-        shared_ptr<Node<T>> tmp = tail;
-        tail = tail->prev;
-        if (tail != nullptr) {
-            tail->next = nullptr;
-        }
-        delete tmp;
-    }
+void Timer::stop() {
+    reset();
+    _running = false;
 }
 
-template <class T>
-T LinkedBuffer<T>::pop() {
-    if (head != nullptr) {
-        shared_ptr<Node<T>> tmp = head;
-        head = head->next;
-        if (head != nullptr) {
-            head->prev = nullptr;
-        }
-        return tmp->val;
-    }
-    return {};
+void Timer::start() { _running = true; }
+
+void Timer::reset() {
+    _time_pass = 0;
+    _fail_count = 0;
+    _retransmission_timeout_shift = 0;
+    _rto = _initial_rto;
 }
 
-template <class T>
-T LinkedBuffer<T>::peek() {
-    return head;
+bool Timer::is_expire() { return _time_pass >= _rto; }
+
+uint16_t Timer::fail_count() const { return _fail_count; }
+
+void Timer::double_rto() {
+    _fail_count++;
+    _time_pass = 0;
+    _retransmission_timeout_shift++;
+    _rto = _initial_rto << _retransmission_timeout_shift;
+}
+
+void Timer::reset_rto() {
+    _retransmission_timeout_shift = 0;
+    _rto = _initial_rto;
+    _time_pass = 0;
 }
 
 template <typename... Targs>
@@ -122,7 +113,7 @@ void TCPSender::fill_window() {
             _peer_window_size = 0;
         if (!_timer.is_running())
             _timer.start();
-        _outstanding_buffer.addTail(seg);
+        _outstanding_buffer.push_back(seg);
         if (directly_break)
             break;
     }
@@ -131,7 +122,7 @@ void TCPSender::fill_window() {
 //! \param ackno The remote receiver's ackno (acknowledgment number)
 //! \param window_size The remote receiver's advertised window size
 void TCPSender::ack_received(const WrappingInt32 ackno, const uint16_t window_size) {
-    cerr << "WIN MY DEBUG: peer win=" << window_size << endl;
+    // cerr << "WIN MY DEBUG: peer win=" << window_size << endl;
     auto window_size_copy = window_size;
     _received_window_size = window_size;
     if (window_size == 0) {
@@ -146,19 +137,19 @@ void TCPSender::ack_received(const WrappingInt32 ackno, const uint16_t window_si
     // remove outstanding segments in the buffer
     bool new_data = false;
     while (true) {
-        if (_outstanding_buffer.head == nullptr) {
+        if (_outstanding_buffer.empty()) {
             break;
         }
-        TCPSegment &head_seg = _outstanding_buffer.head->val;
+        TCPSegment &head_seg = _outstanding_buffer.front();
         auto length_in_seq = head_seg.length_in_sequence_space();
         auto head_seg_seqno = unwrap(head_seg.header().seqno, _isn, _acked_next);
         if (abs_ackno > head_seg_seqno) {
             new_data = true;
             if (abs_ackno - head_seg_seqno >= length_in_seq) {
-                cerr << "MY DEBUG: acked seqno=" << ackno << endl;
+                // cerr << "MY DEBUG: acked seqno=" << ackno << endl;
                 _bytes_in_flight -= length_in_seq;
                 _acked_next += length_in_seq;
-                _outstanding_buffer.pop();
+                _outstanding_buffer.pop_front();
             } else {
                 break;
             }
@@ -173,7 +164,7 @@ void TCPSender::ack_received(const WrappingInt32 ackno, const uint16_t window_si
     else
         _peer_window_size = 0;
     // reset the timer
-    if (_outstanding_buffer.head == nullptr) {
+    if (_outstanding_buffer.empty()) {
         _timer.stop();
     }
     if (new_data) {
@@ -187,17 +178,13 @@ void TCPSender::ack_received(const WrappingInt32 ackno, const uint16_t window_si
 void TCPSender::tick(const size_t ms_since_last_tick) {
     _timer.pass(ms_since_last_tick);
     if (_timer.is_expire()) {
-        cerr << "DEBUG: timer has expired!\n";
+        // cerr << "DEBUG: timer has expired!\n";
         if (_received_window_size != 0)
             _timer.double_rto();
         else
             _timer.reset_rto();
-        shared_ptr<Node<TCPSegment>> p = _outstanding_buffer.head;
-        auto peer_window_size = _peer_window_size;
-        if (p != nullptr) {
-            _segments_out.push(p->val);
-            peer_window_size -= p->val.length_in_sequence_space();
-            p = p->next;
+        if (!_outstanding_buffer.empty()) {
+            _segments_out.push(_outstanding_buffer.front());
         }
     }
 }

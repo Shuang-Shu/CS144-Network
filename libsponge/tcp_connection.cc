@@ -18,14 +18,14 @@ size_t TCPConnection::bytes_in_flight() const { return _sender.bytes_in_flight()
 
 size_t TCPConnection::unassembled_bytes() const { return _receiver.unassembled_bytes(); }
 
-size_t TCPConnection::time_since_last_segment_received() const { return _crt_time - _newest_seg_time; }
+size_t TCPConnection::time_since_last_segment_received() const { return _newest_seg_time; }
 
 void TCPConnection::segment_received(const TCPSegment &seg) {
     if (!active()) {
         return;
     }
-    cerr << "MY DEBUG: segment received: header=" << seg.header().summary() << ", data length=" << seg.payload().size()
-         << endl;
+    // cerr << "MY DEBUG: segment received: header=" << seg.header().summary() << ", data length=" << seg.payload().size()
+    //      << endl;
     if (seg.header().rst) {
         // special case, reset both of inbound and outbound stream
         _reset(false);
@@ -45,8 +45,8 @@ void TCPConnection::segment_received(const TCPSegment &seg) {
     } else if (seg.header().syn) {
         _sender.fill_window();
     }
-    // sync the _newest_seg_time
-    _newest_seg_time = _crt_time;
+    // fresh the _newest_seg_time
+    _newest_seg_time = 0;
     send_segs();
 }
 
@@ -61,8 +61,8 @@ void TCPConnection::send_segs() {
     while (!seg_queue.empty()) {
         TCPSegment &seg = seg_queue.front();
         fill_seg_fields(seg);
-        cerr << "MY DEBUG: send a segment: header=" << seg.header().summary()
-             << ", data length=" << seg.payload().size() << endl;
+        // cerr << "MY DEBUG: send a segment: header=" << seg.header().summary()
+        //      << ", data length=" << seg.payload().size() << endl;
         check_send_fin(seg);
         seg_queue.pop();
         _segments_out.push(seg);
@@ -135,7 +135,7 @@ size_t TCPConnection::write(const string &data) {
 
 //! \param[in] ms_since_last_tick number of milliseconds since the last call to this method
 void TCPConnection::tick(const size_t ms_since_last_tick) {
-    _crt_time += ms_since_last_tick;
+    _newest_seg_time += ms_since_last_tick;
     if (_sender.fail_count() >= _cfg.MAX_RETX_ATTEMPTS) {
         cerr << "MYDEBUG: RESET, because of fail_count()\n";
         _reset(true);
@@ -145,7 +145,7 @@ void TCPConnection::tick(const size_t ms_since_last_tick) {
         _sender.tick(ms_since_last_tick);
     } else {
         // lingering
-        if (_crt_time - _newest_seg_time >= 10 * _cfg.rt_timeout) {
+        if (_newest_seg_time >= 10 * _cfg.rt_timeout) {
             // end the inbound stream
             _receiver.stream_out().end_input();
             _lingering = false;
