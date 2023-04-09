@@ -21,11 +21,6 @@ size_t TCPConnection::unassembled_bytes() const { return _receiver.unassembled_b
 size_t TCPConnection::time_since_last_segment_received() const { return _newest_seg_time; }
 
 void TCPConnection::segment_received(const TCPSegment &seg) {
-    if (!active()) {
-        return;
-    }
-    // cerr << "MY DEBUG: segment received: header=" << seg.header().summary() << ", data length=" << seg.payload().size()
-    //      << endl;
     if (seg.header().rst) {
         // special case, reset both of inbound and outbound stream
         _reset(false);
@@ -35,17 +30,17 @@ void TCPConnection::segment_received(const TCPSegment &seg) {
     _receiver.segment_received(seg);
     if (seg.header().ack) {
         _sender.ack_received(seg.header().ackno, seg.header().win);
+    } else if (seg.header().syn) {
+        _sender.fill_window();
     }
-    if (_sender.next_seqno_absolute() > 0) {
+
+    if (_sender.next_seqno_absolute() > 0 && _sender.segments_out().empty()) {
         if (seg.length_in_sequence_space() > 0) {
             _sender.send_empty_segment();
         } else if (_receiver.ackno().has_value() && seg.header().seqno == _receiver.ackno().value() - 1) {
             _sender.send_empty_segment();
         }
-    } else if (seg.header().syn) {
-        _sender.fill_window();
     }
-    // fresh the _newest_seg_time
     _newest_seg_time = 0;
     send_segs();
 }
@@ -59,10 +54,8 @@ bool TCPConnection::active() const {
 void TCPConnection::send_segs() {
     queue<TCPSegment> &seg_queue = _sender.segments_out();
     while (!seg_queue.empty()) {
-        TCPSegment &seg = seg_queue.front();
+        TCPSegment seg = seg_queue.front();
         fill_seg_fields(seg);
-        // cerr << "MY DEBUG: send a segment: header=" << seg.header().summary()
-        //      << ", data length=" << seg.payload().size() << endl;
         check_send_fin(seg);
         seg_queue.pop();
         _segments_out.push(seg);
@@ -122,12 +115,10 @@ uint64_t TCPConnection::unwrap_in_connection_receiver(WrappingInt32 number) {
 }
 
 size_t TCPConnection::write(const string &data) {
-    // cerr << "MY DEBUG: data size=" << data.length() << endl;
-    if (data.size() == 0) {
+    if (!data.size()) {
         return 0;
     }
-    auto res = _sender.stream_in().write(data);
-    // cerr << "MY DEBUG: written size=" << res << endl;
+    size_t res = _sender.stream_in().write(data);
     _sender.fill_window();
     send_segs();
     return res;
@@ -137,7 +128,7 @@ size_t TCPConnection::write(const string &data) {
 void TCPConnection::tick(const size_t ms_since_last_tick) {
     _newest_seg_time += ms_since_last_tick;
     if (_sender.fail_count() >= _cfg.MAX_RETX_ATTEMPTS) {
-        cerr << "MYDEBUG: RESET, because of fail_count()\n";
+        // cerr << "MYDEBUG: RESET, because of fail_count()\n";
         _reset(true);
         return;
     }
