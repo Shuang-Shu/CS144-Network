@@ -1,5 +1,4 @@
 #include "stream_reassembler.hh"
-#include <iostream>
 
 // Dummy implementation of a stream reassembler.
 
@@ -9,134 +8,132 @@
 // You will need to add private members to the class declaration in `stream_reassembler.hh`
 
 template <typename... Targs>
-void DUMMY_CODE(Targs &&.../* unused */) {}
+void DUMMY_CODE(Targs &&... /* unused */) {}
 
 using namespace std;
 
-CycleArray::CycleArray(size_t cap)
-    : _capacity{cap}, _head{0}, _head_index_in_stream{0}, _array{new char[cap]}, _null_array{new bool[cap]} {
-    for (size_t i = 0; i < cap; i++) {
-        _null_array[i] = true;
-    }
-}
-
-size_t CycleArray::_logic_index_to_real(size_t logic_index) {
-    if (logic_index >= _capacity) {
-        cerr << "index out of capacity" << endl;
-        throw 0;
-    }
-    return ((_head + logic_index) % _capacity);
-}
-
-bool CycleArray::get_is_null(size_t logic_index) {
-    auto real_index = _logic_index_to_real(logic_index);
-    return _null_array[real_index];
-}
-
-char CycleArray::get_at_index(size_t logic_index) {
-    auto index = _logic_index_to_real(logic_index);
-    return _array[index];
-}
-
-void CycleArray::set_index_null(size_t logic_index) {
-    auto index = _logic_index_to_real(logic_index);
-    _null_array[index] = true;
-}
-
-bool CycleArray::set_at_index_zero(size_t logic_index, char c) {
-    auto index = _logic_index_to_real(logic_index);
-    if (_null_array[index] == true) {
-        _array[index] = c;
-        _null_array[index] = false;
-        return true;
-    }
-    return false;
-}
-
-char CycleArray::pop_head() {
-    char r = get_at_index(0);
-    set_index_null(0);
-    _head = (_head + 1) % _capacity;
-    _head_index_in_stream++;
-    return r;
-}
-
-size_t CycleArray::get_head_index_in_stream() { return this->_head_index_in_stream; }
-
-size_t CycleArray::peek_head_length() {
-    size_t head_length = 0;
-    while (head_length < _capacity && get_is_null(head_length++) != true) {
-    }
-    if (head_length == _capacity && get_is_null(head_length - 1) != true) {
-        return head_length;
-    }
-    return head_length - 1;
-}
-
-StreamReassembler::StreamReassembler(const size_t capacity)
-    : _output(capacity)
-    , _capacity(capacity)
-    , _unassembled{CycleArray(capacity)}
-    , _assembled(queue<char>())
-    , _assembled_bytes{0}
-    , _unassembled_bytes{0}
-    , _expect{0}
-    , _eof_index{} {
-    _eof_index = 1 << 31;
-}
+StreamReassembler::StreamReassembler(const size_t capacity) : _output(capacity), _capacity(capacity),
+unassemBuf(), assemBuf(), expectIdx(0), unassemSize(0), eofIndex(-1) {}
 
 //! \details This function accepts a substring (aka a segment) of bytes,
 //! possibly out-of-order, from the logical stream, and assembles any newly
 //! contiguous substrings and writes them into the output stream in order.
 void StreamReassembler::push_substring(const string &data, const size_t index, const bool eof) {
-    push_to_stream();
-    if (eof) {
-        _eof_index = index + data.length();
-    }
-    size_t set_in_count = 0;
-    size_t offset = index - _unassembled.get_head_index_in_stream();
-    for (size_t i = 0; i < data.length(); i++) {
-        if (i + index < _unassembled.get_head_index_in_stream() || offset + i >= _capacity)
-            continue;
-        if (_unassembled.set_at_index_zero(offset + i, data[i]))
-            set_in_count++;
-    }
-    _unassembled_bytes = _unassembled_bytes + set_in_count;
-    // push assembled char in _unassembled to _assembled
-    if (index <= _expect) {
-        auto head_length = _unassembled.peek_head_length();
-        for (size_t i = 0; i < head_length; i++) {
-            _assembled.push(_unassembled.pop_head());
-        }
-        _unassembled_bytes -= head_length;
-        _assembled_bytes += head_length;
-        _expect += head_length;
-    }
-    // try to send assembled chars
-    push_to_stream();
-    // close the output stream when the last char has arrived
-    if (_expect == _eof_index && _unassembled_bytes == 0 && _assembled_bytes == 0) {
+    if(eof)
+        eofIndex=index+data.length();
+    // 处理部分
+    pushUnassem(data, index);
+    fixCap();
+    assem();
+    writeStr();
+    // 终止输入
+    if(assemBuf.length()==0&&expectIdx==eofIndex)
         _output.end_input();
+}
+
+void StreamReassembler::pushUnassem(string data, size_t index){
+    // 预处理
+    string validStr;
+    size_t validIdx,rightBound;
+    rightBound=index+data.length();
+    if(index+data.length()<=expectIdx)
+        return;
+    else if(index<expectIdx){
+        validIdx=expectIdx;
+        validStr=data.substr(expectIdx-index, data.length()-(expectIdx-index));
+    }
+    else{
+        validIdx=index;
+        validStr=data;
+    }
+    // 将validStr插入到unassemBuf中
+    if(unassemBuf.find(validIdx)==unassemBuf.end())
+        unassemBuf.insert(make_pair(validIdx, validStr));
+    else{
+        if((*unassemBuf.find(validIdx)).second.length()>=validStr.length())
+            return;
+        else
+            (*unassemBuf.find(validIdx)).second=validStr;
+    }
+    auto iterR=unassemBuf.find(validIdx);
+    auto iterRL=iterR;
+    auto iterL=iterR;
+    iterL--;
+    if(iterL==unassemBuf.end())
+        iterL=iterR;
+    else if((*iterL).first+(*iterL).second.length()<=(*iterR).first)
+        iterL=iterR;
+    rightBound=max((*iterL).first+(*iterL).second.length(), rightBound);
+    while(iterR!=unassemBuf.end()&&(*iterR).first<validIdx+validStr.length()){
+        rightBound=max(rightBound, (*iterR).first+(*iterR).second.length());
+        iterRL=iterR;
+        iterR++;
+    }
+    string mergedStr(rightBound-(*iterL).first, '-');
+    size_t leftBound=(*iterL).first;
+    for(auto iter=iterL;iter!=iterR;++iter){
+        size_t offset=(*iter).first;
+        string tempStr=(*iter).second;
+        for(size_t j=0;j<tempStr.length();++j)
+            mergedStr[j+offset-leftBound]=tempStr[j];
+    }
+    (*iterL).second=mergedStr;
+    if(iterL!=iterR){
+        iterL++;
+        vector<size_t> deleteIdx;
+        for(auto iter=iterL;iter!=iterR;++iter)
+            deleteIdx.push_back((*iter).first);
+        for(size_t i=0;i<deleteIdx.size();++i)
+            unassemBuf.erase(deleteIdx[i]);
     }
 }
 
-size_t StreamReassembler::unassembled_bytes() const { return _unassembled_bytes; }
+void StreamReassembler::assem(){
+    auto iter=unassemBuf.begin();
+    while(iter!=unassemBuf.end()&&(*iter).first==expectIdx){
+        assemBuf+=(*iter).second;
+        size_t temp=(*iter).first;
+        expectIdx+=(*iter).second.length();
+        iter++;
+        unassemBuf.erase(temp);
+    }
+    size_t newSize=0;
+    for(iter=unassemBuf.begin();iter!=unassemBuf.end();++iter)
+        newSize+=(*iter).second.length();
+    unassemSize=newSize;
+}
 
-bool StreamReassembler::empty() const { return _unassembled_bytes == 0; }
+void StreamReassembler::writeStr(){
+    size_t writeLen=_output.write(assemBuf);
+    assemBuf=assemBuf.substr(writeLen, assemBuf.length()-writeLen);
+}
 
-bool StreamReassembler::push_to_stream() {
-    bool output_sufficient = true;
-    do {
-        if (_assembled.size() == 0)
-            break;
-        auto head = _assembled.front();
-        string temp(CHAR_LENGTH, head);
-        if (_output.write(temp) == 0) {
-            output_sufficient = false;
-        } else {
-            _assembled_bytes--;
-            _assembled.pop();
+void StreamReassembler::fixCap(){
+    if(unassemBuf.size()==0)
+        return;
+    size_t temp=0;
+    for(auto iter=unassemBuf.begin();iter!=unassemBuf.end();++iter)
+        temp+=(*iter).second.length();
+    if(_capacity>assemBuf.length()+temp)
+        return;
+    else{
+        auto iter=unassemBuf.end();iter--;
+        size_t overflowSize=assemBuf.length()+temp-_capacity;
+        while((*iter).second.length()<=overflowSize){
+            overflowSize-=(*iter).second.length();
+            size_t tempIdx=(*iter).first;
+            --iter;
+            unassemBuf.erase(tempIdx);
         }
-    } while (output_sufficient);
-    return output_sufficient;
+        size_t tempLen=(*iter).second.length();
+        (*iter).second=(*iter).second.substr(0, tempLen-overflowSize);
+    }
+}
+
+size_t StreamReassembler::unassembled_bytes() const { return unassemSize; }
+
+bool StreamReassembler::empty() const {
+    if(unassemSize+assemBuf.length()==0)
+        return true;
+    return false;
 }
